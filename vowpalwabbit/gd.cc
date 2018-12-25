@@ -13,6 +13,10 @@ license as described in the file LICENSE.
 #endif
 
 #if !defined(VW_NO_INLINE_SIMD)
+#  if !defined(__SSE2__) && (defined(_M_AMD64) || defined(_M_X64))
+#    define __SSE2__
+#  endif
+
 #  if defined(__ARM_NEON__)
 #include <arm_neon.h>
 #  elif defined(__SSE2__)
@@ -85,7 +89,7 @@ static inline float InvSqrt(float x)
   float32x2_t e3 = vmul_f32(e2, vrsqrts_f32(v1, vmul_f32(e2, e2)));
   // Extract result
   return vget_lane_f32(e3, 0);
-#  elif (defined(__SSE2__) || defined(_M_AMD64) || defined(_M_X64))
+#  elif defined(__SSE2__)
   __m128 eta = _mm_load_ss(&x);
   eta = _mm_rsqrt_ss(eta);
   _mm_store_ss(&x, eta);
@@ -850,9 +854,12 @@ void save_load_online_state(vw& all, io_buf& model_file, bool read, bool text, g
   bin_text_read_write_fixed(model_file, (char*)&all.sd->sum_loss_since_last_dump, sizeof(all.sd->sum_loss_since_last_dump),
                             "", read, msg, text);
 
-  msg << "dump_interval " << all.sd->dump_interval << "\n";
-  bin_text_read_write_fixed(model_file, (char*)&all.sd->dump_interval, sizeof(all.sd->dump_interval),
+  float dump_interval = all.sd->dump_interval;
+  msg << "dump_interval " << dump_interval << "\n";
+  bin_text_read_write_fixed(model_file, (char*)&dump_interval, sizeof(dump_interval),
                             "", read, msg, text);
+  if (!read || (all.training && all.preserve_performance_counters)) // update dump_interval from input model
+    all.sd->dump_interval = dump_interval;
 
   msg << "min_label " << all.sd->min_label << "\n";
   bin_text_read_write_fixed(model_file, (char*)&all.sd->min_label, sizeof(all.sd->min_label),
@@ -918,7 +925,6 @@ void save_load_online_state(vw& all, io_buf& model_file, bool read, bool text, g
   {
     all.sd->sum_loss = 0;
     all.sd->sum_loss_since_last_dump = 0;
-    all.sd->dump_interval = 1.;
     all.sd->weighted_labeled_examples = 0.;
     all.sd->weighted_labels = 0.;
     all.sd->weighted_unlabeled_examples = 0.;
@@ -978,7 +984,7 @@ void save_load(gd& g, io_buf& model_file, bool read, bool text)
     if (resume)
     {
       if (read && all.model_file_ver < VERSION_SAVE_RESUME_FIX)
-        all.opts_n_args.trace_message << endl << "WARNING: --save_resume functionality is known to have inaccuracy in model files version less than " << VERSION_SAVE_RESUME_FIX << endl << endl;
+        all.trace_message << endl << "WARNING: --save_resume functionality is known to have inaccuracy in model files version less than " << VERSION_SAVE_RESUME_FIX << endl << endl;
       // save_load_online_state(g, model_file, read, text);
       save_load_online_state(all, model_file, read, text, &g);
     }
@@ -1141,7 +1147,7 @@ base_learner* setup(arguments& arg)
     THROW("Cannot use adax without adaptive");
 
   if (pow((double)arg.all->eta_decay_rate, (double)arg.all->numpasses) < 0.0001 )
-    arg.trace_message << "Warning: the learning rate for the last pass is multiplied by: " << pow((double)arg.all->eta_decay_rate, (double)arg.all->numpasses)
+    arg.all->trace_message << "Warning: the learning rate for the last pass is multiplied by: " << pow((double)arg.all->eta_decay_rate, (double)arg.all->numpasses)
                       << " adjust --decay_learning_rate larger to avoid this." << endl;
 
   if (arg.all->reg_mode % 2)

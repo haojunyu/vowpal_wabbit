@@ -232,7 +232,7 @@ bool update_statistics(vw& all, cb_adf& c, example& ec, multi_ex* ec_seq)
 
 void output_example(vw& all, cb_adf& c, example& ec, multi_ex* ec_seq)
 {
-  if (example_is_newline(ec) || (CB::ec_is_example_header(ec) && ec_seq->size() == 1)) return;
+  if (example_is_newline_not_header(ec)) return;
 
   bool labeled_example = update_statistics(all, c, ec, ec_seq);
 
@@ -372,7 +372,7 @@ base_learner* cb_adf_setup(arguments& arg)
     ld->gen_cs.cb_type = CB_TYPE_DM;
   else
     {
-      arg.trace_message << "warning: cb_type must be in {'ips','dr','mtr','dm'}; resetting to ips." << std::endl;
+      arg.all->trace_message << "warning: cb_type must be in {'ips','dr','mtr','dm'}; resetting to ips." << std::endl;
       ld->gen_cs.cb_type = CB_TYPE_IPS;
     }
 
@@ -383,9 +383,10 @@ base_learner* cb_adf_setup(arguments& arg)
        || ld->rank_all || arg.vm.count("csoaa_rank") == 0)
   {
     if (count(arg.args.begin(), arg.args.end(), "--csoaa_ldf") == 0)
+    {
       arg.args.push_back("--csoaa_ldf");
-    if (count(arg.args.begin(), arg.args.end(), "multiline") == 0)
       arg.args.push_back("multiline");
+    }
     if (count(arg.args.begin(), arg.args.end(), "--csoaa_rank") == 0)
       arg.args.push_back("--csoaa_rank");
   }
