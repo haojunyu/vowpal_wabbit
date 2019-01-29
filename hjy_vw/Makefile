@@ -1,7 +1,7 @@
 ARCH = -msse2 -mfpmath=sse -march=x86-64
 FLAGS = -Wall $(ARCH) -O3 -ffast-math -D_FILE_OFFSET_BITS=64 -Wno-deprecated -I /usr/include/boost-1_34_1 
 
-all:	vw install
+all:	vw
 
 vw.o:	vw.cc parse_example.h parse_regressor.h parse_args.h
 	g++ $(FLAGS) -c $< -o $@

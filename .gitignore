@@ -1,2 +1,3 @@
 *.o
 *.aut
+.DS_Store

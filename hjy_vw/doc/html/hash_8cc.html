@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: hash.cc 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">hash.cc 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="hash_8h_source.html">hash.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+hash.cc 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="hash_8cc__incl.png" border="0" usemap="#hash_8cc" alt=""/></div>
+<map name="hash_8cc" id="hash_8cc">
+<area shape="rect"  title=" " alt="" coords="5,5,73,31"/>
+<area shape="rect"  href="hash_8h.html" title=" " alt="" coords="8,79,70,104"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a86173ca25b300cf3276b088d3fc6bdaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8cc.html#a86173ca25b300cf3276b088d3fc6bdaf">hashsize</a>(n)&#160;&#160;&#160;((<a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a>)1&lt;&lt;(n))</td></tr>
+<tr class="separator:a86173ca25b300cf3276b088d3fc6bdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd6ed104463685849b2550389d05ff3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8cc.html#aacd6ed104463685849b2550389d05ff3">hashmask</a>(n)&#160;&#160;&#160;(<a class="el" href="hash_8cc.html#a86173ca25b300cf3276b088d3fc6bdaf">hashsize</a>(n)-1)</td></tr>
+<tr class="separator:aacd6ed104463685849b2550389d05ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9fa1747724ec6142812721997394c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8cc.html#afd9fa1747724ec6142812721997394c3">mix</a>(a,  b,  c)</td></tr>
+<tr class="separator:afd9fa1747724ec6142812721997394c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a5de8c92ebd556dedb75cdd515843edc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8cc.html#a5de8c92ebd556dedb75cdd515843edc3">hash</a> (<a class="el" href="hash_8h.html#a5e0e444ca36facaa313c7f26758b6dd0">ub1</a> *k, <a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a> length, <a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a> initval)</td></tr>
+<tr class="separator:a5de8c92ebd556dedb75cdd515843edc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="aacd6ed104463685849b2550389d05ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd6ed104463685849b2550389d05ff3">&#9670;&nbsp;</a></span>hashmask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define hashmask</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="hash_8cc.html#a86173ca25b300cf3276b088d3fc6bdaf">hashsize</a>(n)-1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86173ca25b300cf3276b088d3fc6bdaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86173ca25b300cf3276b088d3fc6bdaf">&#9670;&nbsp;</a></span>hashsize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define hashsize</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;((<a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a>)1&lt;&lt;(n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd9fa1747724ec6142812721997394c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd9fa1747724ec6142812721997394c3">&#9670;&nbsp;</a></span>mix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mix</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">c&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{ \</div><div class="line">  a -= b; a -= c; a ^= (c&gt;&gt;13); \</div><div class="line">  b -= c; b -= a; b ^= (a&lt;&lt;8); \</div><div class="line">  c -= a; c -= b; c ^= (b&gt;&gt;13); \</div><div class="line">  a -= b; a -= c; a ^= (c&gt;&gt;12);  \</div><div class="line">  b -= c; b -= a; b ^= (a&lt;&lt;16); \</div><div class="line">  c -= a; c -= b; c ^= (b&gt;&gt;5); \</div><div class="line">  a -= b; a -= c; a ^= (c&gt;&gt;3);  \</div><div class="line">  b -= c; b -= a; b ^= (a&lt;&lt;10); \</div><div class="line">  c -= a; c -= b; c ^= (b&gt;&gt;15); \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a5de8c92ebd556dedb75cdd515843edc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de8c92ebd556dedb75cdd515843edc3">&#9670;&nbsp;</a></span>hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a> hash </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="hash_8h.html#a5e0e444ca36facaa313c7f26758b6dd0">ub1</a> *&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a>&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a>&#160;</td>
+          <td class="paramname"><em>initval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

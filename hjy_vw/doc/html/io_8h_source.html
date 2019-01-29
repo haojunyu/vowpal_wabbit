@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: io.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">io.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="io_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* </span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Copyright (c) 2007 Yahoo! Inc.  All rights reserved.  The copyrights</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">embodied in the content of this file are licensed under the BSD</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">(revised) open source license</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef IO_H__</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define IO_H__</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stack_8h.html">stack.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>std;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classio__buf.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classio__buf.html">io_buf</a> {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classio__buf.html#aad6fffd4bcf2f840d43f5cb22c036944">   20</a></span>&#160;    <a class="code" href="classv__array.html">v_array&lt;char &gt;</a> <a class="code" href="classio__buf.html#aad6fffd4bcf2f840d43f5cb22c036944">space</a>;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classio__buf.html#abda7b4056e753a5458a99249ff01e2a1">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classio__buf.html#abda7b4056e753a5458a99249ff01e2a1">file</a>;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classio__buf.html#af858c66c5893eb3292bb5a605511f459">   22</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classio__buf.html#af858c66c5893eb3292bb5a605511f459">currentname</a>;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classio__buf.html#ab58dbda6d1cedabedc2b816c4023151a">   23</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classio__buf.html#ab58dbda6d1cedabedc2b816c4023151a">finalname</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classio__buf.html#ae01bc5dd5cd7128faeff147ce34a1f36">   25</a></span>&#160;    <a class="code" href="classio__buf.html#ae01bc5dd5cd7128faeff147ce34a1f36">io_buf</a>() {<a class="code" href="stack_8h.html#a327b2f85144c44052102753c3d72b2d1">alloc</a>(space, 1 &lt;&lt; 16); }</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classio__buf.html#af32020bb18ceca0dc038900797715ae6">   26</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classio__buf.html#af32020bb18ceca0dc038900797715ae6">set</a>(<span class="keywordtype">char</span> *p){space.<a class="code" href="classv__array.html#a716766c7045adf91b9bb0d63ede22a51">end</a> = p;}</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classio__buf.html#aa587461036195ef42d14ba73eb3afffb">   27</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classio__buf.html#aa587461036195ef42d14ba73eb3afffb">fill</a>(<span class="keywordtype">int</span> n) {<a class="code" href="stack_8h.html#a327b2f85144c44052102753c3d72b2d1">alloc</a>(space, </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;          n + read(file, space.<a class="code" href="classv__array.html#a38f65b49e5c2ce93ca4bc4cc18a0e49f">begin</a>+n, space.<a class="code" href="classv__array.html#ae563c3b32418f28a3c424c2f88cdf721">end_array</a> - space.<a class="code" href="classv__array.html#a38f65b49e5c2ce93ca4bc4cc18a0e49f">begin</a> -n));}</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classio__buf.html#ac61fc00776c65e38be5fc17365badac7">   29</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classio__buf.html#ac61fc00776c65e38be5fc17365badac7">flush</a>() { </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordflow">if</span> (write(file, space.<a class="code" href="classv__array.html#a38f65b49e5c2ce93ca4bc4cc18a0e49f">begin</a>, space.<a class="code" href="classv__array.html#a68e120dd0092dd5ee177db7e8eccc89e">index</a>()) != (<span class="keywordtype">int</span>) space.<a class="code" href="classv__array.html#a68e120dd0092dd5ee177db7e8eccc89e">index</a>())</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        cerr &lt;&lt; <span class="stringliteral">&quot;error, failed to write to cache\n&quot;</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        space.<a class="code" href="classv__array.html#a716766c7045adf91b9bb0d63ede22a51">end</a> = space.<a class="code" href="classv__array.html#a38f65b49e5c2ce93ca4bc4cc18a0e49f">begin</a>; </div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        fsync(file); </div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="io_8h.html#a7bef0905c9ecab6cc17bc3866b07c8d2">buf_write</a>(<a class="code" href="classio__buf.html">io_buf</a> &amp;o, <span class="keywordtype">char</span>* &amp;pointer, <span class="keywordtype">int</span> n);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="io_8h.html#ace13ef7fb455a9bf519806528252ee15">buf_read</a>(<a class="code" href="classio__buf.html">io_buf</a> &amp;i, <span class="keywordtype">char</span>* &amp;pointer, <span class="keywordtype">int</span> n);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classv__array_html_ae563c3b32418f28a3c424c2f88cdf721"><div class="ttname"><a href="classv__array.html#ae563c3b32418f28a3c424c2f88cdf721">v_array::end_array</a></div><div class="ttdeci">T * end_array</div><div class="ttdoc">数组空间尾部</div><div class="ttdef"><b>Definition:</b> stack.h:22</div></div>
+<div class="ttc" id="io_8h_html_a7bef0905c9ecab6cc17bc3866b07c8d2"><div class="ttname"><a href="io_8h.html#a7bef0905c9ecab6cc17bc3866b07c8d2">buf_write</a></div><div class="ttdeci">void buf_write(io_buf &amp;o, char *&amp;pointer, int n)</div><div class="ttdef"><b>Definition:</b> io.cc:37</div></div>
+<div class="ttc" id="classio__buf_html_af32020bb18ceca0dc038900797715ae6"><div class="ttname"><a href="classio__buf.html#af32020bb18ceca0dc038900797715ae6">io_buf::set</a></div><div class="ttdeci">void set(char *p)</div><div class="ttdef"><b>Definition:</b> io.h:26</div></div>
+<div class="ttc" id="classv__array_html"><div class="ttname"><a href="classv__array.html">v_array&lt; char &gt;</a></div></div>
+<div class="ttc" id="classv__array_html_a38f65b49e5c2ce93ca4bc4cc18a0e49f"><div class="ttname"><a href="classv__array.html#a38f65b49e5c2ce93ca4bc4cc18a0e49f">v_array::begin</a></div><div class="ttdeci">T * begin</div><div class="ttdoc">数组数据头</div><div class="ttdef"><b>Definition:</b> stack.h:20</div></div>
+<div class="ttc" id="io_8h_html_ace13ef7fb455a9bf519806528252ee15"><div class="ttname"><a href="io_8h.html#ace13ef7fb455a9bf519806528252ee15">buf_read</a></div><div class="ttdeci">unsigned int buf_read(io_buf &amp;i, char *&amp;pointer, int n)</div><div class="ttdef"><b>Definition:</b> io.cc:10</div></div>
+<div class="ttc" id="stack_8h_html_a327b2f85144c44052102753c3d72b2d1"><div class="ttname"><a href="stack_8h.html#a327b2f85144c44052102753c3d72b2d1">alloc</a></div><div class="ttdeci">void alloc(v_array&lt; T &gt; &amp;v, size_t length)</div><div class="ttdoc">数组申请空间</div><div class="ttdef"><b>Definition:</b> stack.h:86</div></div>
+<div class="ttc" id="classio__buf_html_abda7b4056e753a5458a99249ff01e2a1"><div class="ttname"><a href="classio__buf.html#abda7b4056e753a5458a99249ff01e2a1">io_buf::file</a></div><div class="ttdeci">int file</div><div class="ttdef"><b>Definition:</b> io.h:21</div></div>
+<div class="ttc" id="classio__buf_html"><div class="ttname"><a href="classio__buf.html">io_buf</a></div><div class="ttdef"><b>Definition:</b> io.h:18</div></div>
+<div class="ttc" id="classio__buf_html_aad6fffd4bcf2f840d43f5cb22c036944"><div class="ttname"><a href="classio__buf.html#aad6fffd4bcf2f840d43f5cb22c036944">io_buf::space</a></div><div class="ttdeci">v_array&lt; char &gt; space</div><div class="ttdef"><b>Definition:</b> io.h:20</div></div>
+<div class="ttc" id="classio__buf_html_ae01bc5dd5cd7128faeff147ce34a1f36"><div class="ttname"><a href="classio__buf.html#ae01bc5dd5cd7128faeff147ce34a1f36">io_buf::io_buf</a></div><div class="ttdeci">io_buf()</div><div class="ttdef"><b>Definition:</b> io.h:25</div></div>
+<div class="ttc" id="classio__buf_html_af858c66c5893eb3292bb5a605511f459"><div class="ttname"><a href="classio__buf.html#af858c66c5893eb3292bb5a605511f459">io_buf::currentname</a></div><div class="ttdeci">string currentname</div><div class="ttdef"><b>Definition:</b> io.h:22</div></div>
+<div class="ttc" id="classv__array_html_a716766c7045adf91b9bb0d63ede22a51"><div class="ttname"><a href="classv__array.html#a716766c7045adf91b9bb0d63ede22a51">v_array::end</a></div><div class="ttdeci">T * end</div><div class="ttdoc">数组数据尾</div><div class="ttdef"><b>Definition:</b> stack.h:21</div></div>
+<div class="ttc" id="classio__buf_html_ac61fc00776c65e38be5fc17365badac7"><div class="ttname"><a href="classio__buf.html#ac61fc00776c65e38be5fc17365badac7">io_buf::flush</a></div><div class="ttdeci">void flush()</div><div class="ttdef"><b>Definition:</b> io.h:29</div></div>
+<div class="ttc" id="classio__buf_html_ab58dbda6d1cedabedc2b816c4023151a"><div class="ttname"><a href="classio__buf.html#ab58dbda6d1cedabedc2b816c4023151a">io_buf::finalname</a></div><div class="ttdeci">string finalname</div><div class="ttdef"><b>Definition:</b> io.h:23</div></div>
+<div class="ttc" id="stack_8h_html"><div class="ttname"><a href="stack_8h.html">stack.h</a></div><div class="ttdoc">实现一个支持通用元素的栈，支持push,pop等功能。</div></div>
+<div class="ttc" id="classio__buf_html_aa587461036195ef42d14ba73eb3afffb"><div class="ttname"><a href="classio__buf.html#aa587461036195ef42d14ba73eb3afffb">io_buf::fill</a></div><div class="ttdeci">void fill(int n)</div><div class="ttdef"><b>Definition:</b> io.h:27</div></div>
+<div class="ttc" id="classv__array_html_a68e120dd0092dd5ee177db7e8eccc89e"><div class="ttname"><a href="classv__array.html#a68e120dd0092dd5ee177db7e8eccc89e">v_array::index</a></div><div class="ttdeci">unsigned int index()</div><div class="ttdoc">返回数组中元素个数</div><div class="ttdef"><b>Definition:</b> stack.h:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

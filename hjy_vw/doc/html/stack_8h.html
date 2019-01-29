@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: stack.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">stack.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>实现一个支持通用元素的栈，支持push,pop等功能。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+stack.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stack_8h__incl.png" border="0" usemap="#stack_8h" alt=""/></div>
+<map name="stack_8h" id="stack_8h">
+<area shape="rect"  title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="5,5,69,31"/>
+<area shape="rect"  title=" " alt="" coords="5,79,69,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="stack_8h__dep__incl.png" border="0" usemap="#stack_8hdep" alt=""/></div>
+<map name="stack_8hdep" id="stack_8hdep">
+<area shape="rect"  title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="109,5,172,31"/>
+<area shape="rect"  href="io_8h.html" title=" " alt="" coords="90,79,132,104"/>
+<area shape="rect"  href="parse__example_8h.html" title=" " alt="" coords="128,152,252,177"/>
+<area shape="rect"  href="io_8cc.html" title=" " alt="" coords="5,152,54,177"/>
+<area shape="rect"  href="parse__args_8cc.html" title=" " alt="" coords="39,225,144,251"/>
+<area shape="rect"  href="parse__example_8cc.html" title=" " alt="" coords="168,225,297,251"/>
+</map>
+</div>
+</div>
+<p><a href="stack_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classv__array.html">v_array&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">支持通用元素的模板数组  <a href="classv__array.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:adcd003b44390deaf80e8ba08dd6b802e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:adcd003b44390deaf80e8ba08dd6b802e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="stack_8h.html#adcd003b44390deaf80e8ba08dd6b802e">push</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;v, const T &amp;new_ele)</td></tr>
+<tr class="memdesc:adcd003b44390deaf80e8ba08dd6b802e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将单个元素放到数组尾部  <a href="#adcd003b44390deaf80e8ba08dd6b802e">更多...</a><br /></td></tr>
+<tr class="separator:adcd003b44390deaf80e8ba08dd6b802e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac808d95605e1b76c6b61324c26618fec"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac808d95605e1b76c6b61324c26618fec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="stack_8h.html#ac808d95605e1b76c6b61324c26618fec">push_many</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;v, const T *begin, size_t num)</td></tr>
+<tr class="memdesc:ac808d95605e1b76c6b61324c26618fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">将多个元素放到数组尾部  <a href="#ac808d95605e1b76c6b61324c26618fec">更多...</a><br /></td></tr>
+<tr class="separator:ac808d95605e1b76c6b61324c26618fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327b2f85144c44052102753c3d72b2d1"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a327b2f85144c44052102753c3d72b2d1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="stack_8h.html#a327b2f85144c44052102753c3d72b2d1">alloc</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;v, size_t length)</td></tr>
+<tr class="memdesc:a327b2f85144c44052102753c3d72b2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">数组申请空间  <a href="#a327b2f85144c44052102753c3d72b2d1">更多...</a><br /></td></tr>
+<tr class="separator:a327b2f85144c44052102753c3d72b2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b7eb63e8239c9e866ebd3fc8ef7570"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:af9b7eb63e8239c9e866ebd3fc8ef7570"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="stack_8h.html#af9b7eb63e8239c9e866ebd3fc8ef7570">pop</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &gt; &amp;stack)</td></tr>
+<tr class="memdesc:af9b7eb63e8239c9e866ebd3fc8ef7570"><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出数组最后一个元素  <a href="#af9b7eb63e8239c9e866ebd3fc8ef7570">更多...</a><br /></td></tr>
+<tr class="separator:af9b7eb63e8239c9e866ebd3fc8ef7570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>实现一个支持通用元素的栈，支持push,pop等功能。 </p>
+<dl class="section author"><dt>作者</dt><dd>hjy </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.3 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-01-29 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>John Langford, license BSD </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a327b2f85144c44052102753c3d72b2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327b2f85144c44052102753c3d72b2d1">&#9670;&nbsp;</a></span>alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void alloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数组申请空间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>数组 </td></tr>
+    <tr><td class="paramname">length</td><td>申请的数组空间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>realloc() </dd></dl>
+
+</div>
+</div>
+<a id="af9b7eb63e8239c9e866ebd3fc8ef7570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b7eb63e8239c9e866ebd3fc8ef7570">&#9670;&nbsp;</a></span>pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;T&gt; pop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>弹出数组最后一个元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>v_array&lt;T&gt; 数组元素 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>数组为空的情况 </dd></dl>
+
+</div>
+</div>
+<a id="adcd003b44390deaf80e8ba08dd6b802e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd003b44390deaf80e8ba08dd6b802e">&#9670;&nbsp;</a></span>push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>new_ele</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将单个元素放到数组尾部 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>数组 </td></tr>
+    <tr><td class="paramname">new_ele</td><td>要推的元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>数据空间重新申请 </dd></dl>
+
+</div>
+</div>
+<a id="ac808d95605e1b76c6b61324c26618fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac808d95605e1b76c6b61324c26618fec">&#9670;&nbsp;</a></span>push_many()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void push_many </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将多个元素放到数组尾部 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>数组 </td></tr>
+    <tr><td class="paramname">begin</td><td>多个元素数组 </td></tr>
+    <tr><td class="paramname">num</td><td>推的元素个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="stack_8h.html#adcd003b44390deaf80e8ba08dd6b802e" title="将单个元素放到数组尾部">push()</a> </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>数据空间重新申请和内存拷贝 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
