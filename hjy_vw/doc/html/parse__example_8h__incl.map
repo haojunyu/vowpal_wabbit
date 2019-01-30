@@ -1,12 +1,12 @@
 <map id="parse_example.h" name="parse_example.h">
-<area shape="rect" id="node1" title=" " alt="" coords="158,5,282,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="161,5,284,31"/>
 <area shape="rect" id="node2" href="$stack_8h.html" title="实现一个支持通用元素的栈，支持push,pop等功能。" alt="" coords="5,152,69,177"/>
-<area shape="rect" id="node4" href="$io_8h.html" title=" " alt="" coords="198,79,241,104"/>
-<area shape="rect" id="node9" href="$parse__regressor_8h.html" title=" " alt="" coords="343,79,472,104"/>
+<area shape="rect" id="node4" href="$io_8h.html" title="声明一个io缓冲区，支持buf_read,buf_write功能。" alt="" coords="201,79,244,104"/>
+<area shape="rect" id="node9" href="$parse__regressor_8h.html" title=" " alt="" coords="347,79,476,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,225,69,251"/>
 <area shape="rect" id="node5" title=" " alt="" coords="93,152,165,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="189,152,250,177"/>
-<area shape="rect" id="node7" title=" " alt="" coords="274,152,342,177"/>
-<area shape="rect" id="node8" title=" " alt="" coords="365,152,429,177"/>
-<area shape="rect" id="node10" title=" " alt="" coords="452,152,520,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="190,152,255,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="279,152,347,177"/>
+<area shape="rect" id="node8" title=" " alt="" coords="371,152,434,177"/>
+<area shape="rect" id="node10" title=" " alt="" coords="458,152,526,177"/>
 </map>

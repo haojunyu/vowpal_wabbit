@@ -75,22 +75,24 @@ io.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="io_8cc__incl.png" border="0" usemap="#io_8cc" alt=""/></div>
 <map name="io_8cc" id="io_8cc">
-<area shape="rect"  title=" " alt="" coords="196,5,245,31"/>
-<area shape="rect"  href="io_8h.html" title=" " alt="" coords="199,79,242,104"/>
+<area shape="rect"  title=" " alt="" coords="201,5,250,31"/>
+<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="204,79,247,104"/>
 <area shape="rect"  title=" " alt="" coords="5,152,78,177"/>
-<area shape="rect"  title=" " alt="" coords="102,152,163,177"/>
-<area shape="rect"  title=" " alt="" coords="186,152,254,177"/>
-<area shape="rect"  title=" " alt="" coords="278,152,341,177"/>
-<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="366,152,429,177"/>
-<area shape="rect"  title=" " alt="" coords="366,225,429,251"/>
+<area shape="rect"  title=" " alt="" coords="102,152,167,177"/>
+<area shape="rect"  title=" " alt="" coords="192,152,260,177"/>
+<area shape="rect"  title=" " alt="" coords="283,152,347,177"/>
+<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="371,152,435,177"/>
+<area shape="rect"  title=" " alt="" coords="371,225,435,251"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:ace13ef7fb455a9bf519806528252ee15"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8cc.html#ace13ef7fb455a9bf519806528252ee15">buf_read</a> (<a class="el" href="classio__buf.html">io_buf</a> &amp;i, char *&amp;pointer, int n)</td></tr>
+<tr class="memdesc:ace13ef7fb455a9bf519806528252ee15"><td class="mdescLeft">&#160;</td><td class="mdescRight">向缓冲区申请n字节的可读空间  <a href="#ace13ef7fb455a9bf519806528252ee15">更多...</a><br /></td></tr>
 <tr class="separator:ace13ef7fb455a9bf519806528252ee15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bef0905c9ecab6cc17bc3866b07c8d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8cc.html#a7bef0905c9ecab6cc17bc3866b07c8d2">buf_write</a> (<a class="el" href="classio__buf.html">io_buf</a> &amp;o, char *&amp;pointer, int n)</td></tr>
+<tr class="memdesc:a7bef0905c9ecab6cc17bc3866b07c8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">向缓冲区申请n大小的可写空间  <a href="#a7bef0905c9ecab6cc17bc3866b07c8d2">更多...</a><br /></td></tr>
 <tr class="separator:a7bef0905c9ecab6cc17bc3866b07c8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -126,6 +128,20 @@ io.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>向缓冲区申请n字节的可读空间 </p>
+<p>从缓冲区读数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>缓冲区 </td></tr>
+    <tr><td class="paramname">pointer</td><td>可读空间的首地址（返回值） </td></tr>
+    <tr><td class="paramname">n</td><td>申请可读空间大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>实际可读空间大小 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>memmove() string.h </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>根据缓冲区剩余空间，缓冲区全部空间分为三段情况考虑 </dd></dl>
+
 </div>
 </div>
 <a id="a7bef0905c9ecab6cc17bc3866b07c8d2"></a>
@@ -159,6 +175,20 @@ io.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>向缓冲区申请n大小的可写空间 </p>
+<p>向缓冲区写数据</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>缓冲区 </td></tr>
+    <tr><td class="paramname">pointer</td><td>可写空间首地址（返回值） </td></tr>
+    <tr><td class="paramname">n</td><td>可写空间大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>flush() </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>考虑缓冲区不够n的情况 </dd></dl>
 
 </div>
 </div>

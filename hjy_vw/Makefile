@@ -1,25 +1,25 @@
-ARCH = -msse2 -mfpmath=sse -march=x86-64
-FLAGS = -Wall $(ARCH) -O3 -ffast-math -D_FILE_OFFSET_BITS=64 -Wno-deprecated -I /usr/include/boost-1_34_1 
+BINARIES = vw 
 
-all:	vw
+CXX = g++
+#VWLIBS := -L. -l vw -l allreduce
+#STDLIBS = $(BOOST_LIBRARY) $(LIBS)
+FLAGS =  
 
-vw.o:	vw.cc parse_example.h parse_regressor.h parse_args.h
-	g++ $(FLAGS) -c $< -o $@
+#%.o:	 %.cc  %.h
+#	$(CXX) $(FLAGS) -c $< -o $@
 
-parse_args.o:	parse_regressor.h parse_example.h io.h
+#%.o:	 %.cc
+#	$(CXX) $(FLAGS) -c $< -o $@
+io.o: io.cc io.h stack.h
+	$(CXX) $(FLAGS) -c $< -o $@
 
-parse_example.o:	io.h stack.h parse_example.cc
-
-io.o:	stack.h
-
-%.o:	%.cc %.h
-	g++ $(FLAGS) -c $< -o $@
-
-vw: hash.o io.o parse_regressor.o parse_example.o parse_args.o vw.o 
-	g++ $(FLAGS) -l boost_program_options -l pthread -o vw $+
-
-install:
-	cp vw ~/bin
+vw: io.o 
+#	$(CXX) $(FLAGS) -o $@ $< $(VWLIBS) $(STDLIBS)
+	$(CXX) $(FLAGS) -o $@ $< 
 
 clean:
-	rm -f *.o vw *~
+	rm -f  *.o $(BINARIES) 
+	rm -rf doc/
+
+doc:
+	doxygen Doxyfile
