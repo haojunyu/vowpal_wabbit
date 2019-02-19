@@ -1,3 +1,4 @@
 *.o
 *.aut
+*.sw*
 .DS_Store
