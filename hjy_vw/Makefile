@@ -10,6 +10,12 @@ FLAGS =
 
 #%.o:	 %.cc
 #	$(CXX) $(FLAGS) -c $< -o $@
+parse_regressor.o: parse_regressor.cc parse_regressor.h
+	$(CXX) $(FLAGS) -c $< -o $@
+
+hash.o: hash.cc hash.h
+	$(CXX) $(FLAGS) -c $< -o $@
+
 io.o: io.cc io.h stack.h
 	$(CXX) $(FLAGS) -c $< -o $@
 

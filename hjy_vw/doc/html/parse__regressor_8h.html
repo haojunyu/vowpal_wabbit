@@ -71,14 +71,19 @@ $(function() {
 <div class="title">parse_regressor.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;vector.h&gt;</code><br />
+
+<p>解析回归量函数的声明  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 parse_regressor.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__regressor_8h__incl.png" border="0" usemap="#parse__regressor_8h" alt=""/></div>
 <map name="parse__regressor_8h" id="parse__regressor_8h">
-<area shape="rect"  title=" " alt="" coords="5,5,134,31"/>
-<area shape="rect"  title=" " alt="" coords="36,79,104,104"/>
+<area shape="rect"  title="è§£æåå½éå½æ°çå£°æ" alt="" coords="21,5,150,31"/>
+<area shape="rect"  title=" " alt="" coords="5,79,78,104"/>
+<area shape="rect"  title=" " alt="" coords="102,79,160,104"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -86,11 +91,11 @@ parse_regressor.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__regressor_8h__dep__incl.png" border="0" usemap="#parse__regressor_8hdep" alt=""/></div>
 <map name="parse__regressor_8hdep" id="parse__regressor_8hdep">
-<area shape="rect"  title=" " alt="" coords="95,5,223,31"/>
+<area shape="rect"  title="è§£æåå½éå½æ°çå£°æ" alt="" coords="95,5,223,31"/>
 <area shape="rect"  href="main_8cc.html" title=" " alt="" coords="5,79,73,104"/>
-<area shape="rect"  href="parse__args_8cc.html" title=" " alt="" coords="57,152,162,177"/>
+<area shape="rect"  href="parse__args_8cc.html" title="åæ°è§£æå½æ°å®ç°" alt="" coords="57,152,162,177"/>
 <area shape="rect"  href="parse__example_8h.html" title=" " alt="" coords="146,79,270,104"/>
-<area shape="rect"  href="parse__regressor_8cc.html" title=" " alt="" coords="294,79,429,104"/>
+<area shape="rect"  href="parse__regressor_8cc.html" title="TODO" alt="" coords="294,79,429,104"/>
 <area shape="rect"  href="parse__example_8cc.html" title=" " alt="" coords="186,152,316,177"/>
 </map>
 </div>
@@ -100,6 +105,7 @@ parse_regressor.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregressor.html">regressor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">回归量结构体  <a href="structregressor.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -110,11 +116,18 @@ parse_regressor.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a70bfc1621c07588cb12f81a717a6dd31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__regressor_8h.html#a70bfc1621c07588cb12f81a717a6dd31">parse_regressor</a> (vector&lt; string &gt; &amp;regressors, <a class="el" href="structregressor.html">regressor</a> &amp;r)</td></tr>
+<tr class="memdesc:a70bfc1621c07588cb12f81a717a6dd31"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO  <a href="#a70bfc1621c07588cb12f81a717a6dd31">更多...</a><br /></td></tr>
 <tr class="separator:a70bfc1621c07588cb12f81a717a6dd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1848be49e57a45dc1494d7aa095ca671"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__regressor_8h.html#a1848be49e57a45dc1494d7aa095ca671">dump_regressor</a> (ofstream &amp;o, <a class="el" href="structregressor.html">regressor</a> &amp;r)</td></tr>
 <tr class="separator:a1848be49e57a45dc1494d7aa095ca671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类型定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>解析回归量函数的声明 </p>
+<dl class="section author"><dt>作者</dt><dd>hjy </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.3 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-01-30 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>John Langford, license BSD </dd></dl>
+</div><h2 class="groupheader">类型定义说明</h2>
 <a id="a4d04a2043fa7480d905108e63adb0bab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d04a2043fa7480d905108e63adb0bab">&#9670;&nbsp;</a></span>weight</h2>
 
@@ -183,6 +196,18 @@ parse_regressor.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>TODO </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">regressors</td><td></td></tr>
+    <tr><td class="paramname">r</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+<dl class="section see"><dt>参见</dt><dd></dd></dl>
+<dl class="section note"><dt>注解</dt><dd></dd></dl>
 
 </div>
 </div>

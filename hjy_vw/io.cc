@@ -1,5 +1,5 @@
 /**
- * @file io.c
+ * @file io.cc
  * @brief 实现一个io缓冲区，支持buf_read,buf_write功能。
  *
  * @author hjy

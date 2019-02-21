@@ -70,13 +70,16 @@ $(function() {
 <div class="title">hash.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>声明类型别名和hash函数。  
+<a href="#details">更多...</a></p>
 <div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
 <div class="center"><img src="hash_8h__dep__incl.png" border="0" usemap="#hash_8hdep" alt=""/></div>
 <map name="hash_8hdep" id="hash_8hdep">
-<area shape="rect"  title=" " alt="" coords="70,5,131,31"/>
-<area shape="rect"  href="hash_8cc.html" title=" " alt="" coords="5,79,73,104"/>
+<area shape="rect"  title="å£°æç±»åå«ååhashå½æ°ã" alt="" coords="70,5,131,31"/>
+<area shape="rect"  href="hash_8cc.html" title="å®ç°hashå½æ°ã" alt="" coords="5,79,73,104"/>
 <area shape="rect"  href="parse__example_8cc.html" title=" " alt="" coords="97,79,226,104"/>
 </map>
 </div>
@@ -86,16 +89,25 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:a3fece3757bfd6deee681fb0d1fd41f97"><td class="memItemLeft" align="right" valign="top">typedef unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a></td></tr>
+<tr class="memdesc:a3fece3757bfd6deee681fb0d1fd41f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">声明ub4  <a href="#a3fece3757bfd6deee681fb0d1fd41f97">更多...</a><br /></td></tr>
 <tr class="separator:a3fece3757bfd6deee681fb0d1fd41f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e0e444ca36facaa313c7f26758b6dd0"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8h.html#a5e0e444ca36facaa313c7f26758b6dd0">ub1</a></td></tr>
+<tr class="memdesc:a5e0e444ca36facaa313c7f26758b6dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">声明ub1  <a href="#a5e0e444ca36facaa313c7f26758b6dd0">更多...</a><br /></td></tr>
 <tr class="separator:a5e0e444ca36facaa313c7f26758b6dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a5de8c92ebd556dedb75cdd515843edc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8h.html#a5de8c92ebd556dedb75cdd515843edc3">hash</a> (<a class="el" href="hash_8h.html#a5e0e444ca36facaa313c7f26758b6dd0">ub1</a> *k, <a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a> length, <a class="el" href="hash_8h.html#a3fece3757bfd6deee681fb0d1fd41f97">ub4</a> initval)</td></tr>
+<tr class="memdesc:a5de8c92ebd556dedb75cdd515843edc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串hash成数值  <a href="#a5de8c92ebd556dedb75cdd515843edc3">更多...</a><br /></td></tr>
 <tr class="separator:a5de8c92ebd556dedb75cdd515843edc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类型定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>声明类型别名和hash函数。 </p>
+<dl class="section author"><dt>作者</dt><dd>hjy </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.3 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-02-14 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>John Langford, license BSD </dd></dl>
+</div><h2 class="groupheader">类型定义说明</h2>
 <a id="a5e0e444ca36facaa313c7f26758b6dd0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e0e444ca36facaa313c7f26758b6dd0">&#9670;&nbsp;</a></span>ub1</h2>
 
@@ -107,6 +119,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>声明ub1 </p>
 
 </div>
 </div>
@@ -121,6 +135,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>声明ub4 </p>
 
 </div>
 </div>
@@ -156,6 +172,20 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>将字符串hash成数值 </p>
+<p>将字符串hash成数值</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>可变长的秘钥（文本） </td></tr>
+    <tr><td class="paramname">length</td><td>秘钥长度，单位为字节 </td></tr>
+    <tr><td class="paramname">initval</td><td>上一次散列值（32位值） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>散列值（32bit） </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a href="http://ourworld.compuserve.com/homepages/bob_jenkins/evahash.htm">http://ourworld.compuserve.com/homepages/bob_jenkins/evahash.htm</a> </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>秘钥的每位都会影响最终的散列值，hash表的长度最好是2的指数，对于 不足32bit的使用位掩码，即<code>h = (h &amp; <a class="el" href="hash_8cc.html#aacd6ed104463685849b2550389d05ff3" title="宏定义：获得n位的位掩码">hashmask(10)</a>);</code> </dd></dl>
 
 </div>
 </div>

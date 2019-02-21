@@ -69,8 +69,11 @@ $(function() {
 <div class="title">parse_args.cc 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream.h&gt;</code><br />
-<code>#include &lt;fstream.h&gt;</code><br />
+
+<p>参数解析函数实现  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;boost/program_options.hpp&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;fcntl.h&quot;</code><br />
@@ -82,35 +85,41 @@ parse_args.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__args_8cc__incl.png" border="0" usemap="#parse__args_8cc" alt=""/></div>
 <map name="parse__args_8cc" id="parse__args_8cc">
-<area shape="rect"  title=" " alt="" coords="441,5,546,31"/>
-<area shape="rect"  title=" " alt="" coords="5,79,89,104"/>
-<area shape="rect"  title=" " alt="" coords="113,79,190,104"/>
-<area shape="rect"  title=" " alt="" coords="214,79,398,104"/>
-<area shape="rect"  title=" " alt="" coords="421,79,484,104"/>
-<area shape="rect"  title=" " alt="" coords="508,79,565,104"/>
-<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="580,152,623,177"/>
-<area shape="rect"  href="parse__regressor_8h.html" title=" " alt="" coords="736,152,865,177"/>
-<area shape="rect"  href="parse__example_8h.html" title=" " alt="" coords="639,79,762,104"/>
-<area shape="rect"  title=" " alt="" coords="488,225,561,251"/>
-<area shape="rect"  title=" " alt="" coords="585,225,650,251"/>
-<area shape="rect"  title=" " alt="" coords="309,225,377,251"/>
-<area shape="rect"  title=" " alt="" coords="401,225,464,251"/>
-<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="674,225,738,251"/>
-<area shape="rect"  title=" " alt="" coords="674,299,738,324"/>
-<area shape="rect"  title=" " alt="" coords="766,225,834,251"/>
+<area shape="rect"  title="åæ°è§£æå½æ°å®ç°" alt="" coords="433,5,538,31"/>
+<area shape="rect"  title=" " alt="" coords="364,225,436,251"/>
+<area shape="rect"  title=" " alt="" coords="488,79,554,104"/>
+<area shape="rect"  title=" " alt="" coords="579,79,762,104"/>
+<area shape="rect"  title=" " alt="" coords="786,79,848,104"/>
+<area shape="rect"  title=" " alt="" coords="873,79,930,104"/>
+<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="194,152,237,177"/>
+<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½éå½æ°çå£°æ" alt="" coords="437,152,566,177"/>
+<area shape="rect"  href="parse__example_8h.html" title=" " alt="" coords="239,79,363,104"/>
+<area shape="rect"  title=" " alt="" coords="93,225,158,251"/>
+<area shape="rect"  title=" " alt="" coords="182,225,250,251"/>
+<area shape="rect"  title=" " alt="" coords="5,225,69,251"/>
+<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="273,225,337,251"/>
+<area shape="rect"  title=" " alt="" coords="273,299,337,324"/>
+<area shape="rect"  title=" " alt="" coords="472,225,530,251"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a1038375ed2b65fe51999463f2df94f43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__args_8cc.html#a1038375ed2b65fe51999463f2df94f43">make_write_cache</a> (size_t numbits, bool &amp;create_cache, string &amp;newname, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache)</td></tr>
+<tr class="memdesc:a1038375ed2b65fe51999463f2df94f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">向缓冲区申请n字节的可读空间  <a href="#a1038375ed2b65fe51999463f2df94f43">更多...</a><br /></td></tr>
 <tr class="separator:a1038375ed2b65fe51999463f2df94f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d85f8eb7cb61950737e6ca67863d69e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__args_8cc.html#a7d85f8eb7cb61950737e6ca67863d69e">parse_cache</a> (po::variables_map &amp;vm, size_t numbits, string source, <a class="el" href="structexample__file.html">example_file</a> &amp;e)</td></tr>
 <tr class="separator:a7d85f8eb7cb61950737e6ca67863d69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9671e24bba9de9793d2e8b872e573b7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__args_8cc.html#a9671e24bba9de9793d2e8b872e573b7d">parse_args</a> (int argc, char *argv[], float &amp;eta, float &amp;eta_decay_rate, float &amp;initial_t, float &amp;power_t, ofstream &amp;predictions, ofstream &amp;raw_predictions, bool &amp;train, int &amp;numthreads, int &amp;passes, <a class="el" href="structregressor.html">regressor</a> &amp;r, <a class="el" href="structexample__file.html">example_file</a> &amp;e, ofstream &amp;final_regressor)</td></tr>
 <tr class="separator:a9671e24bba9de9793d2e8b872e573b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>参数解析函数实现 </p>
+<dl class="section author"><dt>作者</dt><dd>hjy </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.3 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-01-30 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>John Langford, license BSD </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="a1038375ed2b65fe51999463f2df94f43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1038375ed2b65fe51999463f2df94f43">&#9670;&nbsp;</a></span>make_write_cache()</h2>
 
@@ -148,6 +157,19 @@ parse_args.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>向缓冲区申请n字节的可读空间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>缓冲区 </td></tr>
+    <tr><td class="paramname">pointer</td><td>可读空间的首地址（返回值） </td></tr>
+    <tr><td class="paramname">n</td><td>申请可读空间大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>实际可读空间大小 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>memmove() string.h </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>根据缓冲区剩余空间，缓冲区全部空间分为三段情况考虑 </dd></dl>
 
 </div>
 </div>

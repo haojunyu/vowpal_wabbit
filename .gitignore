@@ -2,3 +2,4 @@
 *.aut
 *.sw*
 .DS_Store
+.vscode
