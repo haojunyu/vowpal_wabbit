@@ -93,7 +93,7 @@ hash.cc 的引用(Include)关系图:</div>
 <tr class="memdesc:aacd6ed104463685849b2550389d05ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">宏定义：获得n位的位掩码  <a href="#aacd6ed104463685849b2550389d05ff3">更多...</a><br /></td></tr>
 <tr class="separator:aacd6ed104463685849b2550389d05ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd9fa1747724ec6142812721997394c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_8cc.html#afd9fa1747724ec6142812721997394c3">mix</a>(a,  b,  c)</td></tr>
-<tr class="memdesc:afd9fa1747724ec6142812721997394c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO  <a href="#afd9fa1747724ec6142812721997394c3">更多...</a><br /></td></tr>
+<tr class="memdesc:afd9fa1747724ec6142812721997394c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">混合3个32位数值  <a href="#afd9fa1747724ec6142812721997394c3">更多...</a><br /></td></tr>
 <tr class="separator:afd9fa1747724ec6142812721997394c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -181,15 +181,16 @@ hash.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 <b>值:</b><div class="fragment"><div class="line">{ \</div><div class="line">  a -= b; a -= c; a ^= (c&gt;&gt;13); \</div><div class="line">  b -= c; b -= a; b ^= (a&lt;&lt;8); \</div><div class="line">  c -= a; c -= b; c ^= (b&gt;&gt;13); \</div><div class="line">  a -= b; a -= c; a ^= (c&gt;&gt;12);  \</div><div class="line">  b -= c; b -= a; b ^= (a&lt;&lt;16); \</div><div class="line">  c -= a; c -= b; c ^= (b&gt;&gt;5); \</div><div class="line">  a -= b; a -= c; a ^= (c&gt;&gt;3);  \</div><div class="line">  b -= c; b -= a; b ^= (a&lt;&lt;10); \</div><div class="line">  c -= a; c -= b; c ^= (b&gt;&gt;15); \</div><div class="line">}</div></div><!-- fragment -->
-<p>TODO </p>
+<p>混合3个32位数值 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a/b/c</td><td>TODO </td></tr>
+    <tr><td class="paramname">a/b/c</td><td>32位整数 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>参见</dt><dd><a href="http://burtleburtle.net/bob/hash/doobs.html">http://burtleburtle.net/bob/hash/doobs.html</a> </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>定义宏函数mix </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">待办事项:</a></b></dt><dd>搞清how和why </dd></dl>
 
 </div>
 </div>

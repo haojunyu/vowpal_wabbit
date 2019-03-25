@@ -27,11 +27,12 @@ mix() takes 36 machine instructions, but only 18 cycles on a superscalar
   hashes to choose from.  I only tested about a billion of those.
 */
 /**
- * @brief TODO
+ * @brief 混合3个32位数值
  * 
- * @param a/b/c TODO
+ * @param a/b/c 32位整数
  * @see http://burtleburtle.net/bob/hash/doobs.html
  * @note 定义宏函数mix
+ * @todo 搞清how和why
  */
 #define mix(a,b,c) \
 { \
