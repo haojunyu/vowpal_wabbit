@@ -117,34 +117,46 @@ parse_example.cc 的引用(Include)关系图:</div>
 <tr class="memdesc:ab7fc146aa0a3985223d538e54a72d0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串散列成长整型  <a href="#ab7fc146aa0a3985223d538e54a72d0ec">更多...</a><br /></td></tr>
 <tr class="separator:ab7fc146aa0a3985223d538e54a72d0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a386b10efd0edd20581e2fa67f2faf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#ad8a386b10efd0edd20581e2fa67f2faf">add_unique_index</a> (bool *in_already, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float v, size_t hashvalue)</td></tr>
-<tr class="memdesc:ad8a386b10efd0edd20581e2fa67f2faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">add feature with unique index in features  <a href="#ad8a386b10efd0edd20581e2fa67f2faf">更多...</a><br /></td></tr>
+<tr class="memdesc:ad8a386b10efd0edd20581e2fa67f2faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">将唯一的索引和权重添加成为特征，冲突的索引则丢弃  <a href="#ad8a386b10efd0edd20581e2fa67f2faf">更多...</a><br /></td></tr>
 <tr class="separator:ad8a386b10efd0edd20581e2fa67f2faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa85701e5cf641f435bff493189e6b4b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#aa85701e5cf641f435bff493189e6b4b0">new_quadratic</a> (bool *in_already, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;pair_features, const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;first_part, const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;second_part, size_t mask)</td></tr>
-<tr class="memdesc:aa85701e5cf641f435bff493189e6b4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">???  <a href="#aa85701e5cf641f435bff493189e6b4b0">更多...</a><br /></td></tr>
+<tr class="memdesc:aa85701e5cf641f435bff493189e6b4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">???用来生成交叉特征的  <a href="#aa85701e5cf641f435bff493189e6b4b0">更多...</a><br /></td></tr>
 <tr class="separator:aa85701e5cf641f435bff493189e6b4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7475d74a1d877852055a2a68ccf395e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#ad7475d74a1d877852055a2a68ccf395e">run_len_decode</a> (char *p, size_t &amp;i)</td></tr>
+<tr class="memdesc:ad7475d74a1d877852055a2a68ccf395e"><td class="mdescLeft">&#160;</td><td class="mdescRight">从字符串中解码整数  <a href="#ad7475d74a1d877852055a2a68ccf395e">更多...</a><br /></td></tr>
 <tr class="separator:ad7475d74a1d877852055a2a68ccf395e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d4bef5aa15850a5f127174bfb06dd68"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a2d4bef5aa15850a5f127174bfb06dd68">read_cached_features</a> (float &amp;label, float &amp;<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache, <a class="el" href="classv__array.html">v_array</a>&lt; char &gt; &amp;tag, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; *atomics, <a class="el" href="classv__array.html">v_array</a>&lt; size_t &gt; &amp;indicies)</td></tr>
+<tr class="memdesc:a2d4bef5aa15850a5f127174bfb06dd68"><td class="mdescLeft">&#160;</td><td class="mdescRight">从cache文件中读取一条样本特征  <a href="#a2d4bef5aa15850a5f127174bfb06dd68">更多...</a><br /></td></tr>
 <tr class="separator:a2d4bef5aa15850a5f127174bfb06dd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d05954c81fac92a95e3101b7b24ec71"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a7d05954c81fac92a95e3101b7b24ec71">run_len_encode</a> (char *p, size_t i)</td></tr>
+<tr class="memdesc:a7d05954c81fac92a95e3101b7b24ec71"><td class="mdescLeft">&#160;</td><td class="mdescRight">对整数进行编码  <a href="#a7d05954c81fac92a95e3101b7b24ec71">更多...</a><br /></td></tr>
 <tr class="separator:a7d05954c81fac92a95e3101b7b24ec71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad5a34a57989d3414f7106a7e647e0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a1ad5a34a57989d3414f7106a7e647e0e">order_features</a> (const void *first, const void *second)</td></tr>
+<tr class="memdesc:a1ad5a34a57989d3414f7106a7e647e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">按feature中weight_index排序的比较函数  <a href="#a1ad5a34a57989d3414f7106a7e647e0e">更多...</a><br /></td></tr>
 <tr class="separator:a1ad5a34a57989d3414f7106a7e647e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099bb632a9d982b1e9cb86fee713df7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a099bb632a9d982b1e9cb86fee713df7a">cache_features</a> (float label, float <a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache, <a class="el" href="classv__array.html">v_array</a>&lt; char &gt; &amp;tag, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; *atomics, <a class="el" href="classv__array.html">v_array</a>&lt; size_t &gt; &amp;indicies)</td></tr>
+<tr class="memdesc:a099bb632a9d982b1e9cb86fee713df7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">缓存一条样本特征进cache文件  <a href="#a099bb632a9d982b1e9cb86fee713df7a">更多...</a><br /></td></tr>
 <tr class="separator:a099bb632a9d982b1e9cb86fee713df7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bd1763adea811362f2b0271d8b00e7f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a9bd1763adea811362f2b0271d8b00e7f">float_of_substring</a> (<a class="el" href="structsubstring.html">substring</a> s)</td></tr>
+<tr class="memdesc:a9bd1763adea811362f2b0271d8b00e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符子串结构体转换成float类型  <a href="#a9bd1763adea811362f2b0271d8b00e7f">更多...</a><br /></td></tr>
 <tr class="separator:a9bd1763adea811362f2b0271d8b00e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a745ab1a8e87b9168ecfdf5abcca2c398"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a745ab1a8e87b9168ecfdf5abcca2c398">feature_value</a> (<a class="el" href="structsubstring.html">substring</a> &amp;s, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt; &amp;name, float &amp;v)</td></tr>
+<tr class="memdesc:a745ab1a8e87b9168ecfdf5abcca2c398"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串s(name:value)中name和v提取出来  <a href="#a745ab1a8e87b9168ecfdf5abcca2c398">更多...</a><br /></td></tr>
 <tr class="separator:a745ab1a8e87b9168ecfdf5abcca2c398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60a80e19799ecb00310e9cbdf1082e5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a60a80e19799ecb00310e9cbdf1082e5c">read_features</a> (<a class="el" href="structthread__data.html">thread_data</a> &amp;stuff, FILE *data, float &amp;label, float &amp;<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>, <a class="el" href="classv__array.html">v_array</a>&lt; char &gt; &amp;tag, size_t mask)</td></tr>
+<tr class="memdesc:a60a80e19799ecb00310e9cbdf1082e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件data中解析一行样本特征置于label,weight,tag,stuff中  <a href="#a60a80e19799ecb00310e9cbdf1082e5c">更多...</a><br /></td></tr>
 <tr class="separator:a60a80e19799ecb00310e9cbdf1082e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25a0f3acb048784e599b740b94a15b7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a25a0f3acb048784e599b740b94a15b7c">parse_example</a> (<a class="el" href="structthread__data.html">thread_data</a> &amp;stuff, <a class="el" href="structexample__file.html">example_file</a> &amp;example_source, <a class="el" href="structregressor.html">regressor</a> &amp;reg, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float &amp;label, float &amp;<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>, <a class="el" href="classv__array.html">v_array</a>&lt; char &gt; &amp;tag)</td></tr>
+<tr class="memdesc:a25a0f3acb048784e599b740b94a15b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据样本文件结构体解析样本  <a href="#a25a0f3acb048784e599b740b94a15b7c">更多...</a><br /></td></tr>
 <tr class="separator:a25a0f3acb048784e599b740b94a15b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8138bf863baa80aab52f8e8c91c48ad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a8138bf863baa80aab52f8e8c91c48ad2">inconsistent_cache</a> (size_t numbits, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache)</td></tr>
+<tr class="memdesc:a8138bf863baa80aab52f8e8c91c48ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测缓存文件是否一致  <a href="#a8138bf863baa80aab52f8e8c91c48ad2">更多...</a><br /></td></tr>
 <tr class="separator:a8138bf863baa80aab52f8e8c91c48ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b2a0115a9c72b96a3d4f4948f30f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#ab8b2a0115a9c72b96a3d4f4948f30f36">reset</a> (size_t numbits, <a class="el" href="structexample__file.html">example_file</a> &amp;source)</td></tr>
+<tr class="memdesc:ab8b2a0115a9c72b96a3d4f4948f30f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置样本文件结构体状态  <a href="#ab8b2a0115a9c72b96a3d4f4948f30f36">更多...</a><br /></td></tr>
 <tr class="separator:ab8b2a0115a9c72b96a3d4f4948f30f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a902e803e85f13b417e9d6453561f1638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a902e803e85f13b417e9d6453561f1638">finalize_source</a> (<a class="el" href="structexample__file.html">example_file</a> &amp;source)</td></tr>
+<tr class="memdesc:a902e803e85f13b417e9d6453561f1638"><td class="mdescLeft">&#160;</td><td class="mdescRight">清理程序空间  <a href="#a902e803e85f13b417e9d6453561f1638">更多...</a><br /></td></tr>
 <tr class="separator:a902e803e85f13b417e9d6453561f1638"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -153,12 +165,15 @@ parse_example.cc 的引用(Include)关系图:</div>
 <tr class="memdesc:a76e413c96f229eab0f46f7d79399a8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">声明互斥变量input_mutex  <a href="#a76e413c96f229eab0f46f7d79399a8ef">更多...</a><br /></td></tr>
 <tr class="separator:a76e413c96f229eab0f46f7d79399a8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae18088c73fbefe2513c233c12a5c9b0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#aae18088c73fbefe2513c233c12a5c9b0">neg_1</a> = 1</td></tr>
+<tr class="memdesc:aae18088c73fbefe2513c233c12a5c9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示特征权重为-1  <a href="#aae18088c73fbefe2513c233c12a5c9b0">更多...</a><br /></td></tr>
 <tr class="separator:aae18088c73fbefe2513c233c12a5c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3caf5ed81bbb9596ea431fa30a030f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a5a3caf5ed81bbb9596ea431fa30a030f">general</a> = 2</td></tr>
+<tr class="memdesc:a5a3caf5ed81bbb9596ea431fa30a030f"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示特征权重不为1和-1之外的值  <a href="#a5a3caf5ed81bbb9596ea431fa30a030f">更多...</a><br /></td></tr>
 <tr class="separator:a5a3caf5ed81bbb9596ea431fa30a030f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9127df2a4e57929543f3b955e8fa6014"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a9127df2a4e57929543f3b955e8fa6014">cache_lock</a></td></tr>
 <tr class="separator:a9127df2a4e57929543f3b955e8fa6014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a521dfc126be97a5d7967923c995260f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a521dfc126be97a5d7967923c995260f3">int_size</a> = 5</td></tr>
+<tr class="memdesc:a521dfc126be97a5d7967923c995260f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">用5个字符来给int编码  <a href="#a521dfc126be97a5d7967923c995260f3">更多...</a><br /></td></tr>
 <tr class="separator:a521dfc126be97a5d7967923c995260f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a05a8447a0b4a97849e16f6ed28a01"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a69a05a8447a0b4a97849e16f6ed28a01">char_size</a> = 2</td></tr>
 <tr class="separator:a69a05a8447a0b4a97849e16f6ed28a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,7 +231,7 @@ parse_example.cc 的引用(Include)关系图:</div>
 </table>
 </div><div class="memdoc">
 
-<p>add feature with unique index in features </p>
+<p>将唯一的索引和权重添加成为特征，冲突的索引则丢弃 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">in_already</td><td>标记散列表是否已经被使用 </td></tr>
@@ -281,6 +296,23 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>缓存一条样本特征进cache文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>样本标签 </td></tr>
+    <tr><td class="paramname">weight</td><td>样本权重 </td></tr>
+    <tr><td class="paramname">cache</td><td>由文件*.cache形成的缓冲区 </td></tr>
+    <tr><td class="paramname">tag</td><td></td></tr>
+    <tr><td class="paramname">atomics</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">indicies</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="parse__example_8cc.html#a2d4bef5aa15850a5f127174bfb06dd68" title="从cache文件中读取一条样本特征">read_cached_features()</a> </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>样本=label,weight,num_indicies,tag_size,tag,[(index,storage,[(weight_index,x)...])...] </dd></dl>
+<p>&lt; ???变量含义 </p>
+
 </div>
 </div>
 <a id="a745ab1a8e87b9168ecfdf5abcca2c398"></a>
@@ -315,6 +347,17 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>将字符串s(name:value)中name和v提取出来 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>字符子串结构体 </td></tr>
+    <tr><td class="paramname">name</td><td>存放name和value </td></tr>
+    <tr><td class="paramname">v</td><td>返回的value值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空 </dd></dl>
+
 </div>
 </div>
 <a id="a902e803e85f13b417e9d6453561f1638"></a>
@@ -332,6 +375,16 @@ parse_example.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>清理程序空间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>样本文件结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>程序结束后用来清理空间 </dd></dl>
 
 </div>
 </div>
@@ -358,6 +411,16 @@ parse_example.cc 的引用(Include)关系图:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>将字符子串结构体转换成float类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>字符子串结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>float类型数值 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>atof() </dd></dl>
 
 </div>
 </div>
@@ -434,6 +497,16 @@ parse_example.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>检测缓存文件是否一致 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numbits</td><td>??? </td></tr>
+    <tr><td class="paramname">cache</td><td>输入输出缓存 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>缓冲区是否一致 </dd></dl>
 
 </div>
 </div>
@@ -521,18 +594,19 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
-<p>??? </p>
+<p>???用来生成交叉特征的 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">in_already</td><td>标记散列表是否已经被使用 </td></tr>
-    <tr><td class="paramname">features</td><td>所有特征数组 </td></tr>
-    <tr><td class="paramname">v</td><td>要添加的特征权重 </td></tr>
-    <tr><td class="paramname">hashvalue</td><td>要添加的特征所对应的散列值 </td></tr>
+    <tr><td class="paramname">pair_features</td><td>所有特征数组 </td></tr>
+    <tr><td class="paramname">first_part</td><td>交叉特征数组1 </td></tr>
+    <tr><td class="paramname">second_part</td><td>交叉特征数组2 </td></tr>
+    <tr><td class="paramname">mask</td><td>散列值掩码 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>void </dd></dl>
-<dl class="section note"><dt>注解</dt><dd>内联函数，遇到冲突则丢弃特征 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>遍历，两两交叉，但是16381和(halfhash+index)&amp;mask </dd></dl>
 
 </div>
 </div>
@@ -561,6 +635,18 @@ parse_example.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>按feature中weight_index排序的比较函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>第一个特征 </td></tr>
+    <tr><td class="paramname">second</td><td>第二个特征 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>特征散列索引的大小 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>qsort() </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>结合qsort使用 </dd></dl>
 
 </div>
 </div>
@@ -666,6 +752,21 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>根据样本文件结构体解析样本 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stuff</td><td>特征存放结构 </td></tr>
+    <tr><td class="paramname">example_source</td><td></td></tr>
+    <tr><td class="paramname">reg</td><td></td></tr>
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">label</td><td>样本标签 </td></tr>
+    <tr><td class="paramname">weight</td><td>样本权重 </td></tr>
+    <tr><td class="paramname">tag</td><td>样本标识 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否解析成功 </dd></dl>
+
 </div>
 </div>
 <a id="a2d4bef5aa15850a5f127174bfb06dd68"></a>
@@ -717,6 +818,22 @@ parse_example.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>从cache文件中读取一条样本特征 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>样本标签 </td></tr>
+    <tr><td class="paramname">weight</td><td>样本权重 </td></tr>
+    <tr><td class="paramname">cache</td><td>由文件*.cache形成的缓冲区 </td></tr>
+    <tr><td class="paramname">tag</td><td></td></tr>
+    <tr><td class="paramname">atomics</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">indicies</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 读取缓冲区中字节数 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="parse__example_8cc.html#a099bb632a9d982b1e9cb86fee713df7a" title="缓存一条样本特征进cache文件">cache_features()</a> </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>样本=label,weight,num_indicies,tag_size,tag,[(index,storage,[(weight_index,x)...])...] </dd></dl>
 
 </div>
 </div>
@@ -770,6 +887,22 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>从文件data中解析一行样本特征置于label,weight,tag,stuff中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stuff</td><td>特征存放结构 </td></tr>
+    <tr><td class="paramname">data</td><td>样本文件句柄 </td></tr>
+    <tr><td class="paramname">label</td><td>样本标签 </td></tr>
+    <tr><td class="paramname">weight</td><td>样本权重 </td></tr>
+    <tr><td class="paramname">tag</td><td>样本标识 </td></tr>
+    <tr><td class="paramname">mask</td><td>特征名散列掩码 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>一行样本的字符数 </dd></dl>
+<p>&lt; FLT_MAX 最大值浮点数</p>
+<p>&lt; 样本标识 </p>
+
 </div>
 </div>
 <a id="ab8b2a0115a9c72b96a3d4f4948f30f36"></a>
@@ -797,6 +930,19 @@ parse_example.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>重置样本文件结构体状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numbits</td><td>??? </td></tr>
+    <tr><td class="paramname">source</td><td>样本文件结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>初始和生成缓存文件后会执行 </dd></dl>
+<p>&lt; 置文件读写位置为0</p>
+<p>&lt; 初始申请2^16Byte空间 </p>
 
 </div>
 </div>
@@ -826,6 +972,18 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>从字符串中解码整数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>待解码的字符串 </td></tr>
+    <tr><td class="paramname">i</td><td>返回的数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>未处理的新字符串 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="parse__example_8cc.html#a7d05954c81fac92a95e3101b7b24ec71" title="对整数进行编码">run_len_encode()</a> </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>a,b,c表示7位二进制，1a1b0c -&gt; cba </dd></dl>
+
 </div>
 </div>
 <a id="a7d05954c81fac92a95e3101b7b24ec71"></a>
@@ -853,6 +1011,18 @@ parse_example.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>对整数进行编码 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>字符串 </td></tr>
+    <tr><td class="paramname">i</td><td>要编码的数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>写入了编码的字符串 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="parse__example_8cc.html#ad7475d74a1d877852055a2a68ccf395e" title="从字符串中解码整数">run_len_decode()</a> </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>a,b,c表示7位二进制，cba -&gt; 1a1b0c </dd></dl>
 
 </div>
 </div>
@@ -937,6 +1107,8 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>表示特征权重不为1和-1之外的值 </p>
+
 </div>
 </div>
 <a id="a76e413c96f229eab0f46f7d79399a8ef"></a>
@@ -967,6 +1139,8 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>用5个字符来给int编码 </p>
+
 </div>
 </div>
 <a id="aae18088c73fbefe2513c233c12a5c9b0"></a>
@@ -980,6 +1154,8 @@ parse_example.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>表示特征权重为-1 </p>
 
 </div>
 </div>
