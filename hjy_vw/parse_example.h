@@ -1,6 +1,6 @@
 /**
  * @file parse_example.h
- * @brief 的声明 
+ * @brief 解析样本文件的声明 
  *
  * @author hjy
  * @version 2.3

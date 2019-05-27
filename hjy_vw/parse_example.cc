@@ -1,6 +1,6 @@
 /**
  * @file parse_example.cc
- * @brief 的实现 
+ * @brief 解析样本文件的实现 
  *
  * @author hjy 
  * @version 2.3 
