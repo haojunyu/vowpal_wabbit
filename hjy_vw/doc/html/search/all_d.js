@@ -13,6 +13,9 @@ var searchData=
   ['parse_5fregressor_2ecc',['parse_regressor.cc',['../parse__regressor_8cc.html',1,'']]],
   ['parse_5fregressor_2eh',['parse_regressor.h',['../parse__regressor_8h.html',1,'']]],
   ['pop',['pop',['../stack_8h.html#af9b7eb63e8239c9e866ebd3fc8ef7570',1,'stack.h']]],
+  ['power_5ft',['power_t',['../vw_8cc.html#a2bc1f24932ad387e5dfcda0fda9ee610',1,'vw.cc']]],
+  ['predict',['predict',['../vw_8cc.html#a0e281b225941742dfa6b8a94dbc05d68',1,'vw.cc']]],
+  ['predictions',['predictions',['../vw_8cc.html#aa64d868e7e67318f584318450fcfbbfa',1,'vw.cc']]],
   ['push',['push',['../stack_8h.html#adcd003b44390deaf80e8ba08dd6b802e',1,'stack.h']]],
   ['push_5fmany',['push_many',['../stack_8h.html#ac808d95605e1b76c6b61324c26618fec',1,'stack.h']]]
 ];

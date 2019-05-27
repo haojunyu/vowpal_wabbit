@@ -70,15 +70,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>声明参数解析函数  
+<p>参数解析的声明  
 <a href="#details">更多...</a></p>
 <div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__args_8h__dep__incl.png" border="0" usemap="#parse__args_8hdep" alt=""/></div>
 <map name="parse__args_8hdep" id="parse__args_8hdep">
-<area shape="rect"  title="å£°æåæ°è§£æå½æ°" alt="" coords="5,5,104,31"/>
-<area shape="rect"  href="main_8cc.html" title=" " alt="" coords="21,79,89,104"/>
+<area shape="rect"  title="åæ°è§£æçå£°æ" alt="" coords="5,5,104,31"/>
+<area shape="rect"  href="vw_8cc.html" title=" " alt="" coords="28,79,82,104"/>
 </map>
 </div>
 </div>
@@ -86,11 +86,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a9671e24bba9de9793d2e8b872e573b7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__args_8h.html#a9671e24bba9de9793d2e8b872e573b7d">parse_args</a> (int argc, char *argv[], float &amp;eta, float &amp;eta_decay_rate, float &amp;initial_t, float &amp;power_t, ofstream &amp;predictions, ofstream &amp;raw_predictions, bool &amp;train, int &amp;numthreads, int &amp;passes, <a class="el" href="structregressor.html">regressor</a> &amp;r, <a class="el" href="structexample__file.html">example_file</a> &amp;e, ofstream &amp;final_regressor)</td></tr>
+<tr class="memitem:a9671e24bba9de9793d2e8b872e573b7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__args_8h.html#a9671e24bba9de9793d2e8b872e573b7d">parse_args</a> (int argc, char *argv[], float &amp;<a class="el" href="vw_8cc.html#a618685c3147cd3392c03da56912eaa0c">eta</a>, float &amp;eta_decay_rate, float &amp;initial_t, float &amp;<a class="el" href="vw_8cc.html#a2bc1f24932ad387e5dfcda0fda9ee610">power_t</a>, ofstream &amp;<a class="el" href="vw_8cc.html#aa64d868e7e67318f584318450fcfbbfa">predictions</a>, ofstream &amp;<a class="el" href="vw_8cc.html#af732817f8cdd699cebf024424d8a6891">raw_predictions</a>, bool &amp;<a class="el" href="vw_8cc.html#ae02c6d8a1513bda9e0f65e2d854f06c2">train</a>, int &amp;numthreads, int &amp;passes, <a class="el" href="structregressor.html">regressor</a> &amp;r, <a class="el" href="structexample__file.html">example_file</a> &amp;e, ofstream &amp;<a class="el" href="vw_8cc.html#a37e907d4eb67b0b9a11b6a8a7e5e4d6e">final_regressor</a>)</td></tr>
+<tr class="memdesc:a9671e24bba9de9793d2e8b872e573b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析命令行参数  <a href="#a9671e24bba9de9793d2e8b872e573b7d">更多...</a><br /></td></tr>
 <tr class="separator:a9671e24bba9de9793d2e8b872e573b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>声明参数解析函数 </p>
+<div class="textblock"><p>参数解析的声明 </p>
 <dl class="section author"><dt>作者</dt><dd>hjy </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>2.3 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2019-02-19 </dd></dl>
@@ -193,6 +194,50 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>解析命令行参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>参数个数 </td></tr>
+    <tr><td class="paramname">argv</td><td>参数数组 </td></tr>
+    <tr><td class="paramname">eta</td><td>初始学习率 </td></tr>
+    <tr><td class="paramname">eta_decay_rate</td><td>学习率衰减因子 </td></tr>
+    <tr><td class="paramname">initial_t</td><td>t初始值 </td></tr>
+    <tr><td class="paramname">power_t</td><td>t power值 </td></tr>
+    <tr><td class="paramname">predictions</td><td>预测值存放文件 </td></tr>
+    <tr><td class="paramname">raw_predictions</td><td>原始概率值存放文件 </td></tr>
+    <tr><td class="paramname">train</td><td>是否训练 </td></tr>
+    <tr><td class="paramname">numthreads</td><td>训练线程数 </td></tr>
+    <tr><td class="paramname">passes</td><td>训练批次 </td></tr>
+    <tr><td class="paramname">r</td><td>回归模型参数 </td></tr>
+    <tr><td class="paramname">e</td><td>样本文件结构体 </td></tr>
+    <tr><td class="paramname">final_regressor</td><td>最终模型参数存放文件 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">待办事项:</a></b></dt><dd>SEG算法是嘛 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>参数个数 </td></tr>
+    <tr><td class="paramname">argv</td><td>参数数组 </td></tr>
+    <tr><td class="paramname">eta</td><td>初始学习率 </td></tr>
+    <tr><td class="paramname">eta_decay_rate</td><td>学习率衰减因子 </td></tr>
+    <tr><td class="paramname">initial_t</td><td>t初始值 </td></tr>
+    <tr><td class="paramname">power_t</td><td>t power值 </td></tr>
+    <tr><td class="paramname">predictions</td><td>预测值存放文件 </td></tr>
+    <tr><td class="paramname">raw_predictions</td><td>原始概率值存放文件 </td></tr>
+    <tr><td class="paramname">train</td><td>是否训练 </td></tr>
+    <tr><td class="paramname">numthreads</td><td>训练线程数 </td></tr>
+    <tr><td class="paramname">passes</td><td>训练批次 </td></tr>
+    <tr><td class="paramname">r</td><td>回归模型参数 </td></tr>
+    <tr><td class="paramname">e</td><td>样本文件结构体 </td></tr>
+    <tr><td class="paramname">final_regressor</td><td>最终模型参数存放文件 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">待办事项:</a></b></dt><dd>SEG算法是嘛 </dd></dl>
 
 </div>
 </div>

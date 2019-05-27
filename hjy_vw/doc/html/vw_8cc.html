@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: vw.cc 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">vw.cc 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;iostream.h&gt;</code><br />
+<code>#include &lt;fstream.h&gt;</code><br />
+<code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="parse__regressor_8h_source.html">parse_regressor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parse__example_8h_source.html">parse_example.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parse__args_8h_source.html">parse_args.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+vw.cc 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vw_8cc__incl.png" border="0" usemap="#vw_8cc" alt=""/></div>
+<map name="vw_8cc" id="vw_8cc">
+<area shape="rect"  title=" " alt="" coords="347,5,401,31"/>
+<area shape="rect"  title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect"  title=" " alt="" coords="92,79,176,104"/>
+<area shape="rect"  title=" " alt="" coords="199,79,276,104"/>
+<area shape="rect"  title=" " alt="" coords="300,79,357,104"/>
+<area shape="rect"  title=" " alt="" coords="382,79,459,104"/>
+<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½éå½æ°çå£°æ" alt="" coords="417,152,546,177"/>
+<area shape="rect"  href="parse__example_8h.html" title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="533,79,657,104"/>
+<area shape="rect"  href="parse__args_8h.html" title="åæ°è§£æçå£°æ" alt="" coords="681,79,781,104"/>
+<area shape="rect"  title=" " alt="" coords="411,225,483,251"/>
+<area shape="rect"  title=" " alt="" coords="329,225,387,251"/>
+<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="775,225,839,251"/>
+<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="587,152,630,177"/>
+<area shape="rect"  title=" " alt="" coords="775,299,839,324"/>
+<area shape="rect"  title=" " alt="" coords="595,225,660,251"/>
+<area shape="rect"  title=" " alt="" coords="684,225,752,251"/>
+<area shape="rect"  title=" " alt="" coords="507,225,571,251"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a850933e501f27ac8dae51171b35102a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a850933e501f27ac8dae51171b35102a5">final_prediction</a> (float ret)</td></tr>
+<tr class="separator:a850933e501f27ac8dae51171b35102a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceec16e59f7e0296e7b7a11da0dfa6c1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aceec16e59f7e0296e7b7a11da0dfa6c1">vector_sum</a> (const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, <a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *w)</td></tr>
+<tr class="separator:aceec16e59f7e0296e7b7a11da0dfa6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ecdbad463771788898a3da4cb935c3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a30ecdbad463771788898a3da4cb935c3">seg_predict</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float &amp;neg_weight_sum, float &amp;pos_weight_sum, float &amp;raw_prediction)</td></tr>
+<tr class="separator:a30ecdbad463771788898a3da4cb935c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb4b02850d0ad1ad4b424e8b258d046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a1eb4b02850d0ad1ad4b424e8b258d046">vector_multiply</a> (const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, <a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *w, const float update)</td></tr>
+<tr class="separator:a1eb4b02850d0ad1ad4b424e8b258d046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87cd28c2ff196feda0fbe6000f5a41c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#ad87cd28c2ff196feda0fbe6000f5a41c">seg_train</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float neg_weight_update, float pos_weight_update)</td></tr>
+<tr class="separator:ad87cd28c2ff196feda0fbe6000f5a41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e281b225941742dfa6b8a94dbc05d68"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a0e281b225941742dfa6b8a94dbc05d68">predict</a> (const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float &amp;norm, float &amp;raw_prediction)</td></tr>
+<tr class="separator:a0e281b225941742dfa6b8a94dbc05d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02c6d8a1513bda9e0f65e2d854f06c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#ae02c6d8a1513bda9e0f65e2d854f06c2">train</a> (const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float update)</td></tr>
+<tr class="separator:ae02c6d8a1513bda9e0f65e2d854f06c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba183bcff4dccaac801ba48d4e08b587"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aba183bcff4dccaac801ba48d4e08b587">go</a> (void *in)</td></tr>
+<tr class="separator:aba183bcff4dccaac801ba48d4e08b587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a41925457da8def0f877df37f7d3bb36a"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a41925457da8def0f877df37f7d3bb36a">weight_lock</a></td></tr>
+<tr class="separator:a41925457da8def0f877df37f7d3bb36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a618685c3147cd3392c03da56912eaa0c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a618685c3147cd3392c03da56912eaa0c">eta</a> = 0.1</td></tr>
+<tr class="separator:a618685c3147cd3392c03da56912eaa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea36502e9d227ff62c5fb2719a246f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#afea36502e9d227ff62c5fb2719a246f2">t</a> = 1.</td></tr>
+<tr class="separator:afea36502e9d227ff62c5fb2719a246f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc1f24932ad387e5dfcda0fda9ee610"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a2bc1f24932ad387e5dfcda0fda9ee610">power_t</a> = 0.</td></tr>
+<tr class="separator:a2bc1f24932ad387e5dfcda0fda9ee610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64d868e7e67318f584318450fcfbbfa"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aa64d868e7e67318f584318450fcfbbfa">predictions</a></td></tr>
+<tr class="separator:aa64d868e7e67318f584318450fcfbbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af732817f8cdd699cebf024424d8a6891"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#af732817f8cdd699cebf024424d8a6891">raw_predictions</a></td></tr>
+<tr class="separator:af732817f8cdd699cebf024424d8a6891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae26660cd72b50848eae6f95a5127f8e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#ae26660cd72b50848eae6f95a5127f8e1">training</a> = true</td></tr>
+<tr class="separator:ae26660cd72b50848eae6f95a5127f8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9785041b63c47f411432d76b1abc57"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a0a9785041b63c47f411432d76b1abc57">dump_interval</a> = exp(1.)</td></tr>
+<tr class="separator:a0a9785041b63c47f411432d76b1abc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95ea5398ee0346a652325029f5cbb31"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#ab95ea5398ee0346a652325029f5cbb31">sum_loss</a> = 0.0</td></tr>
+<tr class="separator:ab95ea5398ee0346a652325029f5cbb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529319b3711094853ce282112db310bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a529319b3711094853ce282112db310bc">sum_loss_since_last_dump</a> = 0.0</td></tr>
+<tr class="separator:a529319b3711094853ce282112db310bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5487b68b5b6ac64732d4d676c7ea50"><td class="memItemLeft" align="right" valign="top">long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a1c5487b68b5b6ac64732d4d676c7ea50">example_number</a> = 0</td></tr>
+<tr class="separator:a1c5487b68b5b6ac64732d4d676c7ea50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b0669cf52bb8d42a19be82bd8e8a59"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a21b0669cf52bb8d42a19be82bd8e8a59">weighted_examples</a> = 0.</td></tr>
+<tr class="separator:a21b0669cf52bb8d42a19be82bd8e8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0b6d27aae6c9158f540f60174ce7ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a3b0b6d27aae6c9158f540f60174ce7ff">old_weighted_examples</a> = 0.</td></tr>
+<tr class="separator:a3b0b6d27aae6c9158f540f60174ce7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd5671039587f8062f0ba14286b7d7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a3cd5671039587f8062f0ba14286b7d7b">weighted_labels</a> = 0.</td></tr>
+<tr class="separator:a3cd5671039587f8062f0ba14286b7d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac6f548c057ea89968851d76d554a9df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structregressor.html">regressor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aac6f548c057ea89968851d76d554a9df">regressor</a></td></tr>
+<tr class="separator:aac6f548c057ea89968851d76d554a9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f7c933893ea00af1408046689efc3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structexample__file.html">example_file</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a66f7c933893ea00af1408046689efc3b">source</a></td></tr>
+<tr class="separator:a66f7c933893ea00af1408046689efc3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37e907d4eb67b0b9a11b6a8a7e5e4d6e"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a37e907d4eb67b0b9a11b6a8a7e5e4d6e">final_regressor</a></td></tr>
+<tr class="separator:a37e907d4eb67b0b9a11b6a8a7e5e4d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a850933e501f27ac8dae51171b35102a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850933e501f27ac8dae51171b35102a5">&#9670;&nbsp;</a></span>final_prediction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float final_prediction </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ret</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba183bcff4dccaac801ba48d4e08b587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba183bcff4dccaac801ba48d4e08b587">&#9670;&nbsp;</a></span>go()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* go </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e281b225941742dfa6b8a94dbc05d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e281b225941742dfa6b8a94dbc05d68">&#9670;&nbsp;</a></span>predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float predict </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>norm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>raw_prediction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30ecdbad463771788898a3da4cb935c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ecdbad463771788898a3da4cb935c3">&#9670;&nbsp;</a></span>seg_predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float seg_predict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>neg_weight_sum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>pos_weight_sum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>raw_prediction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad87cd28c2ff196feda0fbe6000f5a41c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87cd28c2ff196feda0fbe6000f5a41c">&#9670;&nbsp;</a></span>seg_train()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void seg_train </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>neg_weight_update</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_weight_update</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae02c6d8a1513bda9e0f65e2d854f06c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae02c6d8a1513bda9e0f65e2d854f06c2">&#9670;&nbsp;</a></span>train()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void train </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>update</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1eb4b02850d0ad1ad4b424e8b258d046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eb4b02850d0ad1ad4b424e8b258d046">&#9670;&nbsp;</a></span>vector_multiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vector_multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>update</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aceec16e59f7e0296e7b7a11da0dfa6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceec16e59f7e0296e7b7a11da0dfa6c1">&#9670;&nbsp;</a></span>vector_sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float vector_sum </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a0a9785041b63c47f411432d76b1abc57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a9785041b63c47f411432d76b1abc57">&#9670;&nbsp;</a></span>dump_interval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float dump_interval = exp(1.)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a618685c3147cd3392c03da56912eaa0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618685c3147cd3392c03da56912eaa0c">&#9670;&nbsp;</a></span>eta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float eta = 0.1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c5487b68b5b6ac64732d4d676c7ea50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c5487b68b5b6ac64732d4d676c7ea50">&#9670;&nbsp;</a></span>example_number</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long int example_number = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37e907d4eb67b0b9a11b6a8a7e5e4d6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e907d4eb67b0b9a11b6a8a7e5e4d6e">&#9670;&nbsp;</a></span>final_regressor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofstream final_regressor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b0b6d27aae6c9158f540f60174ce7ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0b6d27aae6c9158f540f60174ce7ff">&#9670;&nbsp;</a></span>old_weighted_examples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double old_weighted_examples = 0.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bc1f24932ad387e5dfcda0fda9ee610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc1f24932ad387e5dfcda0fda9ee610">&#9670;&nbsp;</a></span>power_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float power_t = 0.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa64d868e7e67318f584318450fcfbbfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa64d868e7e67318f584318450fcfbbfa">&#9670;&nbsp;</a></span>predictions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofstream predictions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af732817f8cdd699cebf024424d8a6891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af732817f8cdd699cebf024424d8a6891">&#9670;&nbsp;</a></span>raw_predictions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofstream raw_predictions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac6f548c057ea89968851d76d554a9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac6f548c057ea89968851d76d554a9df">&#9670;&nbsp;</a></span>regressor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structregressor.html">regressor</a> <a class="el" href="structregressor.html">regressor</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66f7c933893ea00af1408046689efc3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f7c933893ea00af1408046689efc3b">&#9670;&nbsp;</a></span>source</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structexample__file.html">example_file</a> source</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab95ea5398ee0346a652325029f5cbb31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab95ea5398ee0346a652325029f5cbb31">&#9670;&nbsp;</a></span>sum_loss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double sum_loss = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a529319b3711094853ce282112db310bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529319b3711094853ce282112db310bc">&#9670;&nbsp;</a></span>sum_loss_since_last_dump</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double sum_loss_since_last_dump = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afea36502e9d227ff62c5fb2719a246f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea36502e9d227ff62c5fb2719a246f2">&#9670;&nbsp;</a></span>t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float t = 1.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae26660cd72b50848eae6f95a5127f8e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26660cd72b50848eae6f95a5127f8e1">&#9670;&nbsp;</a></span>training</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool training = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41925457da8def0f877df37f7d3bb36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41925457da8def0f877df37f7d3bb36a">&#9670;&nbsp;</a></span>weight_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t weight_lock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21b0669cf52bb8d42a19be82bd8e8a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b0669cf52bb8d42a19be82bd8e8a59">&#9670;&nbsp;</a></span>weighted_examples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double weighted_examples = 0.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cd5671039587f8062f0ba14286b7d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd5671039587f8062f0ba14286b7d7b">&#9670;&nbsp;</a></span>weighted_labels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double weighted_labels = 0.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['weight_5findex',['weight_index',['../structfeature.html#a91dbf6e9eb7b3a15fb3aacb058cb17c2',1,'feature']]],
-  ['weights',['weights',['../structregressor.html#ac93059506d6408e3dc40f9611e9a8e4a',1,'regressor']]],
-  ['words',['words',['../structthread__data.html#af3fd091926a1194783805c5b6c74b9e9',1,'thread_data']]],
-  ['write_5fcache',['write_cache',['../structexample__file.html#ade314d62b3dbeaf9829000641a9a81f7',1,'example_file']]]
+  ['seg',['seg',['../structregressor.html#a2203258473d1185da96952cac6d0ce5b',1,'regressor']]],
+  ['source',['source',['../vw_8cc.html#a66f7c933893ea00af1408046689efc3b',1,'vw.cc']]],
+  ['space',['space',['../classio__buf.html#aad6fffd4bcf2f840d43f5cb22c036944',1,'io_buf']]],
+  ['start',['start',['../structsubstring.html#a36bc76239469abae707f2a5ff71bfe5d',1,'substring']]],
+  ['sum_5floss',['sum_loss',['../vw_8cc.html#ab95ea5398ee0346a652325029f5cbb31',1,'vw.cc']]],
+  ['sum_5floss_5fsince_5flast_5fdump',['sum_loss_since_last_dump',['../vw_8cc.html#a529319b3711094853ce282112db310bc',1,'vw.cc']]]
 ];

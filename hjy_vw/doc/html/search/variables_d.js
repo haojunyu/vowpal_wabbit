@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['seg',['seg',['../structregressor.html#a2203258473d1185da96952cac6d0ce5b',1,'regressor']]],
-  ['space',['space',['../classio__buf.html#aad6fffd4bcf2f840d43f5cb22c036944',1,'io_buf']]],
-  ['start',['start',['../structsubstring.html#a36bc76239469abae707f2a5ff71bfe5d',1,'substring']]]
+  ['raw_5fpredictions',['raw_predictions',['../vw_8cc.html#af732817f8cdd699cebf024424d8a6891',1,'vw.cc']]],
+  ['regressor',['regressor',['../vw_8cc.html#aac6f548c057ea89968851d76d554a9df',1,'vw.cc']]]
 ];

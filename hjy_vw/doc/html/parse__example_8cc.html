@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>的实现  
+<p>解析样本文件的实现  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;float.h&gt;</code><br />
@@ -84,12 +84,12 @@ parse_example.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__example_8cc__incl.png" border="0" usemap="#parse__example_8cc" alt=""/></div>
 <map name="parse__example_8cc" id="parse__example_8cc">
-<area shape="rect"  title="çå®ç°" alt="" coords="124,5,253,31"/>
+<area shape="rect"  title="è§£ææ ·æ¬æä»¶çå®ç°" alt="" coords="124,5,253,31"/>
 <area shape="rect"  title=" " alt="" coords="8,225,65,251"/>
 <area shape="rect"  title=" " alt="" coords="33,79,91,104"/>
 <area shape="rect"  title=" " alt="" coords="115,79,172,104"/>
 <area shape="rect"  title=" " alt="" coords="195,79,273,104"/>
-<area shape="rect"  href="parse__example_8h.html" title="çå£°æ" alt="" coords="296,79,420,104"/>
+<area shape="rect"  href="parse__example_8h.html" title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="296,79,420,104"/>
 <area shape="rect"  href="hash_8h.html" title="å£°æç±»åå«ååhashå½æ°ã" alt="" coords="443,79,505,104"/>
 <area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="466,225,530,251"/>
 <area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="302,152,345,177"/>
@@ -152,10 +152,10 @@ parse_example.cc 的引用(Include)关系图:</div>
 <tr class="memitem:a8138bf863baa80aab52f8e8c91c48ad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a8138bf863baa80aab52f8e8c91c48ad2">inconsistent_cache</a> (size_t numbits, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache)</td></tr>
 <tr class="memdesc:a8138bf863baa80aab52f8e8c91c48ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测缓存文件是否一致  <a href="#a8138bf863baa80aab52f8e8c91c48ad2">更多...</a><br /></td></tr>
 <tr class="separator:a8138bf863baa80aab52f8e8c91c48ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8b2a0115a9c72b96a3d4f4948f30f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#ab8b2a0115a9c72b96a3d4f4948f30f36">reset</a> (size_t numbits, <a class="el" href="structexample__file.html">example_file</a> &amp;source)</td></tr>
+<tr class="memitem:ab8b2a0115a9c72b96a3d4f4948f30f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#ab8b2a0115a9c72b96a3d4f4948f30f36">reset</a> (size_t numbits, <a class="el" href="structexample__file.html">example_file</a> &amp;<a class="el" href="vw_8cc.html#a66f7c933893ea00af1408046689efc3b">source</a>)</td></tr>
 <tr class="memdesc:ab8b2a0115a9c72b96a3d4f4948f30f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置样本文件结构体状态  <a href="#ab8b2a0115a9c72b96a3d4f4948f30f36">更多...</a><br /></td></tr>
 <tr class="separator:ab8b2a0115a9c72b96a3d4f4948f30f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a902e803e85f13b417e9d6453561f1638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a902e803e85f13b417e9d6453561f1638">finalize_source</a> (<a class="el" href="structexample__file.html">example_file</a> &amp;source)</td></tr>
+<tr class="memitem:a902e803e85f13b417e9d6453561f1638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a902e803e85f13b417e9d6453561f1638">finalize_source</a> (<a class="el" href="structexample__file.html">example_file</a> &amp;<a class="el" href="vw_8cc.html#a66f7c933893ea00af1408046689efc3b">source</a>)</td></tr>
 <tr class="memdesc:a902e803e85f13b417e9d6453561f1638"><td class="mdescLeft">&#160;</td><td class="mdescRight">清理程序空间  <a href="#a902e803e85f13b417e9d6453561f1638">更多...</a><br /></td></tr>
 <tr class="separator:a902e803e85f13b417e9d6453561f1638"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -179,7 +179,7 @@ parse_example.cc 的引用(Include)关系图:</div>
 <tr class="separator:a69a05a8447a0b4a97849e16f6ed28a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>的实现 </p>
+<div class="textblock"><p>解析样本文件的实现 </p>
 <dl class="section author"><dt>作者</dt><dd>hjy </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>2.3 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2019-02-25 </dd></dl>
