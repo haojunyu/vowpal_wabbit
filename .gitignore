@@ -1,5 +1,7 @@
 *.o
-*.aut
+*.bak
+*.out
 *.sw*
 .DS_Store
 .vscode
+test_*

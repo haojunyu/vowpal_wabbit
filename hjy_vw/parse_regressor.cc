@@ -57,7 +57,7 @@ void initialize_regressor(regressor &r)
 void parse_regressor(vector<string> &regressors, regressor &r)
 {
   bool initialized = false;
-  
+
   for (size_t i = 0; i < regressors.size(); i++)
   {
     ifstream regressor(regressors[i].c_str());
@@ -167,23 +167,23 @@ void parse_regressor(vector<string> &regressors, regressor &r)
  */
 void dump_regressor(ofstream &o, regressor &r)
 {
-  if (o.is_open()) 
+  if (o.is_open())
   {
     o.write((char *)&r.seg, sizeof(r.seg));
     o.write((char *)&r.numbits, sizeof(r.numbits));
     int len = r.pairs.size();
     o.write((char *)&len, sizeof(len));
-    for (vector<string>::iterator i = r.pairs.begin(); i != r.pairs.end();i++) 
+    for (vector<string>::iterator i = r.pairs.begin(); i != r.pairs.end();i++)
     {
       o << (*i)[0] << (*i)[1];
     }
-      
+
     if (!r.seg) 
     {
       for(weight* v = r.weights; v != r.weights+r.length; v++)
       {
         if (*v != 0.)
-        {      
+        {
           size_t dist = v - r.weights;
           o.write((char *)&(dist), sizeof (dist));
           o.write((char *)v, sizeof (*v));
@@ -193,7 +193,7 @@ void dump_regressor(ofstream &o, regressor &r)
       for(weight* v = r.weights; v != r.weights+r.length; v++)
       {
         if (*v != 1.)
-        {      
+        {
           size_t dist = v - r.weights;
           o.write((char *)&(dist), sizeof (dist));
           o.write((char *)v, sizeof (*v));
