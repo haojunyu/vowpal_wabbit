@@ -70,6 +70,9 @@ $(function() {
 <div class="title">vw.cc 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>vowpal wabbit实现  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;iostream.h&gt;</code><br />
 <code>#include &lt;fstream.h&gt;</code><br />
@@ -83,7 +86,7 @@ vw.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="vw_8cc__incl.png" border="0" usemap="#vw_8cc" alt=""/></div>
 <map name="vw_8cc" id="vw_8cc">
-<area shape="rect"  title=" " alt="" coords="347,5,401,31"/>
+<area shape="rect"  title="vowpal wabbitå®ç°" alt="" coords="347,5,401,31"/>
 <area shape="rect"  title=" " alt="" coords="5,79,67,104"/>
 <area shape="rect"  title=" " alt="" coords="92,79,176,104"/>
 <area shape="rect"  title=" " alt="" coords="199,79,276,104"/>
@@ -106,10 +109,13 @@ vw.cc 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a850933e501f27ac8dae51171b35102a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a850933e501f27ac8dae51171b35102a5">final_prediction</a> (float ret)</td></tr>
+<tr class="memdesc:a850933e501f27ac8dae51171b35102a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理预测值到区间[0,1]  <a href="#a850933e501f27ac8dae51171b35102a5">更多...</a><br /></td></tr>
 <tr class="separator:a850933e501f27ac8dae51171b35102a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceec16e59f7e0296e7b7a11da0dfa6c1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aceec16e59f7e0296e7b7a11da0dfa6c1">vector_sum</a> (const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, <a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *w)</td></tr>
+<tr class="memdesc:aceec16e59f7e0296e7b7a11da0dfa6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">特征权重求和  <a href="#aceec16e59f7e0296e7b7a11da0dfa6c1">更多...</a><br /></td></tr>
 <tr class="separator:aceec16e59f7e0296e7b7a11da0dfa6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ecdbad463771788898a3da4cb935c3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a30ecdbad463771788898a3da4cb935c3">seg_predict</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float &amp;neg_weight_sum, float &amp;pos_weight_sum, float &amp;raw_prediction)</td></tr>
+<tr class="memdesc:a30ecdbad463771788898a3da4cb935c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">seg算法预测的值  <a href="#a30ecdbad463771788898a3da4cb935c3">更多...</a><br /></td></tr>
 <tr class="separator:a30ecdbad463771788898a3da4cb935c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb4b02850d0ad1ad4b424e8b258d046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a1eb4b02850d0ad1ad4b424e8b258d046">vector_multiply</a> (const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, <a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *w, const float update)</td></tr>
 <tr class="separator:a1eb4b02850d0ad1ad4b424e8b258d046"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,8 +126,10 @@ vw.cc 的引用(Include)关系图:</div>
 <tr class="memitem:ae02c6d8a1513bda9e0f65e2d854f06c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#ae02c6d8a1513bda9e0f65e2d854f06c2">train</a> (const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float update)</td></tr>
 <tr class="separator:ae02c6d8a1513bda9e0f65e2d854f06c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba183bcff4dccaac801ba48d4e08b587"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aba183bcff4dccaac801ba48d4e08b587">go</a> (void *in)</td></tr>
+<tr class="memdesc:aba183bcff4dccaac801ba48d4e08b587"><td class="mdescLeft">&#160;</td><td class="mdescRight">单进程  <a href="#aba183bcff4dccaac801ba48d4e08b587">更多...</a><br /></td></tr>
 <tr class="separator:aba183bcff4dccaac801ba48d4e08b587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">主函数  <a href="#a0ddf1224851353fc92bfbff6f499fa97">更多...</a><br /></td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -129,26 +137,35 @@ vw.cc 的引用(Include)关系图:</div>
 <tr class="memitem:a41925457da8def0f877df37f7d3bb36a"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a41925457da8def0f877df37f7d3bb36a">weight_lock</a></td></tr>
 <tr class="separator:a41925457da8def0f877df37f7d3bb36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a618685c3147cd3392c03da56912eaa0c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a618685c3147cd3392c03da56912eaa0c">eta</a> = 0.1</td></tr>
+<tr class="memdesc:a618685c3147cd3392c03da56912eaa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">学习率  <a href="#a618685c3147cd3392c03da56912eaa0c">更多...</a><br /></td></tr>
 <tr class="separator:a618685c3147cd3392c03da56912eaa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afea36502e9d227ff62c5fb2719a246f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#afea36502e9d227ff62c5fb2719a246f2">t</a> = 1.</td></tr>
+<tr class="memdesc:afea36502e9d227ff62c5fb2719a246f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">todo  <a href="#afea36502e9d227ff62c5fb2719a246f2">更多...</a><br /></td></tr>
 <tr class="separator:afea36502e9d227ff62c5fb2719a246f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc1f24932ad387e5dfcda0fda9ee610"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a2bc1f24932ad387e5dfcda0fda9ee610">power_t</a> = 0.</td></tr>
+<tr class="memdesc:a2bc1f24932ad387e5dfcda0fda9ee610"><td class="mdescLeft">&#160;</td><td class="mdescRight">todo  <a href="#a2bc1f24932ad387e5dfcda0fda9ee610">更多...</a><br /></td></tr>
 <tr class="separator:a2bc1f24932ad387e5dfcda0fda9ee610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa64d868e7e67318f584318450fcfbbfa"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aa64d868e7e67318f584318450fcfbbfa">predictions</a></td></tr>
+<tr class="memdesc:aa64d868e7e67318f584318450fcfbbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">预测值存放文件  <a href="#aa64d868e7e67318f584318450fcfbbfa">更多...</a><br /></td></tr>
 <tr class="separator:aa64d868e7e67318f584318450fcfbbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af732817f8cdd699cebf024424d8a6891"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#af732817f8cdd699cebf024424d8a6891">raw_predictions</a></td></tr>
+<tr class="memdesc:af732817f8cdd699cebf024424d8a6891"><td class="mdescLeft">&#160;</td><td class="mdescRight">原始概率值存放文件  <a href="#af732817f8cdd699cebf024424d8a6891">更多...</a><br /></td></tr>
 <tr class="separator:af732817f8cdd699cebf024424d8a6891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae26660cd72b50848eae6f95a5127f8e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#ae26660cd72b50848eae6f95a5127f8e1">training</a> = true</td></tr>
 <tr class="separator:ae26660cd72b50848eae6f95a5127f8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a9785041b63c47f411432d76b1abc57"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a0a9785041b63c47f411432d76b1abc57">dump_interval</a> = exp(1.)</td></tr>
+<tr class="memdesc:a0a9785041b63c47f411432d76b1abc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否训练中  <a href="#a0a9785041b63c47f411432d76b1abc57">更多...</a><br /></td></tr>
 <tr class="separator:a0a9785041b63c47f411432d76b1abc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab95ea5398ee0346a652325029f5cbb31"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#ab95ea5398ee0346a652325029f5cbb31">sum_loss</a> = 0.0</td></tr>
+<tr class="memdesc:ab95ea5398ee0346a652325029f5cbb31"><td class="mdescLeft">&#160;</td><td class="mdescRight">总损失值  <a href="#ab95ea5398ee0346a652325029f5cbb31">更多...</a><br /></td></tr>
 <tr class="separator:ab95ea5398ee0346a652325029f5cbb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a529319b3711094853ce282112db310bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a529319b3711094853ce282112db310bc">sum_loss_since_last_dump</a> = 0.0</td></tr>
 <tr class="separator:a529319b3711094853ce282112db310bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c5487b68b5b6ac64732d4d676c7ea50"><td class="memItemLeft" align="right" valign="top">long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a1c5487b68b5b6ac64732d4d676c7ea50">example_number</a> = 0</td></tr>
+<tr class="memdesc:a1c5487b68b5b6ac64732d4d676c7ea50"><td class="mdescLeft">&#160;</td><td class="mdescRight">样本总数目  <a href="#a1c5487b68b5b6ac64732d4d676c7ea50">更多...</a><br /></td></tr>
 <tr class="separator:a1c5487b68b5b6ac64732d4d676c7ea50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21b0669cf52bb8d42a19be82bd8e8a59"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a21b0669cf52bb8d42a19be82bd8e8a59">weighted_examples</a> = 0.</td></tr>
+<tr class="memdesc:a21b0669cf52bb8d42a19be82bd8e8a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">样本总权重  <a href="#a21b0669cf52bb8d42a19be82bd8e8a59">更多...</a><br /></td></tr>
 <tr class="separator:a21b0669cf52bb8d42a19be82bd8e8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b0b6d27aae6c9158f540f60174ce7ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a3b0b6d27aae6c9158f540f60174ce7ff">old_weighted_examples</a> = 0.</td></tr>
 <tr class="separator:a3b0b6d27aae6c9158f540f60174ce7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +178,13 @@ vw.cc 的引用(Include)关系图:</div>
 <tr class="memitem:a37e907d4eb67b0b9a11b6a8a7e5e4d6e"><td class="memItemLeft" align="right" valign="top">ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a37e907d4eb67b0b9a11b6a8a7e5e4d6e">final_regressor</a></td></tr>
 <tr class="separator:a37e907d4eb67b0b9a11b6a8a7e5e4d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>vowpal wabbit实现 </p>
+<dl class="section author"><dt>作者</dt><dd>hjy </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.3 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-05-27 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>John Langford, license BSD </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="a850933e501f27ac8dae51171b35102a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a850933e501f27ac8dae51171b35102a5">&#9670;&nbsp;</a></span>final_prediction()</h2>
 
@@ -186,6 +209,15 @@ vw.cc 的引用(Include)关系图:</div>
 </table>
 </div><div class="memdoc">
 
+<p>处理预测值到区间[0,1] </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ret</td><td>预测值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的预测值 </dd></dl>
+
 </div>
 </div>
 <a id="aba183bcff4dccaac801ba48d4e08b587"></a>
@@ -203,6 +235,15 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>单进程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
 
 </div>
 </div>
@@ -231,6 +272,16 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>主函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>参数个数 </td></tr>
+    <tr><td class="paramname">argv</td><td>参数数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
 
 </div>
 </div>
@@ -265,6 +316,15 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">norm</td><td>?? </td></tr>
+    <tr><td class="paramname">raw_prediction</td><td>预测概率值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
 
 </div>
 </div>
@@ -306,6 +366,18 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>seg算法预测的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">neg_weight_sum</td><td>负权重之和 </td></tr>
+    <tr><td class="paramname">pos_weight_sum</td><td>正权重之和 </td></tr>
+    <tr><td class="paramname">raw_prediction</td><td>预测概率值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>seg算法预测的值 </dd></dl>
+
 </div>
 </div>
 <a id="ad87cd28c2ff196feda0fbe6000f5a41c"></a>
@@ -339,6 +411,15 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">neg_weight_update</td><td>?? </td></tr>
+    <tr><td class="paramname">pos_weight_update</td><td>?? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
 
 </div>
 </div>
@@ -367,6 +448,14 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">update</td><td>?? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
 
 </div>
 </div>
@@ -401,6 +490,15 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">w</td><td>权重数组 </td></tr>
+    <tr><td class="paramname">update</td><td>??? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
 
 </div>
 </div>
@@ -430,6 +528,17 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>特征权重求和 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">w</td><td>模型权重数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>特征权重之和 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">待办事项:</a></b></dt><dd>???为啥不是模型权重*特征值 </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">变量说明</h2>
@@ -445,6 +554,8 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>是否训练中 </p>
+
 </div>
 </div>
 <a id="a618685c3147cd3392c03da56912eaa0c"></a>
@@ -459,6 +570,8 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>学习率 </p>
+
 </div>
 </div>
 <a id="a1c5487b68b5b6ac64732d4d676c7ea50"></a>
@@ -472,6 +585,8 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>样本总数目 </p>
 
 </div>
 </div>
@@ -515,6 +630,8 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>todo </p>
+
 </div>
 </div>
 <a id="aa64d868e7e67318f584318450fcfbbfa"></a>
@@ -529,6 +646,8 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>预测值存放文件 </p>
+
 </div>
 </div>
 <a id="af732817f8cdd699cebf024424d8a6891"></a>
@@ -542,6 +661,8 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>原始概率值存放文件 </p>
 
 </div>
 </div>
@@ -585,6 +706,8 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>总损失值 </p>
+
 </div>
 </div>
 <a id="a529319b3711094853ce282112db310bc"></a>
@@ -612,6 +735,8 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>todo </p>
 
 </div>
 </div>
@@ -654,6 +779,8 @@ vw.cc 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>样本总权重 </p>
 
 </div>
 </div>

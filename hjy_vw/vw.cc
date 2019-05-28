@@ -1,7 +1,11 @@
-/*
-Copyright (c) 2007 Yahoo! Inc.  All rights reserved.  The copyrights
-embodied in the content of this file are licensed under the BSD
-(revised) open source license
+/**
+ * @file vw.cc
+ * @brief vowpal wabbit实现
+ *
+ * @author hjy
+ * @version 2.3
+ * @date 2019-05-27
+ * @copyright John Langford, license BSD
  */
 
 #include <math.h>
@@ -14,18 +18,18 @@ embodied in the content of this file are licensed under the BSD
 #include "parse_args.h"
 
 pthread_mutex_t weight_lock;
-float eta = 0.1;
-float t = 1.;
-float power_t = 0.;
-ofstream predictions;
-ofstream raw_predictions;
-bool training = true;
+float eta = 0.1;  ///< 学习率 
+float t = 1.; ///< todo
+float power_t = 0.; ///< todo
+ofstream predictions; ///< 预测值存放文件
+ofstream raw_predictions; ///< 原始概率值存放文件
+bool training = true; /// 是否训练中
 
-float dump_interval = exp(1.);
-double sum_loss = 0.0;
+float dump_interval = exp(1.);  ///< 
+double sum_loss = 0.0;  ///< 总损失值
 double sum_loss_since_last_dump = 0.0;
-long long int example_number = 0;
-double weighted_examples = 0.;
+long long int example_number = 0; ///< 样本总数目
+double weighted_examples = 0.;  ///< 样本总权重
 double old_weighted_examples = 0.;
 double weighted_labels = 0.;
 
@@ -33,6 +37,12 @@ regressor regressor;
 example_file source;
 ofstream final_regressor;
 
+/**
+ * @brief 处理预测值到区间[0,1]
+ * 
+ * @param ret 预测值
+ * @return 处理后的预测值
+ */
 inline float final_prediction(float ret) {
   if (isnan(ret))
     return 0.5;
@@ -43,22 +53,40 @@ inline float final_prediction(float ret) {
   return ret;
 }
 
+/**
+ * @brief 特征权重求和
+ * 
+ * @param features 特征数组
+ * @param w 模型权重数组
+ * @return 特征权重之和
+ * @todo ???为啥不是模型权重*特征值
+ */
 float vector_sum(const v_array<feature> &features, weight* w)
 {
   float sum = 0.0;
-  for (feature* ele = features.begin; ele != features.end; ele++) 
+  for (feature* ele = features.begin; ele != features.end; ele++)
     sum += w[ele->weight_index];
 
   return sum;
 }
 
-float seg_predict(v_array<feature> &features, 
-		  float &neg_weight_sum, float &pos_weight_sum,
-		  float &raw_prediction)
+/**
+ * @brief seg算法预测的值
+ * 
+ * @param features 特征数组
+ * @param neg_weight_sum 负权重之和
+ * @param pos_weight_sum 正权重之和
+ * @param raw_prediction 预测概率值
+ * @return seg算法预测的值
+ */
+float seg_predict(v_array<feature> &features,
+    float &neg_weight_sum, float &pos_weight_sum,
+    float &raw_prediction)
 {
   pos_weight_sum = vector_sum(features, regressor.weights);
   neg_weight_sum = vector_sum(features, regressor.other_weights);
-  
+
+  // ?? raw_prediction为啥取pos_weight_sum
   raw_prediction = pos_weight_sum;
 
   if (fpclassify(neg_weight_sum) == FP_ZERO)
@@ -67,27 +95,51 @@ float seg_predict(v_array<feature> &features,
     return final_prediction(pos_weight_sum / (neg_weight_sum+pos_weight_sum));
 }
 
-void vector_multiply(const v_array<feature> &features, weight *w, 
-		     const float update)
+/**
+ * @brief
+ *
+ * @param features 特征数组
+ * @param w 权重数组
+ * @param update ???
+ * @return ???
+ */
+void vector_multiply(const v_array<feature> &features, weight *w,
+    const float update)
 {
-  for (feature* ele = features.begin; ele != features.end; ele++) 
+  for (feature* ele = features.begin; ele != features.end; ele++)
     w[ele->weight_index] *= update;
 }
 
-void seg_train(v_array<feature> &features,  
-	       float neg_weight_update, float pos_weight_update)
+/**
+ * @brief
+ *
+ * @param features 特征数组
+ * @param neg_weight_update ??
+ * @param pos_weight_update ??
+ * @return ???
+ */
+void seg_train(v_array<feature> &features,
+    float neg_weight_update, float pos_weight_update)
 {
   vector_multiply(features, regressor.weights, pos_weight_update);
   vector_multiply(features, regressor.other_weights, neg_weight_update);
 }
 
+/**
+ * @brief
+ *
+ * @param features 特征数组
+ * @param norm ??
+ * @param raw_prediction 预测概率值
+ * @return ???
+ */
 float predict(const v_array<feature> &features, float &norm, float & raw_prediction)
 {
   float prediction = 0.0;
   weight *weights = regressor.weights;
   for (feature* j = features.begin; j != features.end; j++)
     prediction += weights[j->weight_index] * j->x;
- 
+
   if (features.end - features.begin > 0)
     norm = 1. / sqrtf(features.end - features.begin);
   else
@@ -95,34 +147,47 @@ float predict(const v_array<feature> &features, float &norm, float & raw_predict
 
   raw_prediction = prediction;
   prediction *= norm;
-  
+
   return final_prediction(prediction);
 }
 
+/**
+ * @brief
+ *
+ * @param features 特征数组
+ * @param update ??
+ * @return ???
+ */
 void train(const v_array<feature> &features, float update)
 {
   if (fabs(update) > 0.)
-    {
-      weight* weights = regressor.weights;
-      for (feature* j = features.begin; j != features.end; j++)
-	weights[j->weight_index] += update * j->x;
-    }
+  {
+    weight* weights = regressor.weights;
+    for (feature* j = features.begin; j != features.end; j++)
+      weights[j->weight_index] += update * j->x;
+  }
 }
 
+/**
+ * @brief 单进程
+ *
+ * @param in 
+ * @return ???
+ */
 void* go(void *in)
 {
   thread_data td;
   td.line = NULL;
   td.linesize = 0;
-  td.in_already = (bool*)calloc(regressor.length, sizeof(bool)); 
-  
+  td.in_already = (bool*)calloc(regressor.length, sizeof(bool));
+
   v_array<feature> features;
   v_array<char> tag;
   float label;
   float weight;
-  
+
   while ( parse_example(td, source, regressor, features, label, weight, tag))
-    {
+  {
       if (features.end == features.begin)
 	{
 	  cout << "You have an example with no features.  Skipping.\n";
@@ -251,27 +316,35 @@ void* go(void *in)
   return NULL;  
 }
 
+/**
+ * @brief 主函数
+ *
+ * @param argc 参数个数
+ * @param argv 参数数组
+ * @return ???
+ */
 int main(int argc, char *argv[])
 {
   int numthreads;
   int numpasses;
   float eta_decay;
-  parse_args(argc, argv, eta, eta_decay, t, power_t, predictions, 
-	     raw_predictions, training, numthreads, numpasses, regressor, source, 
-	     final_regressor);
-  
+  parse_args(argc, argv, eta, eta_decay, t, power_t, predictions,
+      raw_predictions, training, numthreads, numpasses, regressor, source,
+      final_regressor);
+
   cout << "average\tsince\texample\texample\tcurrent\tcurrent\tcurrent" << endl;
   cout << "loss\tlast\tcounter\tweight\tlabel\tpredict\tfeatures" << endl;
   cout.precision(4);
 
+  // 多线程训练模型
   for (; numpasses > 0; numpasses--) {
     pthread_t threads[numthreads];
     for (int i = 0; i < numthreads; i++)
       pthread_create(&threads[i], NULL, go, NULL);
-    
+
     for (int i = 0; i < numthreads; i++) 
       pthread_join(threads[i], NULL);
-    
+
     eta *= eta_decay;
     reset(regressor.numbits, source);
   }
@@ -280,8 +353,8 @@ int main(int argc, char *argv[])
   finalize_source(source);
   float best_constant = weighted_labels / weighted_examples;
   float constant_loss = (best_constant*(1.0 - best_constant)*(1.0 - best_constant)
-			 + (1.0 - best_constant)*best_constant*best_constant);
-  
+      + (1.0 - best_constant)*best_constant*best_constant);
+
   cout << endl << "finished run";
   cout << endl << "number of examples = " << example_number;
   cout << endl << "weighted_examples = " << weighted_examples;

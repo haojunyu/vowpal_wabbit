@@ -15,7 +15,7 @@
 
 using namespace std;
 
-typedef float weight; //< 定义weight为float类型别名
+typedef float weight; ///< 定义weight为float类型别名
 
 /**
  * @brief 回归量结构体
@@ -23,14 +23,14 @@ typedef float weight; //< 定义weight为float类型别名
 struct regressor {
   weight* weights;
   weight* other_weights;
-  size_t numbits; //< 散列表位数
-  size_t length; //< pairs的长度
-  vector<string> pairs;
+  size_t numbits; ///< 散列表位数
+  size_t length; ///< 散列表长度=2^{numbits}
+  vector<string> pairs; ///< 交叉特征数组
   bool seg;
 };
 
-void parse_regressor(vector<string> &regressors, regressor &r);  //< 解析regressors，构造回归量结构体
+void parse_regressor(vector<string> &regressors, regressor &r);  ///< 解析regressors，构造回归量结构体
 
-void dump_regressor(ofstream &o, regressor &r); //< 输出回归量结构体
+void dump_regressor(ofstream &o, regressor &r); ///< 输出回归量结构体
 
 #endif
