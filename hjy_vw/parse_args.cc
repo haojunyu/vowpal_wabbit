@@ -7,14 +7,8 @@
  * @date 2019-01-30
  * @copyright John Langford, license BSD
  */
-#include <iostream>
-#include <fstream>
-#include <boost/program_options.hpp>
-#include <math.h>
-#include "fcntl.h"
-#include "io.h"
-#include "parse_regressor.h"
-#include "parse_example.h"
+#include "parse_args.h"
+
 
 namespace po = boost::program_options;
 using namespace std;

@@ -10,7 +10,6 @@
 
 #ifndef PE_H
 #define PE_H
-#include "stack.h"
 #include "io.h"
 #include "parse_regressor.h"
 

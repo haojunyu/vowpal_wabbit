@@ -4,5 +4,6 @@ var searchData=
   ['make_5fwrite_5fcache',['make_write_cache',['../parse__args_8cc.html#a1038375ed2b65fe51999463f2df94f43',1,'parse_args.cc']]],
   ['mark',['mark',['../parse__example_8cc.html#ae08da07ea04adab55e6be1121dc04c81',1,'parse_example.cc']]],
   ['mask',['mask',['../structexample__file.html#a1a3a16484cd8a0439aaea925e0bb1c42',1,'example_file']]],
-  ['mix',['mix',['../hash_8cc.html#afd9fa1747724ec6142812721997394c3',1,'hash.cc']]]
+  ['mix',['mix',['../hash_8cc.html#afd9fa1747724ec6142812721997394c3',1,'hash.cc']]],
+  ['my_5fhash',['my_hash',['../hash_8cc.html#a7213196c8826c3941b894291465d006f',1,'my_hash(ub1 *k, ub4 length, ub4 initval):&#160;hash.cc'],['../hash_8h.html#a7213196c8826c3941b894291465d006f',1,'my_hash(ub1 *k, ub4 length, ub4 initval):&#160;hash.cc']]]
 ];

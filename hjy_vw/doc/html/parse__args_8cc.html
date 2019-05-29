@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -72,34 +78,29 @@ $(function() {
 
 <p>参数解析函数实现  
 <a href="#details">更多...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;boost/program_options.hpp&gt;</code><br />
-<code>#include &lt;math.h&gt;</code><br />
-<code>#include &quot;fcntl.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="io_8h_source.html">io.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="parse__regressor_8h_source.html">parse_regressor.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="parse__example_8h_source.html">parse_example.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="parse__args_8h_source.html">parse_args.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 parse_args.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__args_8cc__incl.png" border="0" usemap="#parse__args_8cc" alt=""/></div>
 <map name="parse__args_8cc" id="parse__args_8cc">
-<area shape="rect"  title="åæ°è§£æå½æ°å®ç°" alt="" coords="433,5,538,31"/>
-<area shape="rect"  title=" " alt="" coords="364,225,436,251"/>
-<area shape="rect"  title=" " alt="" coords="488,79,554,104"/>
-<area shape="rect"  title=" " alt="" coords="579,79,762,104"/>
-<area shape="rect"  title=" " alt="" coords="786,79,848,104"/>
-<area shape="rect"  title=" " alt="" coords="873,79,930,104"/>
-<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="194,152,237,177"/>
-<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½éå½æ°çå£°æ" alt="" coords="437,152,566,177"/>
-<area shape="rect"  href="parse__example_8h.html" title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="239,79,363,104"/>
-<area shape="rect"  title=" " alt="" coords="93,225,158,251"/>
-<area shape="rect"  title=" " alt="" coords="182,225,250,251"/>
-<area shape="rect"  title=" " alt="" coords="5,225,69,251"/>
-<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="273,225,337,251"/>
-<area shape="rect"  title=" " alt="" coords="273,299,337,324"/>
-<area shape="rect"  title=" " alt="" coords="472,225,530,251"/>
+<area shape="rect"  title="åæ°è§£æå½æ°å®ç°" alt="" coords="471,5,576,31"/>
+<area shape="rect"  href="parse__args_8h.html" title="åæ°è§£æçå£°æ" alt="" coords="474,79,573,104"/>
+<area shape="rect"  title=" " alt="" coords="323,299,396,324"/>
+<area shape="rect"  title=" " alt="" coords="526,152,592,177"/>
+<area shape="rect"  title=" " alt="" coords="617,152,801,177"/>
+<area shape="rect"  title=" " alt="" coords="824,152,886,177"/>
+<area shape="rect"  title=" " alt="" coords="911,152,968,177"/>
+<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="211,225,254,251"/>
+<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½æ¨¡åå½æ°çå£°æ" alt="" coords="328,225,457,251"/>
+<area shape="rect"  href="parse__example_8h.html" title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="328,152,452,177"/>
+<area shape="rect"  title=" " alt="" coords="156,372,221,397"/>
+<area shape="rect"  title=" " alt="" coords="5,299,73,324"/>
+<area shape="rect"  title=" " alt="" coords="97,299,160,324"/>
+<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="236,299,299,324"/>
+<area shape="rect"  title=" " alt="" coords="245,372,308,397"/>
+<area shape="rect"  title=" " alt="" coords="332,372,408,397"/>
+<area shape="rect"  title=" " alt="" coords="420,299,478,324"/>
 </map>
 </div>
 </div><table class="memberdecls">

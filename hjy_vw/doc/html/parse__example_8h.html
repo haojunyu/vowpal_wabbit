@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -73,24 +79,24 @@ $(function() {
 
 <p>解析样本文件的声明  
 <a href="#details">更多...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="stack_8h_source.html">stack.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="io_8h_source.html">io.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="io_8h_source.html">io.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="parse__regressor_8h_source.html">parse_regressor.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 parse_example.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__example_8h__incl.png" border="0" usemap="#parse__example_8h" alt=""/></div>
 <map name="parse__example_8h" id="parse__example_8h">
-<area shape="rect"  title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="154,5,278,31"/>
-<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="5,152,69,177"/>
-<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="194,79,237,104"/>
-<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½éå½æ°çå£°æ" alt="" coords="333,79,462,104"/>
-<area shape="rect"  title=" " alt="" coords="5,225,69,251"/>
-<area shape="rect"  title=" " alt="" coords="361,152,433,177"/>
-<area shape="rect"  title=" " alt="" coords="93,152,158,177"/>
-<area shape="rect"  title=" " alt="" coords="182,152,250,177"/>
-<area shape="rect"  title=" " alt="" coords="273,152,337,177"/>
-<area shape="rect"  title=" " alt="" coords="458,152,515,177"/>
+<area shape="rect"  title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="176,5,299,31"/>
+<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="161,79,204,104"/>
+<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½æ¨¡åå½æ°çå£°æ" alt="" coords="262,79,391,104"/>
+<area shape="rect"  title=" " alt="" coords="291,152,363,177"/>
+<area shape="rect"  title=" " alt="" coords="34,225,99,251"/>
+<area shape="rect"  title=" " alt="" coords="23,152,91,177"/>
+<area shape="rect"  title=" " alt="" coords="115,152,179,177"/>
+<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="203,152,267,177"/>
+<area shape="rect"  title=" " alt="" coords="156,225,220,251"/>
+<area shape="rect"  title=" " alt="" coords="243,225,319,251"/>
+<area shape="rect"  title=" " alt="" coords="387,152,445,177"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -98,11 +104,12 @@ parse_example.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__example_8h__dep__incl.png" border="0" usemap="#parse__example_8hdep" alt=""/></div>
 <map name="parse__example_8hdep" id="parse__example_8hdep">
-<area shape="rect"  title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="201,5,325,31"/>
-<area shape="rect"  href="parse__args_8cc.html" title="åæ°è§£æå½æ°å®ç°" alt="" coords="5,79,110,104"/>
-<area shape="rect"  href="parse__example_8cc.html" title="è§£ææ ·æ¬æä»¶çå®ç°" alt="" coords="134,79,264,104"/>
-<area shape="rect"  href="test__pe_8cc.html" title=" " alt="" coords="287,79,370,104"/>
-<area shape="rect"  href="vw_8cc.html" title="vowpal wabbitå®ç°" alt="" coords="394,79,448,104"/>
+<area shape="rect"  title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="151,5,274,31"/>
+<area shape="rect"  href="parse__args_8h.html" title="åæ°è§£æçå£°æ" alt="" coords="26,79,125,104"/>
+<area shape="rect"  href="vw_8cc.html" title="vowpal wabbitå®ç°" alt="" coords="135,152,189,177"/>
+<area shape="rect"  href="parse__example_8cc.html" title="è§£ææ ·æ¬æä»¶çå®ç°" alt="" coords="200,79,329,104"/>
+<area shape="rect"  href="test__pe_8cc.html" title=" " alt="" coords="353,79,435,104"/>
+<area shape="rect"  href="parse__args_8cc.html" title="åæ°è§£æå½æ°å®ç°" alt="" coords="5,152,110,177"/>
 </map>
 </div>
 </div>
@@ -273,6 +280,20 @@ parse_example.h 的引用(Include)关系图:</div>
     <tr><td class="paramname">stuff</td><td>特征存放结构 </td></tr>
     <tr><td class="paramname">example_source</td><td></td></tr>
     <tr><td class="paramname">reg</td><td></td></tr>
+    <tr><td class="paramname">features</td><td>特征数组 </td></tr>
+    <tr><td class="paramname">label</td><td>样本标签 </td></tr>
+    <tr><td class="paramname">weight</td><td>样本权重 </td></tr>
+    <tr><td class="paramname">tag</td><td>样本标识 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否解析成功</dd></dl>
+<p>根据样本文件结构体解析样本</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stuff</td><td>样本结构体 </td></tr>
+    <tr><td class="paramname">example_source</td><td>样本文件结构体 </td></tr>
+    <tr><td class="paramname">reg</td><td>回归模型结构体 </td></tr>
     <tr><td class="paramname">features</td><td>特征数组 </td></tr>
     <tr><td class="paramname">label</td><td>样本标签 </td></tr>
     <tr><td class="paramname">weight</td><td>样本权重 </td></tr>

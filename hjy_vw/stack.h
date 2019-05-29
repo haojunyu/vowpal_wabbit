@@ -7,10 +7,13 @@
  * @date 2019-01-29
  * @copyright John Langford, license BSD
  */
+#ifndef __STACK_H
+#define __STACK_H
 #include <stdlib.h>
+#include <string.h>
+#include <algorithm>
+using namespace std;
 
-#ifndef STACK_H__
-#define STACK_H__
 
 /**
  * @brief 支持通用元素的模板数组
@@ -105,4 +108,4 @@ template<class T> v_array<T> pop(v_array<v_array<T> > &stack)
     return v_array<T>();
 }
 
-#endif  // STACK_H__
+#endif  // __STACK_H

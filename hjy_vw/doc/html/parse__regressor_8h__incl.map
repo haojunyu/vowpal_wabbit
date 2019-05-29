@@ -1,5 +1,5 @@
 <map id="parse_regressor.h" name="parse_regressor.h">
-<area shape="rect" id="node1" title="解析回归量函数的声明" alt="" coords="21,5,150,31"/>
+<area shape="rect" id="node1" title="解析回归模型函数的声明" alt="" coords="21,5,150,31"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,79,78,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="102,79,160,104"/>
 </map>

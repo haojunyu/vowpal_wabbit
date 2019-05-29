@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -81,7 +87,7 @@ parse_regressor.cc 的引用(Include)关系图:</div>
 <map name="parse__regressor_8cc" id="parse__regressor_8cc">
 <area shape="rect"  title="TODO" alt="" coords="31,5,166,31"/>
 <area shape="rect"  title=" " alt="" coords="5,79,71,104"/>
-<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½éå½æ°çå£°æ" alt="" coords="95,79,224,104"/>
+<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½æ¨¡åå½æ°çå£°æ" alt="" coords="95,79,224,104"/>
 <area shape="rect"  title=" " alt="" coords="78,152,150,177"/>
 <area shape="rect"  title=" " alt="" coords="175,152,232,177"/>
 </map>
@@ -90,7 +96,7 @@ parse_regressor.cc 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a6e682f4eee2e5a93122ad097a24ab06f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__regressor_8cc.html#a6e682f4eee2e5a93122ad097a24ab06f">initialize_regressor</a> (<a class="el" href="structregressor.html">regressor</a> &amp;r)</td></tr>
-<tr class="memdesc:a6e682f4eee2e5a93122ad097a24ab06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化回归量结构体  <a href="#a6e682f4eee2e5a93122ad097a24ab06f">更多...</a><br /></td></tr>
+<tr class="memdesc:a6e682f4eee2e5a93122ad097a24ab06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化回归模型结构体  <a href="#a6e682f4eee2e5a93122ad097a24ab06f">更多...</a><br /></td></tr>
 <tr class="separator:a6e682f4eee2e5a93122ad097a24ab06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70bfc1621c07588cb12f81a717a6dd31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__regressor_8cc.html#a70bfc1621c07588cb12f81a717a6dd31">parse_regressor</a> (vector&lt; string &gt; &amp;regressors, <a class="el" href="structregressor.html">regressor</a> &amp;r)</td></tr>
 <tr class="memdesc:a70bfc1621c07588cb12f81a717a6dd31"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO  <a href="#a70bfc1621c07588cb12f81a717a6dd31">更多...</a><br /></td></tr>
@@ -133,6 +139,7 @@ parse_regressor.cc 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>输出回归量结构体 </p>
+<p>输出回归模型结构体</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">o</td><td>输出流 </td></tr>
@@ -161,10 +168,10 @@ parse_regressor.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
-<p>初始化回归量结构体 </p>
+<p>初始化回归模型结构体 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>回归量结构体 </td></tr>
+    <tr><td class="paramname">r</td><td>回归模型结构体 </td></tr>
   </table>
   </dd>
 </dl>
@@ -200,7 +207,7 @@ parse_regressor.cc 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>TODO </p>
-<p>解析regressors，构造回归量结构体</p>
+<p>解析regressors，构造回归模型结构体</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">regressors</td><td></td></tr>

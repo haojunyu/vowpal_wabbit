@@ -1,4 +1,5 @@
 <map id="parse_args.h" name="parse_args.h">
-<area shape="rect" id="node1" title="参数解析的声明" alt="" coords="5,5,104,31"/>
-<area shape="rect" id="node2" href="$vw_8cc.html" title="vowpal wabbit实现" alt="" coords="28,79,82,104"/>
+<area shape="rect" id="node1" title="参数解析的声明" alt="" coords="60,5,159,31"/>
+<area shape="rect" id="node2" href="$parse__args_8cc.html" title="参数解析函数实现" alt="" coords="5,79,110,104"/>
+<area shape="rect" id="node3" href="$vw_8cc.html" title="vowpal wabbit实现" alt="" coords="135,79,189,104"/>
 </map>

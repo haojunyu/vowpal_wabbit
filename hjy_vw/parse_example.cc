@@ -495,11 +495,11 @@ int read_features(thread_data &stuff, FILE* data, float &label,
 }
 
 /**
- * @brief 根据样本文件结构体解析样本
+ * @brief 根据样本文件结构体example_source解析样本，并置于features中
  *
- * @param stuff 特征存放结构
- * @param example_source 
- * @param reg 
+ * @param stuff 样本结构体
+ * @param example_source 样本文件结构体
+ * @param reg 回归模型结构体
  * @param features  特征数组
  * @param label  样本标签
  * @param weight  样本权重

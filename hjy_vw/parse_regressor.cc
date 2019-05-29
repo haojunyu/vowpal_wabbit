@@ -11,9 +11,9 @@
 #include "parse_regressor.h"
 
 /**
- * @brief 初始化回归量结构体
+ * @brief 初始化回归模型结构体
  * 
- * @param r 回归量结构体
+ * @param r 回归模型结构体
  * @return void
  * @note 主要是weights（other_weights）的空间申请
  */

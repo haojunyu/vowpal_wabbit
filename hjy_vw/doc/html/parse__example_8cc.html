@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -84,21 +90,22 @@ parse_example.cc 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse__example_8cc__incl.png" border="0" usemap="#parse__example_8cc" alt=""/></div>
 <map name="parse__example_8cc" id="parse__example_8cc">
-<area shape="rect"  title="è§£ææ ·æ¬æä»¶çå®ç°" alt="" coords="124,5,253,31"/>
-<area shape="rect"  title=" " alt="" coords="8,225,65,251"/>
-<area shape="rect"  title=" " alt="" coords="33,79,91,104"/>
-<area shape="rect"  title=" " alt="" coords="115,79,172,104"/>
-<area shape="rect"  title=" " alt="" coords="195,79,273,104"/>
-<area shape="rect"  href="parse__example_8h.html" title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="296,79,420,104"/>
-<area shape="rect"  href="hash_8h.html" title="å£°æç±»åå«ååhashå½æ°ã" alt="" coords="443,79,505,104"/>
-<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="466,225,530,251"/>
-<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="302,152,345,177"/>
-<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½éå½æ°çå£°æ" alt="" coords="74,152,202,177"/>
-<area shape="rect"  title=" " alt="" coords="466,299,530,324"/>
-<area shape="rect"  title=" " alt="" coords="102,225,174,251"/>
-<area shape="rect"  title=" " alt="" coords="285,225,350,251"/>
-<area shape="rect"  title=" " alt="" coords="375,225,443,251"/>
-<area shape="rect"  title=" " alt="" coords="198,225,262,251"/>
+<area shape="rect"  title="è§£ææ ·æ¬æä»¶çå®ç°" alt="" coords="121,5,251,31"/>
+<area shape="rect"  title=" " alt="" coords="28,225,86,251"/>
+<area shape="rect"  title=" " alt="" coords="31,79,88,104"/>
+<area shape="rect"  title=" " alt="" coords="112,79,169,104"/>
+<area shape="rect"  title=" " alt="" coords="193,79,270,104"/>
+<area shape="rect"  href="parse__example_8h.html" title="è§£ææ ·æ¬æä»¶çå£°æ" alt="" coords="294,79,417,104"/>
+<area shape="rect"  href="hash_8h.html" title="å£°æç±»åå«ååhashå½æ°ã" alt="" coords="441,79,502,104"/>
+<area shape="rect"  href="io_8h.html" title="å£°æä¸ä¸ªioç¼å²åºï¼æ¯æbuf_read,buf_writeåè½ã" alt="" coords="334,152,377,177"/>
+<area shape="rect"  href="parse__regressor_8h.html" title="è§£æåå½æ¨¡åå½æ°çå£°æ" alt="" coords="146,152,274,177"/>
+<area shape="rect"  title=" " alt="" coords="174,225,246,251"/>
+<area shape="rect"  title=" " alt="" coords="332,299,397,324"/>
+<area shape="rect"  title=" " alt="" coords="321,225,389,251"/>
+<area shape="rect"  title=" " alt="" coords="413,225,477,251"/>
+<area shape="rect"  href="stack_8h.html" title="å®ç°ä¸ä¸ªæ¯æéç¨åç´ çæ ï¼æ¯æpush,popç­åè½ã" alt="" coords="501,225,565,251"/>
+<area shape="rect"  title=" " alt="" coords="454,299,518,324"/>
+<area shape="rect"  title=" " alt="" coords="541,299,618,324"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -147,7 +154,7 @@ parse_example.cc 的引用(Include)关系图:</div>
 <tr class="memdesc:a60a80e19799ecb00310e9cbdf1082e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件data中解析一行样本特征置于label,weight,tag,stuff中  <a href="#a60a80e19799ecb00310e9cbdf1082e5c">更多...</a><br /></td></tr>
 <tr class="separator:a60a80e19799ecb00310e9cbdf1082e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25a0f3acb048784e599b740b94a15b7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a25a0f3acb048784e599b740b94a15b7c">parse_example</a> (<a class="el" href="structthread__data.html">thread_data</a> &amp;stuff, <a class="el" href="structexample__file.html">example_file</a> &amp;example_source, <a class="el" href="structregressor.html">regressor</a> &amp;reg, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features, float &amp;label, float &amp;<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>, <a class="el" href="classv__array.html">v_array</a>&lt; char &gt; &amp;tag)</td></tr>
-<tr class="memdesc:a25a0f3acb048784e599b740b94a15b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据样本文件结构体解析样本  <a href="#a25a0f3acb048784e599b740b94a15b7c">更多...</a><br /></td></tr>
+<tr class="memdesc:a25a0f3acb048784e599b740b94a15b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据样本文件结构体example_source解析样本，并置于features中  <a href="#a25a0f3acb048784e599b740b94a15b7c">更多...</a><br /></td></tr>
 <tr class="separator:a25a0f3acb048784e599b740b94a15b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8138bf863baa80aab52f8e8c91c48ad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a8138bf863baa80aab52f8e8c91c48ad2">inconsistent_cache</a> (size_t numbits, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache)</td></tr>
 <tr class="memdesc:a8138bf863baa80aab52f8e8c91c48ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测缓存文件是否一致  <a href="#a8138bf863baa80aab52f8e8c91c48ad2">更多...</a><br /></td></tr>
@@ -467,7 +474,7 @@ parse_example.cc 的引用(Include)关系图:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>散列值 </dd></dl>
-<dl class="section see"><dt>参见</dt><dd><a class="el" href="hash_8cc.html#a5de8c92ebd556dedb75cdd515843edc3" title="将可变长的秘钥散列成32位值">hash()</a> <a class="el" href="hash_8h.html" title="声明类型别名和hash函数。">hash.h</a> </dd></dl>
+<dl class="section see"><dt>参见</dt><dd>hash() <a class="el" href="hash_8h.html" title="声明类型别名和hash函数。">hash.h</a> </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>内联函数 </dd></dl>
 
 </div>
@@ -752,12 +759,13 @@ parse_example.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
-<p>根据样本文件结构体解析样本 </p>
+<p>根据样本文件结构体example_source解析样本，并置于features中 </p>
+<p>根据样本文件结构体解析样本</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stuff</td><td>特征存放结构 </td></tr>
-    <tr><td class="paramname">example_source</td><td></td></tr>
-    <tr><td class="paramname">reg</td><td></td></tr>
+    <tr><td class="paramname">stuff</td><td>样本结构体 </td></tr>
+    <tr><td class="paramname">example_source</td><td>样本文件结构体 </td></tr>
+    <tr><td class="paramname">reg</td><td>回归模型结构体 </td></tr>
     <tr><td class="paramname">features</td><td>特征数组 </td></tr>
     <tr><td class="paramname">label</td><td>样本标签 </td></tr>
     <tr><td class="paramname">weight</td><td>样本权重 </td></tr>

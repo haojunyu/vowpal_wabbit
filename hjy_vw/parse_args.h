@@ -11,6 +11,15 @@
 #ifndef PA_H
 #define PA_H
 
+#include <iostream>
+#include <fstream>
+#include <boost/program_options.hpp>
+#include <math.h>
+#include "fcntl.h"
+#include "io.h"
+#include "parse_regressor.h"
+#include "parse_example.h"
+using namespace std;
 /**
  * @brief 解析命令行参数
  * 
