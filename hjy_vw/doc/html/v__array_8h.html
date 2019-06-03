@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: v_array.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">v_array.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+v_array.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="v__array_8h__incl.png" border="0" usemap="#v__array_8h" alt=""/></div>
+<map name="v__array_8h" id="v__array_8h">
+<area shape="rect"  title=" " alt="" coords="87,5,163,31"/>
+<area shape="rect"  title=" " alt="" coords="5,79,69,104"/>
+<area shape="rect"  title=" " alt="" coords="93,79,158,104"/>
+<area shape="rect"  title=" " alt="" coords="182,79,258,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="v__array_8h__dep__incl.png" border="0" usemap="#v__array_8hdep" alt=""/></div>
+<map name="v__array_8hdep" id="v__array_8hdep">
+<area shape="rect"  title=" " alt="" coords="1334,5,1410,31"/>
+<area shape="rect"  href="io_8h.html" title=" " alt="" coords="1350,79,1393,104"/>
+<area shape="rect"  href="delay__ring_8cc.html" title=" " alt="" coords="1548,225,1648,251"/>
+<area shape="rect"  href="parse__primitives_8h.html" title=" " alt="" coords="692,79,822,104"/>
+<area shape="rect"  href="global__data_8h.html" title=" " alt="" coords="1570,79,1672,104"/>
+<area shape="rect"  href="example_8h.html" title=" " alt="" coords="904,79,986,104"/>
+<area shape="rect"  href="parse__example_8h.html" title=" " alt="" coords="628,225,752,251"/>
+<area shape="rect"  href="parse__args_8cc.html" title=" " alt="" coords="1358,372,1463,397"/>
+<area shape="rect"  href="sender_8cc.html" title=" " alt="" coords="1176,372,1255,397"/>
+<area shape="rect"  href="parser_8h.html" title=" " alt="" coords="1000,152,1069,177"/>
+<area shape="rect"  href="simple__label_8h.html" title=" " alt="" coords="1029,299,1136,324"/>
+<area shape="rect"  href="io_8cc.html" title=" " alt="" coords="1535,152,1584,177"/>
+<area shape="rect"  href="cache_8h.html" title=" " alt="" coords="659,299,727,324"/>
+<area shape="rect"  href="gd_8cc.html" title=" " alt="" coords="582,372,636,397"/>
+<area shape="rect"  href="offset__tree_8cc.html" title=" " alt="" coords="457,372,558,397"/>
+<area shape="rect"  href="parse__example_8cc.html" title=" " alt="" coords="158,372,287,397"/>
+<area shape="rect"  href="parser_8cc.html" title=" " alt="" coords="659,372,735,397"/>
+<area shape="rect"  href="sparse__dense_8h.html" title=" " alt="" coords="366,299,482,324"/>
+<area shape="rect"  href="vw_8cc.html" title=" " alt="" coords="1279,372,1333,397"/>
+<area shape="rect"  href="cache_8cc.html" title=" " alt="" coords="5,372,79,397"/>
+<area shape="rect"  href="simple__label_8cc.html" title=" " alt="" coords="758,372,871,397"/>
+<area shape="rect"  href="sparse__dense_8cc.html" title=" " alt="" coords="311,372,433,397"/>
+<area shape="rect"  href="unique__sort_8h.html" title=" " alt="" coords="83,225,185,251"/>
+<area shape="rect"  href="gd_8h.html" title=" " alt="" coords="1123,225,1170,251"/>
+<area shape="rect"  href="multisource_8h.html" title=" " alt="" coords="904,299,1005,324"/>
+<area shape="rect"  href="noop_8cc.html" title=" " alt="" coords="878,225,946,251"/>
+<area shape="rect"  href="unique__sort_8cc.html" title=" " alt="" coords="80,299,188,324"/>
+<area shape="rect"  href="vw_8h.html" title=" " alt="" coords="1434,299,1482,324"/>
+<area shape="rect"  href="main_8cc.html" title=" " alt="" coords="1618,372,1685,397"/>
+<area shape="rect"  href="parse__args_8h.html" title=" " alt="" coords="1159,299,1259,324"/>
+<area shape="rect"  href="global__data_8cc.html" title=" " alt="" coords="1487,372,1595,397"/>
+<area shape="rect"  href="message__relay_8cc.html" title=" " alt="" coords="894,372,1022,397"/>
+<area shape="rect"  href="multisource_8cc.html" title=" " alt="" coords="1046,372,1153,397"/>
+<area shape="rect"  href="parse__primitives_8cc.html" title=" " alt="" coords="104,152,239,177"/>
+<area shape="rect"  href="parse__regressor_8cc.html" title=" " alt="" coords="1659,152,1794,177"/>
+</map>
+</div>
+</div>
+<p><a href="v__array_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classv__array.html">v_array&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:adcd003b44390deaf80e8ba08dd6b802e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:adcd003b44390deaf80e8ba08dd6b802e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="v__array_8h.html#adcd003b44390deaf80e8ba08dd6b802e">push</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;v, const T &amp;new_ele)</td></tr>
+<tr class="separator:adcd003b44390deaf80e8ba08dd6b802e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac808d95605e1b76c6b61324c26618fec"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac808d95605e1b76c6b61324c26618fec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="v__array_8h.html#ac808d95605e1b76c6b61324c26618fec">push_many</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;v, const T *begin, size_t num)</td></tr>
+<tr class="separator:ac808d95605e1b76c6b61324c26618fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8fa611b673d72756965c65e0156d9f"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3c8fa611b673d72756965c65e0156d9f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="v__array_8h.html#a3c8fa611b673d72756965c65e0156d9f">reserve</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;v, size_t length)</td></tr>
+<tr class="separator:a3c8fa611b673d72756965c65e0156d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7f543a2adbe053d8129eebb9223694"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:acf7f543a2adbe053d8129eebb9223694"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="v__array_8h.html#acf7f543a2adbe053d8129eebb9223694">calloc_reserve</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;v, size_t length)</td></tr>
+<tr class="separator:acf7f543a2adbe053d8129eebb9223694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b7eb63e8239c9e866ebd3fc8ef7570"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:af9b7eb63e8239c9e866ebd3fc8ef7570"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="v__array_8h.html#af9b7eb63e8239c9e866ebd3fc8ef7570">pop</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &gt; &amp;stack)</td></tr>
+<tr class="separator:af9b7eb63e8239c9e866ebd3fc8ef7570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="acf7f543a2adbe053d8129eebb9223694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7f543a2adbe053d8129eebb9223694">&#9670;&nbsp;</a></span>calloc_reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void calloc_reserve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9b7eb63e8239c9e866ebd3fc8ef7570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b7eb63e8239c9e866ebd3fc8ef7570">&#9670;&nbsp;</a></span>pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;T&gt; pop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcd003b44390deaf80e8ba08dd6b802e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd003b44390deaf80e8ba08dd6b802e">&#9670;&nbsp;</a></span>push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>new_ele</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac808d95605e1b76c6b61324c26618fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac808d95605e1b76c6b61324c26618fec">&#9670;&nbsp;</a></span>push_many()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void push_many </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c8fa611b673d72756965c65e0156d9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8fa611b673d72756965c65e0156d9f">&#9670;&nbsp;</a></span>reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void reserve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

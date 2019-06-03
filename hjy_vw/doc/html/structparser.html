@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: parser结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structparser-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">parser结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="parser_8h_source.html">parser.h</a>&gt;</code></p>
+<div class="dynheader">
+parser 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structparser__coll__graph.png" border="0" usemap="#parser_coll__map" alt="Collaboration graph"/></div>
+<map name="parser_coll__map" id="parser_coll__map">
+<area shape="rect"  title=" " alt="" coords="929,139,988,165"/>
+<area shape="rect"  href="classv__array.html" title=" " alt="" coords="665,33,808,58"/>
+<area shape="rect"  href="structsubstring.html" title=" " alt="" coords="426,33,502,58"/>
+<area shape="rect"  href="structlabel__parser.html" title=" " alt="" coords="689,82,784,107"/>
+<area shape="rect"  href="classio__buf.html" title=" " alt="" coords="707,139,765,165"/>
+<area shape="rect"  href="classv__array.html" title=" " alt="" coords="407,114,521,139"/>
+<area shape="rect"  href="classv__array.html" title=" " alt="" coords="413,163,516,189"/>
+<area shape="rect"  href="classv__array.html" title=" " alt="" coords="674,197,798,222"/>
+<area shape="rect"  href="classv__array.html" title=" " alt="" coords="645,246,828,271"/>
+<area shape="rect"  href="structpartial__example.html" title=" " alt="" coords="406,246,522,271"/>
+<area shape="rect"  href="structlabel__data.html" title=" " alt="" coords="200,221,283,246"/>
+<area shape="rect"  href="classv__array.html" title=" " alt="" coords="176,270,307,295"/>
+<area shape="rect"  href="structfeature.html" title=" " alt="" coords="5,270,68,295"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a1d621360818a070071053f6de0575ec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a1d621360818a070071053f6de0575ec3">channels</a></td></tr>
+<tr class="separator:a1d621360818a070071053f6de0575ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424e54814f57544ec3bc1d1773bd3436"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a424e54814f57544ec3bc1d1773bd3436">words</a></td></tr>
+<tr class="separator:a424e54814f57544ec3bc1d1773bd3436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82eda9d1c1b6e66ed2e6c9f3a02e35a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a82eda9d1c1b6e66ed2e6c9f3a02e35a4">name</a></td></tr>
+<tr class="separator:a82eda9d1c1b6e66ed2e6c9f3a02e35a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601f1252678fe829df969e78e70a972c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlabel__parser.html">label_parser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a601f1252678fe829df969e78e70a972c">lp</a></td></tr>
+<tr class="separator:a601f1252678fe829df969e78e70a972c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879fafa20463b21873abf1945c17f493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classio__buf.html">io_buf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a879fafa20463b21873abf1945c17f493">input</a></td></tr>
+<tr class="separator:a879fafa20463b21873abf1945c17f493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb87fe5e1863c1ab53c7b49f76d4bdba"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#acb87fe5e1863c1ab53c7b49f76d4bdba">reader</a> )(<a class="el" href="structparser.html">parser</a> *p, void *ae)</td></tr>
+<tr class="separator:acb87fe5e1863c1ab53c7b49f76d4bdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e92900e2b124f96f0b21a0e5303bed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a31e92900e2b124f96f0b21a0e5303bed">resettable</a></td></tr>
+<tr class="separator:a31e92900e2b124f96f0b21a0e5303bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a3b9e257151fde632741f95d18071f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classio__buf.html">io_buf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#ab5a3b9e257151fde632741f95d18071f">output</a></td></tr>
+<tr class="separator:ab5a3b9e257151fde632741f95d18071f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f48db95a95c057288a00642d4cf9f14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a5f48db95a95c057288a00642d4cf9f14">write_cache</a></td></tr>
+<tr class="separator:a5f48db95a95c057288a00642d4cf9f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58776422c06446202d8eab6f31645752"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structpartial__example.html">partial_example</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a58776422c06446202d8eab6f31645752">pes</a></td></tr>
+<tr class="separator:a58776422c06446202d8eab6f31645752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df792349ebce230daa93e1bc5eb6d48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a2df792349ebce230daa93e1bc5eb6d48">ids</a></td></tr>
+<tr class="separator:a2df792349ebce230daa93e1bc5eb6d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91f2a3bc35a0f226486f23071eb020e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv__array.html">v_array</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#af91f2a3bc35a0f226486f23071eb020e">counts</a></td></tr>
+<tr class="separator:af91f2a3bc35a0f226486f23071eb020e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53b04588524b349d94531588be79b1f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#ad53b04588524b349d94531588be79b1f">finished_count</a></td></tr>
+<tr class="separator:ad53b04588524b349d94531588be79b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0130d298d8b4c7341c7cbd879300e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a4e0130d298d8b4c7341c7cbd879300e9">label_sock</a></td></tr>
+<tr class="separator:a4e0130d298d8b4c7341c7cbd879300e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0212867a595343ef36a89c0149258178"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structparser.html#a0212867a595343ef36a89c0149258178">max_fd</a></td></tr>
+<tr class="separator:a0212867a595343ef36a89c0149258178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a1d621360818a070071053f6de0575ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d621360818a070071053f6de0575ec3">&#9670;&nbsp;</a></span>channels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;<a class="el" href="structsubstring.html">substring</a>&gt; parser::channels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af91f2a3bc35a0f226486f23071eb020e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91f2a3bc35a0f226486f23071eb020e">&#9670;&nbsp;</a></span>counts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;size_t&gt; parser::counts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad53b04588524b349d94531588be79b1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53b04588524b349d94531588be79b1f">&#9670;&nbsp;</a></span>finished_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t parser::finished_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2df792349ebce230daa93e1bc5eb6d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df792349ebce230daa93e1bc5eb6d48">&#9670;&nbsp;</a></span>ids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;size_t&gt; parser::ids</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a879fafa20463b21873abf1945c17f493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879fafa20463b21873abf1945c17f493">&#9670;&nbsp;</a></span>input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classio__buf.html">io_buf</a> parser::input</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e0130d298d8b4c7341c7cbd879300e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0130d298d8b4c7341c7cbd879300e9">&#9670;&nbsp;</a></span>label_sock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parser::label_sock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a601f1252678fe829df969e78e70a972c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601f1252678fe829df969e78e70a972c">&#9670;&nbsp;</a></span>lp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structlabel__parser.html">label_parser</a>* parser::lp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0212867a595343ef36a89c0149258178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0212867a595343ef36a89c0149258178">&#9670;&nbsp;</a></span>max_fd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parser::max_fd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82eda9d1c1b6e66ed2e6c9f3a02e35a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82eda9d1c1b6e66ed2e6c9f3a02e35a4">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;<a class="el" href="structsubstring.html">substring</a>&gt; parser::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5a3b9e257151fde632741f95d18071f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a3b9e257151fde632741f95d18071f">&#9670;&nbsp;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classio__buf.html">io_buf</a> parser::output</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58776422c06446202d8eab6f31645752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58776422c06446202d8eab6f31645752">&#9670;&nbsp;</a></span>pes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;<a class="el" href="structpartial__example.html">partial_example</a>&gt; parser::pes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb87fe5e1863c1ab53c7b49f76d4bdba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb87fe5e1863c1ab53c7b49f76d4bdba">&#9670;&nbsp;</a></span>reader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* parser::reader) (<a class="el" href="structparser.html">parser</a> *p, void *ae)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31e92900e2b124f96f0b21a0e5303bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e92900e2b124f96f0b21a0e5303bed">&#9670;&nbsp;</a></span>resettable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool parser::resettable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a424e54814f57544ec3bc1d1773bd3436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424e54814f57544ec3bc1d1773bd3436">&#9670;&nbsp;</a></span>words</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv__array.html">v_array</a>&lt;<a class="el" href="structsubstring.html">substring</a>&gt; parser::words</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f48db95a95c057288a00642d4cf9f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f48db95a95c057288a00642d4cf9f14">&#9670;&nbsp;</a></span>write_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool parser::write_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="parser_8h_source.html">parser.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

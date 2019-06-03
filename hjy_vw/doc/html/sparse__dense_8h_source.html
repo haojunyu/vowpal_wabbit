@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: sparse_dense.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sparse_dense.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sparse__dense_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Copyright (c) 2009 Yahoo! Inc.  All rights reserved.  The copyrights</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">embodied in the content of this file are licensed under the BSD</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">(revised) open source license</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef SPARSE_DENSE_VECTOR_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SPARSE_DENSE_VECTOR_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="parse__example_8h.html">parse_example.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">float</span> <a class="code" href="sparse__dense_8h.html#a47d9b30a1a04a261682d11b93f999028">sd_add</a>(<a class="code" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>* weights, <span class="keywordtype">size_t</span> mask, <a class="code" href="structfeature.html">feature</a>* begin, <a class="code" href="structfeature.html">feature</a>* end);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sparse__dense_8h.html#ac581ba63621ed094ddda1b2c3f1db784">quadratic</a>(<a class="code" href="classv__array.html">v_array&lt;feature&gt;</a> &amp;f, <span class="keyword">const</span> <a class="code" href="classv__array.html">v_array&lt;feature&gt;</a> &amp;first_part, </div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;               <span class="keyword">const</span> <a class="code" href="classv__array.html">v_array&lt;feature&gt;</a> &amp;second_part, <span class="keywordtype">size_t</span> thread_mask);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">float</span> <a class="code" href="sparse__dense_8h.html#a717f61c72b6efb0f095d34b30933c82e">one_of_quad_predict</a>(<a class="code" href="classv__array.html">v_array&lt;feature&gt;</a> &amp;page_features, <a class="code" href="structfeature.html">feature</a>&amp; offer_feature, <a class="code" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>* weights, <span class="keywordtype">size_t</span> mask);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">float</span> <a class="code" href="sparse__dense_8h.html#a13712ed4902e5d01d92aa58d96dfc656">one_pf_quad_predict</a>(<a class="code" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>* weights, <a class="code" href="structfeature.html">feature</a>&amp; page_feature, <a class="code" href="classv__array.html">v_array&lt;feature&gt;</a> &amp;offer_features, <span class="keywordtype">size_t</span> mask);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">float</span> <a class="code" href="sparse__dense_8h.html#a9aaa3095b776d43d7ad597432c1792da">offset_quad_predict</a>(<a class="code" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>* weights, <a class="code" href="structfeature.html">feature</a>&amp; page_feature, <a class="code" href="classv__array.html">v_array&lt;feature&gt;</a> &amp;offer_features, <span class="keywordtype">size_t</span> mask, <span class="keywordtype">size_t</span> offset);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sparse__dense_8h.html#a2653f65e9a77c8cf004211f59dbaad47">print_offset_audit_quad</a>(<a class="code" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>* weights, <a class="code" href="structaudit__data.html">audit_data</a>&amp; page_feature, <a class="code" href="classv__array.html">v_array&lt;audit_data&gt;</a> &amp;offer_features, <span class="keywordtype">size_t</span> mask, <span class="keywordtype">size_t</span> offset);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sparse__dense_8h.html#a771d4f793368b76ec10ce3cf4a7ef13f">print_offset_quad</a>(<a class="code" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>* weights, <a class="code" href="structfeature.html">feature</a>&amp; page_feature, <a class="code" href="classv__array.html">v_array&lt;feature&gt;</a> &amp;offer_features, <span class="keywordtype">size_t</span> mask, <span class="keywordtype">size_t</span> offset);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">float</span> <a class="code" href="sparse__dense_8h.html#a23764548bee25b53adf6416feaf30bc9">single_quad_weight</a>(<a class="code" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a>* weights, <a class="code" href="structfeature.html">feature</a>&amp; page_feature, <a class="code" href="structfeature.html">feature</a>* offer_feature, <span class="keywordtype">size_t</span> mask);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="parse__example_8h_html"><div class="ttname"><a href="parse__example_8h.html">parse_example.h</a></div></div>
+<div class="ttc" id="sparse__dense_8h_html_a13712ed4902e5d01d92aa58d96dfc656"><div class="ttname"><a href="sparse__dense_8h.html#a13712ed4902e5d01d92aa58d96dfc656">one_pf_quad_predict</a></div><div class="ttdeci">float one_pf_quad_predict(weight *weights, feature &amp;page_feature, v_array&lt; feature &gt; &amp;offer_features, size_t mask)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:52</div></div>
+<div class="ttc" id="sparse__dense_8h_html_a2653f65e9a77c8cf004211f59dbaad47"><div class="ttname"><a href="sparse__dense_8h.html#a2653f65e9a77c8cf004211f59dbaad47">print_offset_audit_quad</a></div><div class="ttdeci">void print_offset_audit_quad(weight *weights, audit_data &amp;page_feature, v_array&lt; audit_data &gt; &amp;offer_features, size_t mask, size_t offset)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:71</div></div>
+<div class="ttc" id="sparse__dense_8h_html_ac581ba63621ed094ddda1b2c3f1db784"><div class="ttname"><a href="sparse__dense_8h.html#ac581ba63621ed094ddda1b2c3f1db784">quadratic</a></div><div class="ttdeci">void quadratic(v_array&lt; feature &gt; &amp;f, const v_array&lt; feature &gt; &amp;first_part, const v_array&lt; feature &gt; &amp;second_part, size_t thread_mask)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:26</div></div>
+<div class="ttc" id="parse__regressor_8h_html_a4d04a2043fa7480d905108e63adb0bab"><div class="ttname"><a href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a></div><div class="ttdeci">float weight</div><div class="ttdef"><b>Definition:</b> parse_regressor.h:14</div></div>
+<div class="ttc" id="sparse__dense_8h_html_a47d9b30a1a04a261682d11b93f999028"><div class="ttname"><a href="sparse__dense_8h.html#a47d9b30a1a04a261682d11b93f999028">sd_add</a></div><div class="ttdeci">float sd_add(weight *weights, size_t mask, feature *begin, feature *end)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:10</div></div>
+<div class="ttc" id="classv__array_html"><div class="ttname"><a href="classv__array.html">v_array&lt; feature &gt;</a></div></div>
+<div class="ttc" id="structaudit__data_html"><div class="ttname"><a href="structaudit__data.html">audit_data</a></div><div class="ttdef"><b>Definition:</b> example.h:19</div></div>
+<div class="ttc" id="sparse__dense_8h_html_a9aaa3095b776d43d7ad597432c1792da"><div class="ttname"><a href="sparse__dense_8h.html#a9aaa3095b776d43d7ad597432c1792da">offset_quad_predict</a></div><div class="ttdeci">float offset_quad_predict(weight *weights, feature &amp;page_feature, v_array&lt; feature &gt; &amp;offer_features, size_t mask, size_t offset)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:60</div></div>
+<div class="ttc" id="sparse__dense_8h_html_a23764548bee25b53adf6416feaf30bc9"><div class="ttname"><a href="sparse__dense_8h.html#a23764548bee25b53adf6416feaf30bc9">single_quad_weight</a></div><div class="ttdeci">float single_quad_weight(weight *weights, feature &amp;page_feature, feature *offer_feature, size_t mask)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:92</div></div>
+<div class="ttc" id="sparse__dense_8h_html_a717f61c72b6efb0f095d34b30933c82e"><div class="ttname"><a href="sparse__dense_8h.html#a717f61c72b6efb0f095d34b30933c82e">one_of_quad_predict</a></div><div class="ttdeci">float one_of_quad_predict(v_array&lt; feature &gt; &amp;page_features, feature &amp;offer_feature, weight *weights, size_t mask)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:41</div></div>
+<div class="ttc" id="structfeature_html"><div class="ttname"><a href="structfeature.html">feature</a></div><div class="ttdef"><b>Definition:</b> example.h:13</div></div>
+<div class="ttc" id="sparse__dense_8h_html_a771d4f793368b76ec10ce3cf4a7ef13f"><div class="ttname"><a href="sparse__dense_8h.html#a771d4f793368b76ec10ce3cf4a7ef13f">print_offset_quad</a></div><div class="ttdeci">void print_offset_quad(weight *weights, feature &amp;page_feature, v_array&lt; feature &gt; &amp;offer_features, size_t mask, size_t offset)</div><div class="ttdef"><b>Definition:</b> sparse_dense.cc:82</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

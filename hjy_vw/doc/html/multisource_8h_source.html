@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: multisource.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">multisource.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="multisource_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MS_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MS_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="example_8h.html">example.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="parser_8h.html">parser.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structprediction.html">    7</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structprediction.html">prediction</a> {</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structprediction.html#a24cb1cba2395b804529078798b556723">    8</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="structprediction.html#a24cb1cba2395b804529078798b556723">p</a>;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structprediction.html#a2ccd71c9ba2e81223a8a8e911f1663e8">    9</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="structprediction.html#a2ccd71c9ba2e81223a8a8e911f1663e8">example_number</a>;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="multisource_8h.html#a215656468d23746d28ed312632a47d5e">   12</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="multisource_8h.html#a215656468d23746d28ed312632a47d5e">multindex</a> = 5;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> <a class="code" href="multisource_8h.html#a70f4f0f8e59efe20e9150a129702f458">really_read</a>(<span class="keywordtype">int</span> sock, <span class="keywordtype">void</span>* in, <span class="keywordtype">size_t</span> count);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> <a class="code" href="multisource_8h.html#a5adc5af9416ed36095c13d21f80fa176">receive_features</a>(<a class="code" href="structparser.html">parser</a>* p, <span class="keywordtype">void</span>* ex);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="multisource_8h.html#a494c52eb11295bde85bc072e0fd2354a">send_prediction</a>(<span class="keywordtype">int</span> sock, <a class="code" href="structprediction.html">prediction</a> pred);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="multisource_8h.html#aab58d970b208fdc09f9bb2f5d0c66965">blocking_get_prediction</a>(<span class="keywordtype">int</span> sock, <a class="code" href="structprediction.html">prediction</a> &amp;p);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="multisource_8h_html_a494c52eb11295bde85bc072e0fd2354a"><div class="ttname"><a href="multisource_8h.html#a494c52eb11295bde85bc072e0fd2354a">send_prediction</a></div><div class="ttdeci">void send_prediction(int sock, prediction pred)</div><div class="ttdef"><b>Definition:</b> multisource.cc:41</div></div>
+<div class="ttc" id="example_8h_html"><div class="ttname"><a href="example_8h.html">example.h</a></div></div>
+<div class="ttc" id="multisource_8h_html_a5adc5af9416ed36095c13d21f80fa176"><div class="ttname"><a href="multisource_8h.html#a5adc5af9416ed36095c13d21f80fa176">receive_features</a></div><div class="ttdeci">int receive_features(parser *p, void *ex)</div><div class="ttdef"><b>Definition:</b> multisource.cc:56</div></div>
+<div class="ttc" id="multisource_8h_html_a215656468d23746d28ed312632a47d5e"><div class="ttname"><a href="multisource_8h.html#a215656468d23746d28ed312632a47d5e">multindex</a></div><div class="ttdeci">const size_t multindex</div><div class="ttdef"><b>Definition:</b> multisource.h:12</div></div>
+<div class="ttc" id="multisource_8h_html_aab58d970b208fdc09f9bb2f5d0c66965"><div class="ttname"><a href="multisource_8h.html#aab58d970b208fdc09f9bb2f5d0c66965">blocking_get_prediction</a></div><div class="ttdeci">bool blocking_get_prediction(int sock, prediction &amp;p)</div><div class="ttdef"><b>Definition:</b> multisource.cc:34</div></div>
+<div class="ttc" id="parser_8h_html"><div class="ttname"><a href="parser_8h.html">parser.h</a></div></div>
+<div class="ttc" id="structprediction_html_a24cb1cba2395b804529078798b556723"><div class="ttname"><a href="structprediction.html#a24cb1cba2395b804529078798b556723">prediction::p</a></div><div class="ttdeci">float p</div><div class="ttdef"><b>Definition:</b> multisource.h:8</div></div>
+<div class="ttc" id="multisource_8h_html_a70f4f0f8e59efe20e9150a129702f458"><div class="ttname"><a href="multisource_8h.html#a70f4f0f8e59efe20e9150a129702f458">really_read</a></div><div class="ttdeci">int really_read(int sock, void *in, size_t count)</div><div class="ttdef"><b>Definition:</b> multisource.cc:9</div></div>
+<div class="ttc" id="structprediction_html"><div class="ttname"><a href="structprediction.html">prediction</a></div><div class="ttdef"><b>Definition:</b> multisource.h:7</div></div>
+<div class="ttc" id="structprediction_html_a2ccd71c9ba2e81223a8a8e911f1663e8"><div class="ttname"><a href="structprediction.html#a2ccd71c9ba2e81223a8a8e911f1663e8">prediction::example_number</a></div><div class="ttdeci">size_t example_number</div><div class="ttdef"><b>Definition:</b> multisource.h:9</div></div>
+<div class="ttc" id="structparser_html"><div class="ttname"><a href="structparser.html">parser</a></div><div class="ttdef"><b>Definition:</b> parser.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

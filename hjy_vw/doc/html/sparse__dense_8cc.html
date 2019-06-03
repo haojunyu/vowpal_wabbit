@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: sparse_dense.cc 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">sparse_dense.cc 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="sparse__dense_8h_source.html">sparse_dense.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="constant_8h_source.html">constant.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+sparse_dense.cc 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="sparse__dense_8cc__incl.png" border="0" usemap="#sparse__dense_8cc" alt=""/></div>
+<map name="sparse__dense_8cc" id="sparse__dense_8cc">
+<area shape="rect"  title=" " alt="" coords="226,5,348,31"/>
+<area shape="rect"  href="sparse__dense_8h.html" title=" " alt="" coords="167,79,284,104"/>
+<area shape="rect"  href="constant_8h.html" title=" " alt="" coords="308,79,391,104"/>
+<area shape="rect"  href="parse__example_8h.html" title=" " alt="" coords="164,152,287,177"/>
+<area shape="rect"  title=" " alt="" coords="5,372,70,397"/>
+<area shape="rect"  href="io_8h.html" title=" " alt="" coords="185,299,228,324"/>
+<area shape="rect"  href="parse__regressor_8h.html" title=" " alt="" coords="540,372,669,397"/>
+<area shape="rect"  href="parse__primitives_8h.html" title=" " alt="" coords="253,299,382,324"/>
+<area shape="rect"  href="parser_8h.html" title=" " alt="" coords="227,225,296,251"/>
+<area shape="rect"  href="example_8h.html" title=" " alt="" coords="79,299,162,324"/>
+<area shape="rect"  href="v__array_8h.html" title=" " alt="" coords="284,372,359,397"/>
+<area shape="rect"  title=" " alt="" coords="187,372,259,397"/>
+<area shape="rect"  title=" " alt="" coords="94,372,162,397"/>
+<area shape="rect"  title=" " alt="" coords="154,445,217,471"/>
+<area shape="rect"  title=" " alt="" coords="241,445,306,471"/>
+<area shape="rect"  title=" " alt="" coords="330,445,406,471"/>
+<area shape="rect"  href="loss__functions_8h.html" title=" " alt="" coords="638,445,755,471"/>
+<area shape="rect"  title=" " alt="" coords="430,445,613,471"/>
+<area shape="rect"  title=" " alt="" coords="669,519,723,544"/>
+<area shape="rect"  href="global__data_8h.html" title=" " alt="" coords="457,299,559,324"/>
+<area shape="rect"  title=" " alt="" coords="458,372,516,397"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a47d9b30a1a04a261682d11b93f999028"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a47d9b30a1a04a261682d11b93f999028">sd_add</a> (<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, size_t mask, <a class="el" href="structfeature.html">feature</a> *begin, <a class="el" href="structfeature.html">feature</a> *end)</td></tr>
+<tr class="separator:a47d9b30a1a04a261682d11b93f999028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fcc60b7270f6911c5b0387d6387c432"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a1fcc60b7270f6911c5b0387d6387c432">sd_offset_add</a> (<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, size_t mask, <a class="el" href="structfeature.html">feature</a> *begin, <a class="el" href="structfeature.html">feature</a> *end, size_t offset)</td></tr>
+<tr class="separator:a1fcc60b7270f6911c5b0387d6387c432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac581ba63621ed094ddda1b2c3f1db784"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#ac581ba63621ed094ddda1b2c3f1db784">quadratic</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;f, const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;first_part, const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;second_part, size_t thread_mask)</td></tr>
+<tr class="separator:ac581ba63621ed094ddda1b2c3f1db784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717f61c72b6efb0f095d34b30933c82e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a717f61c72b6efb0f095d34b30933c82e">one_of_quad_predict</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;page_features, <a class="el" href="structfeature.html">feature</a> &amp;offer_feature, <a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, size_t mask)</td></tr>
+<tr class="separator:a717f61c72b6efb0f095d34b30933c82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf8d0dbe695362a897edf99a8d05180"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a6bf8d0dbe695362a897edf99a8d05180">one_pf_quad_predict</a> (<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, <a class="el" href="structfeature.html">feature</a> &amp;f, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;cross_features, size_t mask)</td></tr>
+<tr class="separator:a6bf8d0dbe695362a897edf99a8d05180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aaa3095b776d43d7ad597432c1792da"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a9aaa3095b776d43d7ad597432c1792da">offset_quad_predict</a> (<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, <a class="el" href="structfeature.html">feature</a> &amp;page_feature, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;offer_features, size_t mask, size_t offset)</td></tr>
+<tr class="separator:a9aaa3095b776d43d7ad597432c1792da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2653f65e9a77c8cf004211f59dbaad47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a2653f65e9a77c8cf004211f59dbaad47">print_offset_audit_quad</a> (<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, <a class="el" href="structaudit__data.html">audit_data</a> &amp;page_feature, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structaudit__data.html">audit_data</a> &gt; &amp;offer_features, size_t mask, size_t offset)</td></tr>
+<tr class="separator:a2653f65e9a77c8cf004211f59dbaad47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771d4f793368b76ec10ce3cf4a7ef13f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a771d4f793368b76ec10ce3cf4a7ef13f">print_offset_quad</a> (<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, <a class="el" href="structfeature.html">feature</a> &amp;page_feature, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;offer_features, size_t mask, size_t offset)</td></tr>
+<tr class="separator:a771d4f793368b76ec10ce3cf4a7ef13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23764548bee25b53adf6416feaf30bc9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sparse__dense_8cc.html#a23764548bee25b53adf6416feaf30bc9">single_quad_weight</a> (<a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *weights, <a class="el" href="structfeature.html">feature</a> &amp;page_feature, <a class="el" href="structfeature.html">feature</a> *offer_feature, size_t mask)</td></tr>
+<tr class="separator:a23764548bee25b53adf6416feaf30bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a9aaa3095b776d43d7ad597432c1792da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aaa3095b776d43d7ad597432c1792da">&#9670;&nbsp;</a></span>offset_quad_predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float offset_quad_predict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> &amp;&#160;</td>
+          <td class="paramname"><em>page_feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>offer_features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a717f61c72b6efb0f095d34b30933c82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717f61c72b6efb0f095d34b30933c82e">&#9670;&nbsp;</a></span>one_of_quad_predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float one_of_quad_predict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>page_features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> &amp;&#160;</td>
+          <td class="paramname"><em>offer_feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bf8d0dbe695362a897edf99a8d05180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf8d0dbe695362a897edf99a8d05180">&#9670;&nbsp;</a></span>one_pf_quad_predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float one_pf_quad_predict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cross_features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2653f65e9a77c8cf004211f59dbaad47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2653f65e9a77c8cf004211f59dbaad47">&#9670;&nbsp;</a></span>print_offset_audit_quad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_offset_audit_quad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structaudit__data.html">audit_data</a> &amp;&#160;</td>
+          <td class="paramname"><em>page_feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structaudit__data.html">audit_data</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>offer_features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a771d4f793368b76ec10ce3cf4a7ef13f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771d4f793368b76ec10ce3cf4a7ef13f">&#9670;&nbsp;</a></span>print_offset_quad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_offset_quad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> &amp;&#160;</td>
+          <td class="paramname"><em>page_feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>offer_features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac581ba63621ed094ddda1b2c3f1db784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac581ba63621ed094ddda1b2c3f1db784">&#9670;&nbsp;</a></span>quadratic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quadratic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>first_part</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>second_part</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>thread_mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47d9b30a1a04a261682d11b93f999028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47d9b30a1a04a261682d11b93f999028">&#9670;&nbsp;</a></span>sd_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sd_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> *&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> *&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fcc60b7270f6911c5b0387d6387c432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcc60b7270f6911c5b0387d6387c432">&#9670;&nbsp;</a></span>sd_offset_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sd_offset_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> *&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> *&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23764548bee25b53adf6416feaf30bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23764548bee25b53adf6416feaf30bc9">&#9670;&nbsp;</a></span>single_quad_weight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float single_quad_weight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parse__regressor_8h.html#a4d04a2043fa7480d905108e63adb0bab">weight</a> *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> &amp;&#160;</td>
+          <td class="paramname"><em>page_feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfeature.html">feature</a> *&#160;</td>
+          <td class="paramname"><em>offer_feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

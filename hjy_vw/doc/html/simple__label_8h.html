@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: simple_label.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">simple_label.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="io_8h_source.html">io.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parse__primitives_8h_source.html">parse_primitives.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parser_8h_source.html">parser.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+simple_label.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="simple__label_8h__incl.png" border="0" usemap="#simple__label_8h" alt=""/></div>
+<map name="simple__label_8h" id="simple__label_8h">
+<area shape="rect"  title=" " alt="" coords="147,5,254,31"/>
+<area shape="rect"  href="io_8h.html" title=" " alt="" coords="69,152,111,177"/>
+<area shape="rect"  href="parse__primitives_8h.html" title=" " alt="" coords="136,152,265,177"/>
+<area shape="rect"  href="parser_8h.html" title=" " alt="" coords="267,79,337,104"/>
+<area shape="rect"  href="v__array_8h.html" title=" " alt="" coords="195,225,271,251"/>
+<area shape="rect"  title=" " alt="" coords="98,225,170,251"/>
+<area shape="rect"  title=" " alt="" coords="5,225,73,251"/>
+<area shape="rect"  title=" " alt="" coords="201,299,264,324"/>
+<area shape="rect"  title=" " alt="" coords="288,299,353,324"/>
+<area shape="rect"  title=" " alt="" coords="101,299,177,324"/>
+<area shape="rect"  href="global__data_8h.html" title=" " alt="" coords="397,152,498,177"/>
+<area shape="rect"  title=" " alt="" coords="534,299,718,324"/>
+<area shape="rect"  href="example_8h.html" title=" " alt="" coords="290,152,373,177"/>
+<area shape="rect"  title=" " alt="" coords="536,225,594,251"/>
+<area shape="rect"  href="parse__regressor_8h.html" title=" " alt="" coords="383,225,512,251"/>
+<area shape="rect"  href="loss__functions_8h.html" title=" " alt="" coords="389,299,506,324"/>
+<area shape="rect"  title=" " alt="" coords="420,372,474,397"/>
+<area shape="rect"  title=" " alt="" coords="295,225,360,251"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="simple__label_8h__dep__incl.png" border="0" usemap="#simple__label_8hdep" alt=""/></div>
+<map name="simple__label_8hdep" id="simple__label_8hdep">
+<area shape="rect"  title=" " alt="" coords="199,5,305,31"/>
+<area shape="rect"  href="gd_8cc.html" title=" " alt="" coords="5,79,59,104"/>
+<area shape="rect"  href="multisource_8cc.html" title=" " alt="" coords="83,79,189,104"/>
+<area shape="rect"  href="sender_8cc.html" title=" " alt="" coords="213,79,291,104"/>
+<area shape="rect"  href="simple__label_8cc.html" title=" " alt="" coords="316,79,428,104"/>
+<area shape="rect"  href="vw_8cc.html" title=" " alt="" coords="452,79,506,104"/>
+</map>
+</div>
+</div>
+<p><a href="simple__label_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a3dab3bf77b17c7e7a68f4909046c819b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a3dab3bf77b17c7e7a68f4909046c819b">bufread_simple_label</a> (<a class="el" href="structlabel__data.html">label_data</a> *ld, char *c)</td></tr>
+<tr class="separator:a3dab3bf77b17c7e7a68f4909046c819b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9c4dfde2dff69540352afdf0bc3b4c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a1c9c4dfde2dff69540352afdf0bc3b4c">bufcache_simple_label</a> (<a class="el" href="structlabel__data.html">label_data</a> *ld, char *c)</td></tr>
+<tr class="separator:a1c9c4dfde2dff69540352afdf0bc3b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019af3b2242074018375fd3b94f2dac4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a019af3b2242074018375fd3b94f2dac4">read_cached_simple_label</a> (void *v, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache)</td></tr>
+<tr class="separator:a019af3b2242074018375fd3b94f2dac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aab8977b4b424708f55045ebce0779c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a2aab8977b4b424708f55045ebce0779c">cache_simple_label</a> (void *v, <a class="el" href="classio__buf.html">io_buf</a> &amp;cache)</td></tr>
+<tr class="separator:a2aab8977b4b424708f55045ebce0779c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdf040fe4eb99718b32a316aaaf48d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a5cdf040fe4eb99718b32a316aaaf48d9">default_simple_label</a> (void *v)</td></tr>
+<tr class="separator:a5cdf040fe4eb99718b32a316aaaf48d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a740ae833c21495f3c8240d8d027558"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a8a740ae833c21495f3c8240d8d027558">parse_simple_label</a> (void *v, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt; &amp;words)</td></tr>
+<tr class="separator:a8a740ae833c21495f3c8240d8d027558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6f989cecc4c7cfca82dfe5feb908c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a6c6f989cecc4c7cfca82dfe5feb908c6">delete_simple_label</a> (void *v)</td></tr>
+<tr class="separator:a6c6f989cecc4c7cfca82dfe5feb908c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a82aba83bc9b63f25981ea8cdc302a692"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlabel__parser.html">label_parser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple__label_8h.html#a82aba83bc9b63f25981ea8cdc302a692">simple_label</a></td></tr>
+<tr class="separator:a82aba83bc9b63f25981ea8cdc302a692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a1c9c4dfde2dff69540352afdf0bc3b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9c4dfde2dff69540352afdf0bc3b4c">&#9670;&nbsp;</a></span>bufcache_simple_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* bufcache_simple_label </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlabel__data.html">label_data</a> *&#160;</td>
+          <td class="paramname"><em>ld</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dab3bf77b17c7e7a68f4909046c819b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dab3bf77b17c7e7a68f4909046c819b">&#9670;&nbsp;</a></span>bufread_simple_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* bufread_simple_label </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlabel__data.html">label_data</a> *&#160;</td>
+          <td class="paramname"><em>ld</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2aab8977b4b424708f55045ebce0779c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aab8977b4b424708f55045ebce0779c">&#9670;&nbsp;</a></span>cache_simple_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cache_simple_label </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classio__buf.html">io_buf</a> &amp;&#160;</td>
+          <td class="paramname"><em>cache</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cdf040fe4eb99718b32a316aaaf48d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdf040fe4eb99718b32a316aaaf48d9">&#9670;&nbsp;</a></span>default_simple_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void default_simple_label </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c6f989cecc4c7cfca82dfe5feb908c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6f989cecc4c7cfca82dfe5feb908c6">&#9670;&nbsp;</a></span>delete_simple_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delete_simple_label </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a740ae833c21495f3c8240d8d027558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a740ae833c21495f3c8240d8d027558">&#9670;&nbsp;</a></span>parse_simple_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parse_simple_label </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>words</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a019af3b2242074018375fd3b94f2dac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a019af3b2242074018375fd3b94f2dac4">&#9670;&nbsp;</a></span>read_cached_simple_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t read_cached_simple_label </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classio__buf.html">io_buf</a> &amp;&#160;</td>
+          <td class="paramname"><em>cache</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a82aba83bc9b63f25981ea8cdc302a692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82aba83bc9b63f25981ea8cdc302a692">&#9670;&nbsp;</a></span>simple_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structlabel__parser.html">label_parser</a> simple_label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {<a class="code" href="simple__label_8h.html#a5cdf040fe4eb99718b32a316aaaf48d9">default_simple_label</a>, <a class="code" href="simple__label_8h.html#a8a740ae833c21495f3c8240d8d027558">parse_simple_label</a>, </div><div class="line">                   <a class="code" href="simple__label_8h.html#a2aab8977b4b424708f55045ebce0779c">cache_simple_label</a>, <a class="code" href="simple__label_8h.html#a019af3b2242074018375fd3b94f2dac4">read_cached_simple_label</a>, </div><div class="line">                   <a class="code" href="simple__label_8h.html#a6c6f989cecc4c7cfca82dfe5feb908c6">delete_simple_label</a>, <span class="keyword">sizeof</span>(<a class="code" href="structlabel__data.html">label_data</a>)}</div><div class="ttc" id="simple__label_8h_html_a8a740ae833c21495f3c8240d8d027558"><div class="ttname"><a href="simple__label_8h.html#a8a740ae833c21495f3c8240d8d027558">parse_simple_label</a></div><div class="ttdeci">void parse_simple_label(void *v, v_array&lt; substring &gt; &amp;words)</div><div class="ttdef"><b>Definition:</b> simple_label.cc:56</div></div>
+<div class="ttc" id="simple__label_8h_html_a2aab8977b4b424708f55045ebce0779c"><div class="ttname"><a href="simple__label_8h.html#a2aab8977b4b424708f55045ebce0779c">cache_simple_label</a></div><div class="ttdeci">void cache_simple_label(void *v, io_buf &amp;cache)</div><div class="ttdef"><b>Definition:</b> simple_label.cc:36</div></div>
+<div class="ttc" id="structlabel__data_html"><div class="ttname"><a href="structlabel__data.html">label_data</a></div><div class="ttdef"><b>Definition:</b> example.h:7</div></div>
+<div class="ttc" id="simple__label_8h_html_a019af3b2242074018375fd3b94f2dac4"><div class="ttname"><a href="simple__label_8h.html#a019af3b2242074018375fd3b94f2dac4">read_cached_simple_label</a></div><div class="ttdeci">size_t read_cached_simple_label(void *v, io_buf &amp;cache)</div><div class="ttdef"><b>Definition:</b> simple_label.cc:15</div></div>
+<div class="ttc" id="simple__label_8h_html_a5cdf040fe4eb99718b32a316aaaf48d9"><div class="ttname"><a href="simple__label_8h.html#a5cdf040fe4eb99718b32a316aaaf48d9">default_simple_label</a></div><div class="ttdeci">void default_simple_label(void *v)</div><div class="ttdef"><b>Definition:</b> simple_label.cc:44</div></div>
+<div class="ttc" id="simple__label_8h_html_a6c6f989cecc4c7cfca82dfe5feb908c6"><div class="ttname"><a href="simple__label_8h.html#a6c6f989cecc4c7cfca82dfe5feb908c6">delete_simple_label</a></div><div class="ttdeci">void delete_simple_label(void *v)</div><div class="ttdef"><b>Definition:</b> simple_label.cc:52</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

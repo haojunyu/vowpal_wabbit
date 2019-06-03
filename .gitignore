@@ -1,5 +1,10 @@
 *.o
 *.a
-t_*
-bin
+*.so
+*.bak
+*.out
+*.sw*
+.DS_Store
+.vscode
+test_*
 vw

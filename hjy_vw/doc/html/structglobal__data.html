@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: global_data结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structglobal__data-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">global_data结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="global__data_8h_source.html">global_data.h</a>&gt;</code></p>
+<div class="dynheader">
+global_data 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structglobal__data__coll__graph.png" border="0" usemap="#global__data_coll__map" alt="Collaboration graph"/></div>
+<map name="global__data_coll__map" id="global__data_coll__map">
+<area shape="rect"  title=" " alt="" coords="22,179,112,204"/>
+<area shape="rect"  href="structregressor.html" title=" " alt="" coords="85,92,163,117"/>
+<area shape="rect"  href="classloss__function.html" title=" " alt="" coords="5,5,104,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa0ac0eb96e2b1032d9490c1f7d86c9a0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#aa0ac0eb96e2b1032d9490c1f7d86c9a0">num_threads</a> ()</td></tr>
+<tr class="separator:aa0ac0eb96e2b1032d9490c1f7d86c9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a9985e8489cd45274d1a8e701bcf85"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#af3a9985e8489cd45274d1a8e701bcf85">length</a> ()</td></tr>
+<tr class="separator:af3a9985e8489cd45274d1a8e701bcf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:aa8842a190ad810d4d294fead9972e6c0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#aa8842a190ad810d4d294fead9972e6c0">thread_bits</a></td></tr>
+<tr class="separator:aa8842a190ad810d4d294fead9972e6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f1bc601d6598a06682a80315040219"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a84f1bc601d6598a06682a80315040219">num_bits</a></td></tr>
+<tr class="separator:a84f1bc601d6598a06682a80315040219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05cdbe5e05e7fa331ac9ec19b69a21e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a05cdbe5e05e7fa331ac9ec19b69a21e4">default_bits</a></td></tr>
+<tr class="separator:a05cdbe5e05e7fa331ac9ec19b69a21e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3ec56ffa9dfede4cbb25a114ec7512"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a2e3ec56ffa9dfede4cbb25a114ec7512">thread_mask</a></td></tr>
+<tr class="separator:a2e3ec56ffa9dfede4cbb25a114ec7512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ee3f5a248dcca4413b5619dd059994"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a93ee3f5a248dcca4413b5619dd059994">mask</a></td></tr>
+<tr class="separator:a93ee3f5a248dcca4413b5619dd059994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbff94325be948b292d3228b40bbb56d"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#abbff94325be948b292d3228b40bbb56d">pairs</a></td></tr>
+<tr class="separator:abbff94325be948b292d3228b40bbb56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f99ef7488a3d4df02bbad011f75e48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a62f99ef7488a3d4df02bbad011f75e48">audit</a></td></tr>
+<tr class="separator:a62f99ef7488a3d4df02bbad011f75e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1decc2067625375cefdbdc58f6b03323"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a1decc2067625375cefdbdc58f6b03323">quiet</a></td></tr>
+<tr class="separator:a1decc2067625375cefdbdc58f6b03323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775317d8d2ee860be2a95bb5dd47ab9b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a775317d8d2ee860be2a95bb5dd47ab9b">training</a></td></tr>
+<tr class="separator:a775317d8d2ee860be2a95bb5dd47ab9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53bf65a0d121c5666c79862b59334aa2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a53bf65a0d121c5666c79862b59334aa2">final_prediction_sink</a></td></tr>
+<tr class="separator:a53bf65a0d121c5666c79862b59334aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc630dc0a241e7f3f95af730c8cba490"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#afc630dc0a241e7f3f95af730c8cba490">raw_prediction</a></td></tr>
+<tr class="separator:afc630dc0a241e7f3f95af730c8cba490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7463c9e89b4563cfb8c11e869a647e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#ae7463c9e89b4563cfb8c11e869a647e5">local_prediction</a></td></tr>
+<tr class="separator:ae7463c9e89b4563cfb8c11e869a647e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae830cb3b8f0fe62190b5137f73015593"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#ae830cb3b8f0fe62190b5137f73015593">unique_id</a></td></tr>
+<tr class="separator:ae830cb3b8f0fe62190b5137f73015593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e82cc7d6c7492aa10368c7fc72478a"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a93e82cc7d6c7492aa10368c7fc72478a">print</a> )(int, float, <a class="el" href="classv__array.html">v_array</a>&lt; char &gt;)</td></tr>
+<tr class="separator:a93e82cc7d6c7492aa10368c7fc72478a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e9bf502bb7d7910935ead5adbb319c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classloss__function.html">loss_function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a89e9bf502bb7d7910935ead5adbb319c">loss</a></td></tr>
+<tr class="separator:a89e9bf502bb7d7910935ead5adbb319c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a12c67637b67925d659875ed5c017e3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a0a12c67637b67925d659875ed5c017e3">program_name</a></td></tr>
+<tr class="separator:a0a12c67637b67925d659875ed5c017e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e843f0f6ec6057078f4eaffbc502a43"><td class="memItemLeft" align="right" valign="top">long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a6e843f0f6ec6057078f4eaffbc502a43">example_number</a></td></tr>
+<tr class="separator:a6e843f0f6ec6057078f4eaffbc502a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9642948324e8bf53d980ee9e6f2e52aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a9642948324e8bf53d980ee9e6f2e52aa">weighted_examples</a></td></tr>
+<tr class="separator:a9642948324e8bf53d980ee9e6f2e52aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83942cf0646792d759aeb0de1d0f02b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#af83942cf0646792d759aeb0de1d0f02b">old_weighted_examples</a></td></tr>
+<tr class="separator:af83942cf0646792d759aeb0de1d0f02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c241b930acdfd761dd3afc2594a9dee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a5c241b930acdfd761dd3afc2594a9dee">weighted_labels</a></td></tr>
+<tr class="separator:a5c241b930acdfd761dd3afc2594a9dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f25171c7a1dfa822e82fa9ca0a3e505"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a8f25171c7a1dfa822e82fa9ca0a3e505">total_features</a></td></tr>
+<tr class="separator:a8f25171c7a1dfa822e82fa9ca0a3e505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353abb33132fcfc080d5cb45d9ae31f2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a353abb33132fcfc080d5cb45d9ae31f2">sum_loss</a></td></tr>
+<tr class="separator:a353abb33132fcfc080d5cb45d9ae31f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e3886023ec374b5c06431dfffbe47e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#ac9e3886023ec374b5c06431dfffbe47e">sum_loss_since_last_dump</a></td></tr>
+<tr class="separator:ac9e3886023ec374b5c06431dfffbe47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0dfce571faf9d2d618dfbffb1b5798"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a8a0dfce571faf9d2d618dfbffb1b5798">dump_interval</a></td></tr>
+<tr class="separator:a8a0dfce571faf9d2d618dfbffb1b5798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85788ed97989e81fc69199945a9b02d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structregressor.html">regressor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structglobal__data.html#a85788ed97989e81fc69199945a9b02d4">reg</a></td></tr>
+<tr class="separator:a85788ed97989e81fc69199945a9b02d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af3a9985e8489cd45274d1a8e701bcf85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a9985e8489cd45274d1a8e701bcf85">&#9670;&nbsp;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0ac0eb96e2b1032d9490c1f7d86c9a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ac0eb96e2b1032d9490c1f7d86c9a0">&#9670;&nbsp;</a></span>num_threads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::num_threads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a62f99ef7488a3d4df02bbad011f75e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f99ef7488a3d4df02bbad011f75e48">&#9670;&nbsp;</a></span>audit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_data::audit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05cdbe5e05e7fa331ac9ec19b69a21e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05cdbe5e05e7fa331ac9ec19b69a21e4">&#9670;&nbsp;</a></span>default_bits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_data::default_bits</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a0dfce571faf9d2d618dfbffb1b5798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0dfce571faf9d2d618dfbffb1b5798">&#9670;&nbsp;</a></span>dump_interval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float global_data::dump_interval</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e843f0f6ec6057078f4eaffbc502a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e843f0f6ec6057078f4eaffbc502a43">&#9670;&nbsp;</a></span>example_number</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long int global_data::example_number</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53bf65a0d121c5666c79862b59334aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53bf65a0d121c5666c79862b59334aa2">&#9670;&nbsp;</a></span>final_prediction_sink</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_data::final_prediction_sink</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7463c9e89b4563cfb8c11e869a647e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7463c9e89b4563cfb8c11e869a647e5">&#9670;&nbsp;</a></span>local_prediction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_data::local_prediction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89e9bf502bb7d7910935ead5adbb319c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e9bf502bb7d7910935ead5adbb319c">&#9670;&nbsp;</a></span>loss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classloss__function.html">loss_function</a>* global_data::loss</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93ee3f5a248dcca4413b5619dd059994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ee3f5a248dcca4413b5619dd059994">&#9670;&nbsp;</a></span>mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84f1bc601d6598a06682a80315040219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f1bc601d6598a06682a80315040219">&#9670;&nbsp;</a></span>num_bits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::num_bits</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af83942cf0646792d759aeb0de1d0f02b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83942cf0646792d759aeb0de1d0f02b">&#9670;&nbsp;</a></span>old_weighted_examples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double global_data::old_weighted_examples</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbff94325be948b292d3228b40bbb56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbff94325be948b292d3228b40bbb56d">&#9670;&nbsp;</a></span>pairs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;string&gt; global_data::pairs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93e82cc7d6c7492aa10368c7fc72478a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e82cc7d6c7492aa10368c7fc72478a">&#9670;&nbsp;</a></span>print</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* global_data::print) (int, float, <a class="el" href="classv__array.html">v_array</a>&lt; char &gt;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a12c67637b67925d659875ed5c017e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a12c67637b67925d659875ed5c017e3">&#9670;&nbsp;</a></span>program_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* global_data::program_name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1decc2067625375cefdbdc58f6b03323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1decc2067625375cefdbdc58f6b03323">&#9670;&nbsp;</a></span>quiet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_data::quiet</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc630dc0a241e7f3f95af730c8cba490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc630dc0a241e7f3f95af730c8cba490">&#9670;&nbsp;</a></span>raw_prediction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_data::raw_prediction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85788ed97989e81fc69199945a9b02d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85788ed97989e81fc69199945a9b02d4">&#9670;&nbsp;</a></span>reg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structregressor.html">regressor</a> global_data::reg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a353abb33132fcfc080d5cb45d9ae31f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a353abb33132fcfc080d5cb45d9ae31f2">&#9670;&nbsp;</a></span>sum_loss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double global_data::sum_loss</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9e3886023ec374b5c06431dfffbe47e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e3886023ec374b5c06431dfffbe47e">&#9670;&nbsp;</a></span>sum_loss_since_last_dump</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double global_data::sum_loss_since_last_dump</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8842a190ad810d4d294fead9972e6c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8842a190ad810d4d294fead9972e6c0">&#9670;&nbsp;</a></span>thread_bits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::thread_bits</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e3ec56ffa9dfede4cbb25a114ec7512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3ec56ffa9dfede4cbb25a114ec7512">&#9670;&nbsp;</a></span>thread_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::thread_mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f25171c7a1dfa822e82fa9ca0a3e505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f25171c7a1dfa822e82fa9ca0a3e505">&#9670;&nbsp;</a></span>total_features</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::total_features</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a775317d8d2ee860be2a95bb5dd47ab9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a775317d8d2ee860be2a95bb5dd47ab9b">&#9670;&nbsp;</a></span>training</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_data::training</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae830cb3b8f0fe62190b5137f73015593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae830cb3b8f0fe62190b5137f73015593">&#9670;&nbsp;</a></span>unique_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t global_data::unique_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9642948324e8bf53d980ee9e6f2e52aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9642948324e8bf53d980ee9e6f2e52aa">&#9670;&nbsp;</a></span>weighted_examples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double global_data::weighted_examples</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c241b930acdfd761dd3afc2594a9dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c241b930acdfd761dd3afc2594a9dee">&#9670;&nbsp;</a></span>weighted_labels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double global_data::weighted_labels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="global__data_8h_source.html">global_data.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

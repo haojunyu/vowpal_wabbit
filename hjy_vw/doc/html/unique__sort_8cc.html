@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: unique_sort.cc 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">unique_sort.cc 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="unique__sort_8h_source.html">unique_sort.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+unique_sort.cc 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="unique__sort_8cc__incl.png" border="0" usemap="#unique__sort_8cc" alt=""/></div>
+<map name="unique__sort_8cc" id="unique__sort_8cc">
+<area shape="rect"  title=" " alt="" coords="440,5,548,31"/>
+<area shape="rect"  href="unique__sort_8h.html" title=" " alt="" coords="443,79,545,104"/>
+<area shape="rect"  href="parser_8h.html" title=" " alt="" coords="423,152,493,177"/>
+<area shape="rect"  href="example_8h.html" title=" " alt="" coords="574,225,657,251"/>
+<area shape="rect"  href="io_8h.html" title=" " alt="" coords="113,225,155,251"/>
+<area shape="rect"  href="global__data_8h.html" title=" " alt="" coords="362,225,463,251"/>
+<area shape="rect"  title=" " alt="" coords="486,372,670,397"/>
+<area shape="rect"  href="parse__primitives_8h.html" title=" " alt="" coords="180,225,309,251"/>
+<area shape="rect"  href="v__array_8h.html" title=" " alt="" coords="195,299,271,324"/>
+<area shape="rect"  title=" " alt="" coords="98,299,170,324"/>
+<area shape="rect"  title=" " alt="" coords="5,299,73,324"/>
+<area shape="rect"  title=" " alt="" coords="69,372,132,397"/>
+<area shape="rect"  title=" " alt="" coords="156,372,221,397"/>
+<area shape="rect"  title=" " alt="" coords="245,372,321,397"/>
+<area shape="rect"  title=" " alt="" coords="295,299,352,324"/>
+<area shape="rect"  href="parse__regressor_8h.html" title=" " alt="" coords="376,299,505,324"/>
+<area shape="rect"  href="loss__functions_8h.html" title=" " alt="" coords="345,372,462,397"/>
+<area shape="rect"  title=" " alt="" coords="376,445,430,471"/>
+<area shape="rect"  title=" " alt="" coords="583,299,648,324"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a1ad5a34a57989d3414f7106a7e647e0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unique__sort_8cc.html#a1ad5a34a57989d3414f7106a7e647e0e">order_features</a> (const void *first, const void *second)</td></tr>
+<tr class="separator:a1ad5a34a57989d3414f7106a7e647e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a8200cee902c18b3b5041ae8dcacef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unique__sort_8cc.html#ad0a8200cee902c18b3b5041ae8dcacef">order_audit_features</a> (const void *first, const void *second)</td></tr>
+<tr class="separator:ad0a8200cee902c18b3b5041ae8dcacef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7747d9799073174b661d79ccc7dd8757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unique__sort_8cc.html#a7747d9799073174b661d79ccc7dd8757">unique_features</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;features)</td></tr>
+<tr class="separator:a7747d9799073174b661d79ccc7dd8757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c28c3908b997f4e6343a56881c1d318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unique__sort_8cc.html#a8c28c3908b997f4e6343a56881c1d318">unique_audit_features</a> (<a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structaudit__data.html">audit_data</a> &gt; &amp;features)</td></tr>
+<tr class="separator:a8c28c3908b997f4e6343a56881c1d318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf67c7ed35da108533edcc40c2839709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unique__sort_8cc.html#acf67c7ed35da108533edcc40c2839709">unique_sort_features</a> (<a class="el" href="structparser.html">parser</a> *p, <a class="el" href="structexample.html">example</a> *ae)</td></tr>
+<tr class="separator:acf67c7ed35da108533edcc40c2839709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="ad0a8200cee902c18b3b5041ae8dcacef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a8200cee902c18b3b5041ae8dcacef">&#9670;&nbsp;</a></span>order_audit_features()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int order_audit_features </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ad5a34a57989d3414f7106a7e647e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad5a34a57989d3414f7106a7e647e0e">&#9670;&nbsp;</a></span>order_features()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int order_features </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c28c3908b997f4e6343a56881c1d318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c28c3908b997f4e6343a56881c1d318">&#9670;&nbsp;</a></span>unique_audit_features()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_audit_features </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structaudit__data.html">audit_data</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7747d9799073174b661d79ccc7dd8757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7747d9799073174b661d79ccc7dd8757">&#9670;&nbsp;</a></span>unique_features()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_features </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structfeature.html">feature</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf67c7ed35da108533edcc40c2839709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf67c7ed35da108533edcc40c2839709">&#9670;&nbsp;</a></span>unique_sort_features()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_sort_features </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structparser.html">parser</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structexample.html">example</a> *&#160;</td>
+          <td class="paramname"><em>ae</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

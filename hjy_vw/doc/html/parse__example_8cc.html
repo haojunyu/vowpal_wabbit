@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vowpal Wabbit v2.3: parse_example.cc 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Vowpal Wabbit v2.3
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vowpal Wabbit 2.3版本的帮助文档</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">parse_example.cc 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="parse__example_8h_source.html">parse_example.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hash_8h_source.html">hash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cache_8h_source.html">cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unique__sort_8h_source.html">unique_sort.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+parse_example.cc 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="parse__example_8cc__incl.png" border="0" usemap="#parse__example_8cc" alt=""/></div>
+<map name="parse__example_8cc" id="parse__example_8cc">
+<area shape="rect"  title=" " alt="" coords="108,5,237,31"/>
+<area shape="rect"  title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect"  href="parse__example_8h.html" title=" " alt="" coords="212,152,336,177"/>
+<area shape="rect"  href="hash_8h.html" title=" " alt="" coords="142,79,203,104"/>
+<area shape="rect"  href="cache_8h.html" title=" " alt="" coords="228,79,296,104"/>
+<area shape="rect"  href="unique__sort_8h.html" title=" " alt="" coords="53,152,155,177"/>
+<area shape="rect"  title=" " alt="" coords="70,372,134,397"/>
+<area shape="rect"  href="io_8h.html" title=" " alt="" coords="250,299,292,324"/>
+<area shape="rect"  href="parse__regressor_8h.html" title=" " alt="" coords="545,372,674,397"/>
+<area shape="rect"  href="parse__primitives_8h.html" title=" " alt="" coords="317,299,446,324"/>
+<area shape="rect"  href="parser_8h.html" title=" " alt="" coords="275,225,344,251"/>
+<area shape="rect"  href="example_8h.html" title=" " alt="" coords="143,299,226,324"/>
+<area shape="rect"  href="v__array_8h.html" title=" " alt="" coords="348,372,424,397"/>
+<area shape="rect"  title=" " alt="" coords="251,372,323,397"/>
+<area shape="rect"  title=" " alt="" coords="158,372,226,397"/>
+<area shape="rect"  title=" " alt="" coords="433,445,496,471"/>
+<area shape="rect"  title=" " alt="" coords="244,445,309,471"/>
+<area shape="rect"  title=" " alt="" coords="333,445,409,471"/>
+<area shape="rect"  href="loss__functions_8h.html" title=" " alt="" coords="521,445,638,471"/>
+<area shape="rect"  title=" " alt="" coords="662,445,846,471"/>
+<area shape="rect"  title=" " alt="" coords="552,519,606,544"/>
+<area shape="rect"  href="global__data_8h.html" title=" " alt="" coords="471,299,572,324"/>
+<area shape="rect"  title=" " alt="" coords="464,372,521,397"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ab7fc146aa0a3985223d538e54a72d0ec"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#ab7fc146aa0a3985223d538e54a72d0ec">hashstring</a> (<a class="el" href="structsubstring.html">substring</a> s, unsigned long h)</td></tr>
+<tr class="separator:ab7fc146aa0a3985223d538e54a72d0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745ab1a8e87b9168ecfdf5abcca2c398"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a745ab1a8e87b9168ecfdf5abcca2c398">feature_value</a> (<a class="el" href="structsubstring.html">substring</a> &amp;s, <a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt; &amp;name, float &amp;v)</td></tr>
+<tr class="separator:a745ab1a8e87b9168ecfdf5abcca2c398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08546abaf107109e860750a84a467ceb"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a08546abaf107109e860750a84a467ceb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a08546abaf107109e860750a84a467ceb">copy_v_array</a> (<a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;old, <a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;new_va)</td></tr>
+<tr class="separator:a08546abaf107109e860750a84a467ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca86e4905111299c4776f3b86b67c46"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a5ca86e4905111299c4776f3b86b67c46">c_string_of_substring</a> (<a class="el" href="structsubstring.html">substring</a> s)</td></tr>
+<tr class="separator:a5ca86e4905111299c4776f3b86b67c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab346c4e6ae23ad8172066ac95f19ed35"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#ab346c4e6ae23ad8172066ac95f19ed35">copy</a> (char *base)</td></tr>
+<tr class="separator:ab346c4e6ae23ad8172066ac95f19ed35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aaac8c12fe1c6b7d212cef8d8db509a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse__example_8cc.html#a4aaac8c12fe1c6b7d212cef8d8db509a">read_features</a> (<a class="el" href="structparser.html">parser</a> *p, void *ex)</td></tr>
+<tr class="separator:a4aaac8c12fe1c6b7d212cef8d8db509a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a5ca86e4905111299c4776f3b86b67c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca86e4905111299c4776f3b86b67c46">&#9670;&nbsp;</a></span>c_string_of_substring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* c_string_of_substring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsubstring.html">substring</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab346c4e6ae23ad8172066ac95f19ed35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab346c4e6ae23ad8172066ac95f19ed35">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* copy </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08546abaf107109e860750a84a467ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08546abaf107109e860750a84a467ceb">&#9670;&nbsp;</a></span>copy_v_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void copy_v_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>old</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_va</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a745ab1a8e87b9168ecfdf5abcca2c398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745ab1a8e87b9168ecfdf5abcca2c398">&#9670;&nbsp;</a></span>feature_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void feature_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsubstring.html">substring</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classv__array.html">v_array</a>&lt; <a class="el" href="structsubstring.html">substring</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7fc146aa0a3985223d538e54a72d0ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7fc146aa0a3985223d538e54a72d0ec">&#9670;&nbsp;</a></span>hashstring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t hashstring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsubstring.html">substring</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4aaac8c12fe1c6b7d212cef8d8db509a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aaac8c12fe1c6b7d212cef8d8db509a">&#9670;&nbsp;</a></span>read_features()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int read_features </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structparser.html">parser</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

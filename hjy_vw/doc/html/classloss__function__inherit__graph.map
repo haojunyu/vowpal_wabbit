@@ -1,0 +1,7 @@
+<map id="loss_function" name="loss_function">
+<area shape="rect" id="node1" title=" " alt="" coords="141,5,240,31"/>
+<area shape="rect" id="node2" href="$classhingeloss.html" title=" " alt="" coords="5,79,83,104"/>
+<area shape="rect" id="node3" href="$classlogloss.html" title=" " alt="" coords="107,79,170,104"/>
+<area shape="rect" id="node4" href="$classquantilesloss.html" title=" " alt="" coords="194,79,292,104"/>
+<area shape="rect" id="node5" href="$classsquaredloss.html" title=" " alt="" coords="316,79,409,104"/>
+</map>
