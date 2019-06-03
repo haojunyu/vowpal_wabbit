@@ -38,7 +38,6 @@ using namespace std;
  * @param e 样本文件结构体
  * @param final_regressor 最终模型参数存放文件
  * @return 空
- * @todo SEG算法是嘛
  **/
 void parse_args(int argc, char *argv[], float &eta, float &eta_decay_rate, float &initial_t,
     float &power_t, ofstream &predictions, ofstream &raw_predictions, bool &train, 

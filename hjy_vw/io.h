@@ -32,16 +32,18 @@ class io_buf {
     io_buf() {alloc(space, 1 << 16); }  ///< 构造函数，申请$2^16$字符空间
     void set(char *p){space.end = p;}  ///< 设置缓冲区末尾，常用来删除缓冲区内容
     /**
-     * @brief 从文件中读取数据填满缓冲区
+     * @brief 从文件file中读取数据填满缓冲区
      * 
      * @param n 当前缓冲区元素个数
      * @return 无
      * @see read() unistd.h
      * @note alloc()是v_array的成员函数
-     * @todo 没明白read后为什么还要alloc
+     * @todo 没明白read后为什么还要alloc: 个人理解是为了置end=begin。该函数一般在初始化时使用
      */
-    void fill(int n) {alloc(space, 
-          n + read(file, space.begin+n, space.end_array - space.begin -n));}
+    void fill(int n) {
+      alloc(space,n + read(file, space.begin+n, space.end_array - space.begin -n));
+    }
+
     /**
      * @brief 从缓冲区中的数据写到文件中
      * 

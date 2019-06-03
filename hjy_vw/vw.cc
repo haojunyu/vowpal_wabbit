@@ -21,7 +21,7 @@ using namespace std;
 
 pthread_mutex_t weight_lock;  ///< 更新权重锁
 float eta = 0.1;  ///< 学习率 
-float t = 1.; ///< todo
+float t = 1.; ///< todo 
 float power_t = 0.; ///< todo
 ofstream predictions; ///< 预测值存放文件
 ofstream raw_predictions; ///< 原始概率值存放文件
@@ -61,7 +61,8 @@ inline float final_prediction(float ret) {
  * @param features 特征数组
  * @param w 模型权重数组
  * @return 特征权重之和
- * @todo ???为啥不是模型权重*特征值
+ * @todo 为啥不是模型权重*特征值
+ * @note seg算法专用，4.0舍弃
  */
 float vector_sum(const v_array<feature> &features, weight* w)
 {
@@ -80,6 +81,7 @@ float vector_sum(const v_array<feature> &features, weight* w)
  * @param pos_weight_sum 正权重之和
  * @param raw_prediction 预测概率值
  * @return seg算法预测的值
+ * @todo raw_prediction为啥取pos_weight_sum
  */
 float seg_predict(v_array<feature> &features,
     float &neg_weight_sum, float &pos_weight_sum,
@@ -88,7 +90,6 @@ float seg_predict(v_array<feature> &features,
   pos_weight_sum = vector_sum(features, regressor.weights);
   neg_weight_sum = vector_sum(features, regressor.other_weights);
 
-  // ?? raw_prediction为啥取pos_weight_sum
   raw_prediction = pos_weight_sum;
 
   if (fpclassify(neg_weight_sum) == FP_ZERO)
@@ -102,8 +103,10 @@ float seg_predict(v_array<feature> &features,
  *
  * @param features 特征数组
  * @param w 权重数组
- * @param update ???
- * @return ???
+ * @param update 
+ * @return 
+ * @todo 尚未理解SEG算法
+ * @note SEG算法专用,4.0放弃
  */
 void vector_multiply(const v_array<feature> &features, weight *w,
     const float update)
@@ -116,9 +119,11 @@ void vector_multiply(const v_array<feature> &features, weight *w,
  * @brief
  *
  * @param features 特征数组
- * @param neg_weight_update ??
- * @param pos_weight_update ??
- * @return ???
+ * @param neg_weight_update 
+ * @param pos_weight_update 
+ * @return 
+ * @todo 尚未理解SEG算法
+ * @note SEG算法专用，4.0放弃
  */
 void seg_train(v_array<feature> &features,
     float neg_weight_update, float pos_weight_update)
@@ -171,10 +176,11 @@ void train(const v_array<feature> &features, float update)
 }
 
 /**
- * @brief 单进程
+ * @brief 单线程更新模型参数
  *
- * @param in 
- * @return ???
+ * @param in 输入
+ * @return 无
+ * @todo t为啥要累计weight
  */
 void* go(void *in)
 {
@@ -232,7 +238,7 @@ void* go(void *in)
       float example_loss = (prediction - label) * (prediction - label);
       example_loss *= weight;
 
-      // ??? t为啥加weight
+      // t为啥加weight
       t += weight;
       sum_loss = sum_loss + example_loss;
       sum_loss_since_last_dump += example_loss;
@@ -254,6 +260,7 @@ void* go(void *in)
         dump_interval *= 2;
       }
     }
+    // 每个样本去训练模型
     if (label != FLT_MAX && training)
     {
       float eta_round = eta / pow(t, power_t);
@@ -327,7 +334,7 @@ void* go(void *in)
  *
  * @param argc 参数个数
  * @param argv 参数数组
- * @return ???
+ * @return
  */
 int main(int argc, char *argv[])
 {

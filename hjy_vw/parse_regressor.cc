@@ -1,6 +1,6 @@
 /**
  * @file parse_regressor.cc
- * @brief TODO
+ * @brief 回归模型结构体实现
  *
  * @author hjy
  * @version 2.3
@@ -46,13 +46,13 @@ void initialize_regressor(regressor &r)
    numbits.
 */
 /**
- * @brief TODO
+ * @brief 初始化回归模型参数，如果指定多个模型文件，则做加权平均，如果没有指定模型文件，则初始化回归模型
  * 
- * @param regressors
- * @param r
+ * @param regressors  文件名称，文件保存的是初始化的回归模型特征值
+ * @param r 回归模型参数
  * @return void
- * @todo seg的含义以及初始化问题 
- * @note 
+ * @todo seg的含义以及初始化问题
+ * @note 训练时初始化回归模型，训练时从文件中读取回归模型参数
  */
 void parse_regressor(vector<string> &regressors, regressor &r)
 {
@@ -62,7 +62,7 @@ void parse_regressor(vector<string> &regressors, regressor &r)
   {
     ifstream regressor(regressors[i].c_str());
     // 第一遍读取seg并赋值给r.seg
-    bool seg; 
+    bool seg;
     regressor.read((char *)&seg, sizeof(seg));
     if (!initialized)
     {
@@ -81,7 +81,7 @@ void parse_regressor(vector<string> &regressors, regressor &r)
     if (!initialized)
     {
       r.numbits = local_numbits;
-    }else{ 
+    }else{
       if (local_numbits != r.numbits)
       {
         cout << "can't combine regressors with different feature number!" << endl;
@@ -128,7 +128,7 @@ void parse_regressor(vector<string> &regressors, regressor &r)
         regressor.read((char *)&hash, sizeof(hash));
         weight w = 0.;
         regressor.read((char *)&w, sizeof(float));
-        if (regressor.good()) 
+        if (regressor.good())
           r.weights[hash] = r.weights[hash] + w;
       }
     }else{
@@ -149,7 +149,7 @@ void parse_regressor(vector<string> &regressors, regressor &r)
     regressor.close();
   }
 
-  // TODO：循环后还会未初始化么？
+  // 循环中initialized会被置为true
   if (!initialized)
   {
     initialize_regressor(r);

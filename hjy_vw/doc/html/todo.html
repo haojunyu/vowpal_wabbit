@@ -74,18 +74,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>成员 <a class="el" href="vw_8cc.html#aba183bcff4dccaac801ba48d4e08b587">go</a>  (void *in)</dt>
+<dd><a class="anchor" id="_todo000009"></a>t为啥要累计weight  </dd>
 <dt>成员 <a class="el" href="classio__buf.html#aa587461036195ef42d14ba73eb3afffb">io_buf::fill</a>  (int n)</dt>
-<dd><a class="anchor" id="_todo000002"></a>没明白read后为什么还要alloc  </dd>
+<dd><a class="anchor" id="_todo000002"></a>没明白read后为什么还要alloc: 个人理解是为了置end=begin。该函数一般在初始化时使用  </dd>
 <dt>成员 <a class="el" href="hash_8cc.html#afd9fa1747724ec6142812721997394c3">mix</a>  (a, b, c)</dt>
-<dd><a class="anchor" id="_todo000001"></a>搞清how和why  </dd>
+<dd><a class="anchor" id="_todo000001"></a>有兴趣可以理解how和why  </dd>
 <dt>成员 <a class="el" href="parse__args_8h.html#a9671e24bba9de9793d2e8b872e573b7d">parse_args</a>  (int argc, char *argv[], float &amp;eta, float &amp;eta_decay_rate, float &amp;initial_t, float &amp;power_t, ofstream &amp;predictions, ofstream &amp;raw_predictions, bool &amp;train, int &amp;numthreads, int &amp;passes, regressor &amp;r, <a class="el" href="structexample__file.html" title="样本文件结构体">example_file</a> &amp;e, ofstream &amp;final_regressor)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000003"></a>SEG算法是嘛 </p>
-<p class="enddd"><a class="anchor" id="_todo000004"></a>SEG算法是嘛  </p>
-</dd>
+<dd><a class="anchor" id="_todo000003"></a>SEG算法是嘛,有兴趣理解  </dd>
 <dt>成员 <a class="el" href="parse__regressor_8h.html#a70bfc1621c07588cb12f81a717a6dd31">parse_regressor</a>  (vector&lt; string &gt; &amp;regressors, regressor &amp;r)</dt>
-<dd><a class="anchor" id="_todo000005"></a>seg的含义以及初始化问题  </dd>
+<dd><a class="anchor" id="_todo000004"></a>seg的含义以及初始化问题  </dd>
+<dt>成员 <a class="el" href="vw_8cc.html#a30ecdbad463771788898a3da4cb935c3">seg_predict</a>  (<a class="el" href="classv__array.html">v_array&lt; feature &gt;</a> &amp;features, float &amp;neg_weight_sum, float &amp;pos_weight_sum, float &amp;raw_prediction)</dt>
+<dd><a class="anchor" id="_todo000006"></a>raw_prediction为啥取pos_weight_sum  </dd>
+<dt>成员 <a class="el" href="vw_8cc.html#ad87cd28c2ff196feda0fbe6000f5a41c">seg_train</a>  (<a class="el" href="classv__array.html">v_array&lt; feature &gt;</a> &amp;features, float neg_weight_update, float pos_weight_update)</dt>
+<dd><a class="anchor" id="_todo000008"></a>尚未理解SEG算法  </dd>
+<dt>成员 <a class="el" href="vw_8cc.html#a1eb4b02850d0ad1ad4b424e8b258d046">vector_multiply</a>  (const <a class="el" href="classv__array.html">v_array&lt; feature &gt;</a> &amp;features, weight *w, const float update)</dt>
+<dd><a class="anchor" id="_todo000007"></a>尚未理解SEG算法  </dd>
 <dt>成员 <a class="el" href="vw_8cc.html#aceec16e59f7e0296e7b7a11da0dfa6c1">vector_sum</a>  (const <a class="el" href="classv__array.html">v_array&lt; feature &gt;</a> &amp;features, weight *w)</dt>
-<dd><a class="anchor" id="_todo000006"></a>???为啥不是模型权重*特征值 </dd>
+<dd><a class="anchor" id="_todo000005"></a>为啥不是模型权重*特征值 </dd>
 </dl>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

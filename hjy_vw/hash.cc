@@ -32,7 +32,7 @@ mix() takes 36 machine instructions, but only 18 cycles on a superscalar
  * @param a/b/c 32位整数
  * @see http://burtleburtle.net/bob/hash/doobs.html
  * @note 定义宏函数mix
- * @todo 搞清how和why
+ * @todo 有兴趣可以理解how和why
  */
 #define mix(a,b,c) \
 { \

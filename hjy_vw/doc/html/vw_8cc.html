@@ -136,7 +136,7 @@ vw.cc 的引用(Include)关系图:</div>
 <tr class="memdesc:ae02c6d8a1513bda9e0f65e2d854f06c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">训练回归模型：更新权重  <a href="#ae02c6d8a1513bda9e0f65e2d854f06c2">更多...</a><br /></td></tr>
 <tr class="separator:ae02c6d8a1513bda9e0f65e2d854f06c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba183bcff4dccaac801ba48d4e08b587"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#aba183bcff4dccaac801ba48d4e08b587">go</a> (void *in)</td></tr>
-<tr class="memdesc:aba183bcff4dccaac801ba48d4e08b587"><td class="mdescLeft">&#160;</td><td class="mdescRight">单进程  <a href="#aba183bcff4dccaac801ba48d4e08b587">更多...</a><br /></td></tr>
+<tr class="memdesc:aba183bcff4dccaac801ba48d4e08b587"><td class="mdescLeft">&#160;</td><td class="mdescRight">单线程更新模型参数  <a href="#aba183bcff4dccaac801ba48d4e08b587">更多...</a><br /></td></tr>
 <tr class="separator:aba183bcff4dccaac801ba48d4e08b587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vw_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">主函数  <a href="#a0ddf1224851353fc92bfbff6f499fa97">更多...</a><br /></td></tr>
@@ -250,14 +250,15 @@ vw.cc 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
-<p>单进程 </p>
+<p>单线程更新模型参数 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td></td></tr>
+    <tr><td class="paramname">in</td><td>输入 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">待办事项:</a></b></dt><dd>t为啥要累计weight </dd></dl>
 
 </div>
 </div>
@@ -295,7 +296,7 @@ vw.cc 的引用(Include)关系图:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -393,6 +394,7 @@ vw.cc 的引用(Include)关系图:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>seg算法预测的值 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">待办事项:</a></b></dt><dd>raw_prediction为啥取pos_weight_sum </dd></dl>
 
 </div>
 </div>
@@ -430,12 +432,14 @@ vw.cc 的引用(Include)关系图:</div>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">features</td><td>特征数组 </td></tr>
-    <tr><td class="paramname">neg_weight_update</td><td>?? </td></tr>
-    <tr><td class="paramname">pos_weight_update</td><td>?? </td></tr>
+    <tr><td class="paramname">neg_weight_update</td><td></td></tr>
+    <tr><td class="paramname">pos_weight_update</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">待办事项:</a></b></dt><dd>尚未理解SEG算法 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>SEG算法专用，4.0放弃 </dd></dl>
 
 </div>
 </div>
@@ -512,11 +516,13 @@ vw.cc 的引用(Include)关系图:</div>
   <table class="params">
     <tr><td class="paramname">features</td><td>特征数组 </td></tr>
     <tr><td class="paramname">w</td><td>权重数组 </td></tr>
-    <tr><td class="paramname">update</td><td>??? </td></tr>
+    <tr><td class="paramname">update</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>??? </dd></dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">待办事项:</a></b></dt><dd>尚未理解SEG算法 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>SEG算法专用,4.0放弃 </dd></dl>
 
 </div>
 </div>
@@ -555,7 +561,8 @@ vw.cc 的引用(Include)关系图:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>特征权重之和 </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">待办事项:</a></b></dt><dd>???为啥不是模型权重*特征值 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">待办事项:</a></b></dt><dd>为啥不是模型权重*特征值 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>seg算法专用，4.0舍弃 </dd></dl>
 
 </div>
 </div>

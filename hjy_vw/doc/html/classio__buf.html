@@ -98,7 +98,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:af32020bb18ceca0dc038900797715ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置缓冲区末尾，常用来删除缓冲区内容  <a href="#af32020bb18ceca0dc038900797715ae6">更多...</a><br /></td></tr>
 <tr class="separator:af32020bb18ceca0dc038900797715ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa587461036195ef42d14ba73eb3afffb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio__buf.html#aa587461036195ef42d14ba73eb3afffb">fill</a> (int n)</td></tr>
-<tr class="memdesc:aa587461036195ef42d14ba73eb3afffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件中读取数据填满缓冲区  <a href="#aa587461036195ef42d14ba73eb3afffb">更多...</a><br /></td></tr>
+<tr class="memdesc:aa587461036195ef42d14ba73eb3afffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件file中读取数据填满缓冲区  <a href="#aa587461036195ef42d14ba73eb3afffb">更多...</a><br /></td></tr>
 <tr class="separator:aa587461036195ef42d14ba73eb3afffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61fc00776c65e38be5fc17365badac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio__buf.html#ac61fc00776c65e38be5fc17365badac7">flush</a> ()</td></tr>
 <tr class="memdesc:ac61fc00776c65e38be5fc17365badac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">从缓冲区中的数据写到文件中  <a href="#ac61fc00776c65e38be5fc17365badac7">更多...</a><br /></td></tr>
@@ -170,7 +170,7 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>从文件中读取数据填满缓冲区 </p>
+<p>从文件file中读取数据填满缓冲区 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>当前缓冲区元素个数 </td></tr>
@@ -180,7 +180,7 @@ Public 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>无 </dd></dl>
 <dl class="section see"><dt>参见</dt><dd>read() unistd.h </dd></dl>
 <dl class="section note"><dt>注解</dt><dd><a class="el" href="stack_8h.html#a327b2f85144c44052102753c3d72b2d1" title="数组申请空间">alloc()</a>是v_array的成员函数 </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">待办事项:</a></b></dt><dd>没明白read后为什么还要alloc </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">待办事项:</a></b></dt><dd>没明白read后为什么还要alloc: 个人理解是为了置end=begin。该函数一般在初始化时使用 </dd></dl>
 
 </div>
 </div>

@@ -21,8 +21,8 @@ typedef float weight; ///< 定义weight为float类型别名
  * @brief 回归模型结构体
  */
 struct regressor {
-  weight* weights;
-  weight* other_weights;
+  weight* weights;  ///< 模型参数
+  weight* other_weights; ///< SEG算法使用，4.0放弃
   size_t numbits; ///< 散列表位数
   size_t length; ///< 散列表长度=2^{numbits}
   vector<string> pairs; ///< 交叉特征数组
