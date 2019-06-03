@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['begin',['begin',['../classv__array.html#a38f65b49e5c2ce93ca4bc4cc18a0e49f',1,'v_array']]],
-  ['bufs',['bufs',['../sender_8cc.html#ada222aa3349a0d6193df4b05ef5311c7',1,'sender.cc']]]
+  ['default_5fbits',['default_bits',['../structglobal__data.html#a05cdbe5e05e7fa331ac9ec19b69a21e4',1,'global_data']]],
+  ['dump_5finterval',['dump_interval',['../structglobal__data.html#a8a0dfce571faf9d2d618dfbffb1b5798',1,'global_data']]]
 ];

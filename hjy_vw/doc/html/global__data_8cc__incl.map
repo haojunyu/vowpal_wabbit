@@ -1,24 +1,11 @@
 <map id="global_data.cc" name="global_data.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="275,5,382,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="92,79,170,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="194,79,255,104"/>
-<area shape="rect" id="node4" href="$global__data_8h.html" title=" " alt="" coords="431,225,533,251"/>
-<area shape="rect" id="node14" href="$multisource_8h.html" title=" " alt="" coords="278,79,379,104"/>
-<area shape="rect" id="node22" href="$message__relay_8h.html" title=" " alt="" coords="454,79,576,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="436,299,493,324"/>
-<area shape="rect" id="node6" href="$v__array_8h.html" title=" " alt="" coords="95,299,170,324"/>
-<area shape="rect" id="node10" href="$parse__regressor_8h.html" title=" " alt="" coords="517,299,646,324"/>
-<area shape="rect" id="node7" title=" " alt="" coords="194,372,258,397"/>
-<area shape="rect" id="node8" title=" " alt="" coords="5,372,70,397"/>
-<area shape="rect" id="node9" title=" " alt="" coords="94,372,171,397"/>
-<area shape="rect" id="node11" href="$loss__functions_8h.html" title=" " alt="" coords="523,372,640,397"/>
-<area shape="rect" id="node13" title=" " alt="" coords="310,372,494,397"/>
-<area shape="rect" id="node12" title=" " alt="" coords="555,445,609,471"/>
-<area shape="rect" id="node15" href="$example_8h.html" title=" " alt="" coords="46,225,129,251"/>
-<area shape="rect" id="node17" href="$parser_8h.html" title=" " alt="" coords="294,152,363,177"/>
-<area shape="rect" id="node16" title=" " alt="" coords="6,299,70,324"/>
-<area shape="rect" id="node18" href="$io_8h.html" title=" " alt="" coords="307,225,350,251"/>
-<area shape="rect" id="node21" href="$parse__primitives_8h.html" title=" " alt="" coords="153,225,283,251"/>
-<area shape="rect" id="node19" title=" " alt="" coords="195,299,267,324"/>
-<area shape="rect" id="node20" title=" " alt="" coords="292,299,360,324"/>
+<area shape="rect" id="node1" title=" " alt="" coords="189,5,296,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,83,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="107,79,168,104"/>
+<area shape="rect" id="node4" href="$global__data_8h.html" title=" " alt="" coords="192,79,294,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="318,79,418,104"/>
+<area shape="rect" id="node9" title=" " alt="" coords="442,79,564,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="123,152,181,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="205,152,281,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="305,152,434,177"/>
 </map>

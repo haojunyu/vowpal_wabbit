@@ -1,25 +1,5 @@
 var searchData=
 [
-  ['c_5fstring_5fof_5fsubstring',['c_string_of_substring',['../parse__example_8cc.html#a5ca86e4905111299c4776f3b86b67c46',1,'parse_example.cc']]],
-  ['cache_2ecc',['cache.cc',['../cache_8cc.html',1,'']]],
-  ['cache_2eh',['cache.h',['../cache_8h.html',1,'']]],
-  ['cache_5ffeatures',['cache_features',['../cache_8cc.html#aac6b2f58d44ef738394d9fe0321120bf',1,'cache_features(io_buf &amp;cache, example *ae):&#160;cache.cc'],['../cache_8h.html#aac6b2f58d44ef738394d9fe0321120bf',1,'cache_features(io_buf &amp;cache, example *ae):&#160;cache.cc']]],
-  ['cache_5flabel',['cache_label',['../structlabel__parser.html#a954752d474128378070d524350347fe6',1,'label_parser']]],
-  ['cache_5fnumbits',['cache_numbits',['../parser_8cc.html#afa7e20eceff79fcc8aec94fcb022cfb8',1,'parser.cc']]],
-  ['cache_5foffset_5flabel',['cache_offset_label',['../offset__tree_8cc.html#a224b26ae0a86c5ffd40e3cc4abb43cc9',1,'offset_tree.cc']]],
-  ['cache_5fsimple_5flabel',['cache_simple_label',['../simple__label_8cc.html#a2aab8977b4b424708f55045ebce0779c',1,'cache_simple_label(void *v, io_buf &amp;cache):&#160;simple_label.cc'],['../simple__label_8h.html#a2aab8977b4b424708f55045ebce0779c',1,'cache_simple_label(void *v, io_buf &amp;cache):&#160;simple_label.cc']]],
-  ['cache_5ftag',['cache_tag',['../cache_8cc.html#a50fc1f434e14517ba0a8becd7e39fdcc',1,'cache_tag(io_buf &amp;cache, v_array&lt; char &gt; tag):&#160;cache.cc'],['../cache_8h.html#a50fc1f434e14517ba0a8becd7e39fdcc',1,'cache_tag(io_buf &amp;cache, v_array&lt; char &gt; tag):&#160;cache.cc']]],
-  ['calloc_5freserve',['calloc_reserve',['../v__array_8h.html#acf7f543a2adbe053d8129eebb9223694',1,'v_array.h']]],
-  ['channels',['channels',['../structparser.html#a1d621360818a070071053f6de0575ec3',1,'parser']]],
-  ['char_5fsize',['char_size',['../cache_8h.html#a863498be33bd0b6164ed4740b646257b',1,'cache.h']]],
-  ['close_5ffiles',['close_files',['../parser_8cc.html#a1c9ce79a70b26a9a5b1052b5a3e96060',1,'parser.cc']]],
-  ['compute_5fupdate',['compute_update',['../gd_8h.html#abd1c7e30ffda100d032c4a85e09d3530',1,'gd.h']]],
-  ['constant',['constant',['../constant_8h.html#a9a5382f84bae26f2a79ebf87e64aa100',1,'constant.h']]],
-  ['constant_2eh',['constant.h',['../constant_8h.html',1,'']]],
-  ['copy',['copy',['../parse__example_8cc.html#ab346c4e6ae23ad8172066ac95f19ed35',1,'parse_example.cc']]],
-  ['copy_5fv_5farray',['copy_v_array',['../parse__example_8cc.html#a08546abaf107109e860750a84a467ceb',1,'parse_example.cc']]],
-  ['count',['count',['../classio__buf.html#a4f9d4ae0cffa446a5bf2c2d507f454e2',1,'io_buf']]],
-  ['counts',['counts',['../structparser.html#af91f2a3bc35a0f226486f23071eb020e',1,'parser']]],
-  ['current',['current',['../classio__buf.html#af3bba98bc702c9de0e6d29ddd780a34f',1,'io_buf']]],
-  ['currentname',['currentname',['../classio__buf.html#a31d3ceba5db278fed121d7136ddcf450',1,'io_buf']]]
+  ['default_5fbits',['default_bits',['../structglobal__data.html#a05cdbe5e05e7fa331ac9ec19b69a21e4',1,'global_data']]],
+  ['dump_5finterval',['dump_interval',['../structglobal__data.html#a8a0dfce571faf9d2d618dfbffb1b5798',1,'global_data']]]
 ];

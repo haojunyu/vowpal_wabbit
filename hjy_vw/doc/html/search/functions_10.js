@@ -1,9 +1,0 @@
-var searchData=
-[
-  ['thread_5fdone',['thread_done',['../delay__ring_8cc.html#a0cd4e69c9e044c97f1f5e9c6f7131327',1,'thread_done(size_t thread):&#160;delay_ring.cc'],['../delay__ring_8h.html#a0cd4e69c9e044c97f1f5e9c6f7131327',1,'thread_done(size_t thread):&#160;delay_ring.cc']]],
-  ['tokenize',['tokenize',['../parse__primitives_8cc.html#a15ff8c08cfd9f882a36f585837b30ec4',1,'tokenize(char delim, substring s, v_array&lt; substring &gt; &amp;ret):&#160;parse_primitives.cc'],['../parse__primitives_8h.html#a15ff8c08cfd9f882a36f585837b30ec4',1,'tokenize(char delim, substring s, v_array&lt; substring &gt; &amp;ret):&#160;parse_primitives.cc']]],
-  ['train',['train',['../gd_8cc.html#ade95cf396b3b65fa9dca713f116e184f',1,'train(weight *weights, const v_array&lt; feature &gt; &amp;features, float update):&#160;gd.cc'],['../gd_8h.html#ade95cf396b3b65fa9dca713f116e184f',1,'train(weight *weights, const v_array&lt; feature &gt; &amp;features, float update):&#160;gd.cc']]],
-  ['train_5foffset_5fexample',['train_offset_example',['../gd_8cc.html#acff184df3a2f1c1814a8637bb9744be3',1,'train_offset_example(regressor &amp;r, example *ex, size_t thread_num, gd_vars &amp;vars, size_t offset):&#160;gd.cc'],['../gd_8h.html#acff184df3a2f1c1814a8637bb9744be3',1,'train_offset_example(regressor &amp;r, example *ex, size_t thread_num, gd_vars &amp;vars, size_t offset):&#160;gd.cc']]],
-  ['train_5fone_5fexample',['train_one_example',['../gd_8cc.html#a17fdb32f04232aa5251eb1c5c64d5be7',1,'train_one_example(regressor &amp;r, example *ex, size_t thread_num, gd_vars &amp;vars):&#160;gd.cc'],['../gd_8h.html#a17fdb32f04232aa5251eb1c5c64d5be7',1,'train_one_example(regressor &amp;r, example *ex, size_t thread_num, gd_vars &amp;vars):&#160;gd.cc']]],
-  ['train_5fone_5fexample_5fsingle_5fthread',['train_one_example_single_thread',['../gd_8h.html#a4ddfe93ee8a2de5e1f2dd58474b5a4d3',1,'gd.h']]]
-];

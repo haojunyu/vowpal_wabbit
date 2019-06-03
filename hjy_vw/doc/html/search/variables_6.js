@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['general',['general',['../cache_8cc.html#a5a3caf5ed81bbb9596ea431fa30a030f',1,'cache.cc']]],
-  ['global',['global',['../global__data_8cc.html#ab8401c78981f794b775cd2a0c948fbf3',1,'global():&#160;global_data.cc'],['../global__data_8h.html#ab8401c78981f794b775cd2a0c948fbf3',1,'global():&#160;global_data.cc']]]
+  ['local_5fprediction',['local_prediction',['../structglobal__data.html#ae7463c9e89b4563cfb8c11e869a647e5',1,'global_data']]],
+  ['loss',['loss',['../structglobal__data.html#a89e9bf502bb7d7910935ead5adbb319c',1,'global_data']]]
 ];
